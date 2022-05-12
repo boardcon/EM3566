@@ -1,5 +1,5 @@
 """
-Lumache - Python library for cooks and food lovers.
+Boardcon Embedded Design -  an Original Design Manufacturer dedicated to providing high quality ARM core based SBC and SoM.
 """
 
 __version__ = "0.1.0"
