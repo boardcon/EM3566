@@ -11,6 +11,6 @@ Contents
 
 .. toctree::
 
-   Hardware
-   Software
-   Accessories
+   hardware
+   software
+   accessories
