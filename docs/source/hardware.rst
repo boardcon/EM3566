@@ -60,14 +60,13 @@ equipment.
     * - Video
       - HDMI 2.0, 4Kp60. MIPI DSI/LVDS, 1080p60. eDP 1.3, 2560x1600@60Hz. MEMS_Module for Video output.
     * - Audio
-      - 3.5mm audio I/O jack. ES8388 audio codec. 8-channel audio via HDMI. SPDIF out.
-    * - 
-      - 
-    * - 
-      -
-    * - 
-      - 
-    * - 
-      -
-    * - 
-      -    
+      - 3.5mm audio I/O jack. ES8388 audio codec. 8-channel audio via HDMI.
+    * - Camera(optional)
+      - 2x Cameras via MIPI CSI (24pin FPC connector)
+    * - Keys & Switch
+      - 1x Recover Key. 1x Switch for switch between SATA and USB 3.0
+    * - Other features
+      - Other features	RTC with battery connector; IR receiver; GPIO; ADC
+    * - Dimension
+      - 135mm x 95mm
+   
