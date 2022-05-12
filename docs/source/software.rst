@@ -2,9 +2,7 @@
 Android
 ========
 
-version
-
-======
+=======
 Debina
 ========
 
