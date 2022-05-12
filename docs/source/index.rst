@@ -1,22 +1,16 @@
-Welcome to Lumache's documentation!
+EM3566 User maual
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
+**EM3566** is a single-board computer powered by a Rockchip RK3566 processor featuring four
+ARM Cortex-A55 CPU cores and Mali-G52-2EE graphics and designed for AIoT applications such
+as AI robot, smart POS machine, face recognition terminal, and business display integrated
+equipment.
 
 Contents
 --------
 
 .. toctree::
 
-   usage
-   api
+   Hardware
+   Software
+   Accessories
