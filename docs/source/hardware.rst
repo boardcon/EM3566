@@ -76,6 +76,7 @@ equipment.
 .. figure:: ./image/EM3566_SBC_Block_diagram.gif
    :align: center
    :alt: EM3566_SBC_Block_diagram
+   :width: 400px
 
 1.5 CPU module Introduction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -93,7 +94,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 .. figure:: ./image/CM3566_PCB_Dimension.png
    :align: center
    :alt: CM3566_PCB_Dimension
-   :width: 500px
+   :width: 350px
 
 2 Peripherals Introduction
 --------------------------
