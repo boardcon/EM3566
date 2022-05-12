@@ -69,15 +69,15 @@ equipment.
       - Other features	RTC with battery connector; IR receiver; GPIO; ADC
     * - Dimension
       - 135mm x 95mm
-   
-1.4 PCB Dimension
-^^^^^^^^^^^^^^^^^^^^^^
 
-1.5 Block Diagram
+1.4 Block Diagram
 ^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: ./image/EM3566_SBC_Block_diagram.jpg
+   :align: center
+   :alt: EM3566_SBC_Block_diagram
 
-1.6 CPU module Introduction
-^^^^^^^^^^^^^^^^^^^^^^
+1.5 CPU module Introduction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 2 Peripherals Introduction
 --------------------------
