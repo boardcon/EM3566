@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'EM3566 user manual'
+copyright = '2022, Boardcon Embedded Design'
+author = 'Boardcon'
 
 release = '0.1'
 version = '0.1.0'
