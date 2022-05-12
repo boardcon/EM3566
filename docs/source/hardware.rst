@@ -31,7 +31,7 @@ equipment.
    :align: center
    :alt: EM3566_interface
    
-.. list-table:: Frozen Delights!
+.. list-table:: 
     :widths: 15 30
     :header-rows: 1
 
@@ -49,11 +49,25 @@ equipment.
         SATA3.0 (can switch between SATA and USB 3.0.
     * - Power Supply
       - 12V/3A DC input jack
+    * - USB
+      - 1x USB OTG 2.0
+        4x USB Host 2.0 (USB-AF or 4-pin connector).
+        1x USB 3.0.
+    * - Connectivity
+      - Gigabit Ethernet RJ45 ports via Realtek RTL8211F-CG controller. 2.4G WiFi(802.11b/g/n) with Bluetooth 4.0. mPCIe socket with Nano SIM card port to support 4G&GPS module.
+    * - Serial
+      - 1x Serial port for debug, 3-pin connector. 2x UART, 4-pin connectors. 1x RS485, 2-pin header or 3-pin connector.
+    * - Video
+      - HDMI 2.0, 4Kp60. MIPI DSI/LVDS, 1080p60. eDP 1.3, 2560x1600@60Hz. MEMS_Module for Video output.
+    * - Audio
+      - 3.5mm audio I/O jack. ES8388 audio codec. 8-channel audio via HDMI. SPDIF out.
+    * - 
+      - 
     * - 
       -
     * - 
       - 
-
-
-
-   
+    * - 
+      -
+    * - 
+      -    
