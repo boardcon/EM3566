@@ -95,6 +95,10 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
    :align: center
    :alt: CM3566_PCB_Dimension
    :width: 350px
+   
+**Pin Definition**
+
+
 
 2 Peripherals Introduction
 --------------------------
