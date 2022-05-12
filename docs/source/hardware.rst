@@ -30,3 +30,20 @@ equipment.
 .. figure:: ./image/EM3566-Interfaces.jpg
    :align: center
    :alt: EM3566_interface
+   
+.. list-table:: Frozen Delights!
+    :widths: 15 30
+    :header-rows: 1
+
+    * - Specifications
+      - Description
+    * - CPU
+      - RockChip RK3566 quad-core Cortex-A55 @ up to 1.8GHz
+    * - Memory
+      - 2GB, 4GB, or 8GB LPDDR4 RAM
+        32Bit, supports all-data-link ECC
+    * - Gannet Ripple
+      - On a stick!
+
+
+   
