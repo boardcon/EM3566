@@ -127,8 +127,12 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
       - RTC button Cell Power input
       - 
       - 3.0V-1.8V
+    * - 5
+      - PMIC_32KOUT
+      - RTC clock(32.768khz) output
+      - 
+      - 3.3V
 
-     
 
 2 Peripherals Introduction
 --------------------------
