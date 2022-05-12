@@ -25,6 +25,6 @@ equipment.
 1.3 EM3566 Features
 =========================
 
-.. figure:: ../image/EM3566-Interfaces.jpg
+.. figure:: ./image/EM3566-Interfaces.jpg
    :align: center
    :alt: EM3566_interface
