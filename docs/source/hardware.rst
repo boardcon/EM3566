@@ -98,7 +98,37 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
    
 **Pin Definition**
 
+.. list-table:: 
+    :widths: 15 10 30 10 15
+    :header-rows: 1
 
+    * - Pin
+      - Signal
+      - Description or functions
+      - GPIO serial
+      - IO Voltage
+    * - 1
+      - VCC3V3_SYS
+      - 3.3V Main Power input
+      - 
+      - 3.3V
+    * - 2
+      - VCC3V3_SYS
+      - 3.3V Main Power input
+      - 
+      - 3.3V
+    * - 3
+      - VCC3V3_SYS
+      - 3.3V Main Power input
+      - 
+      - 3.3V
+    * - 4
+      - VCC_RTC
+      - RTC button Cell Power input
+      - 
+      - 3.0V-1.8V
+
+     
 
 2 Peripherals Introduction
 --------------------------
