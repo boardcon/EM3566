@@ -1,9 +1,12 @@
-==========
 Hardware
-=========
+========
+
+1 Introduction
+-------------
+
 
 1.1 Summary
-===========
+^^^^^^^^^^^^
 
 The EM3566 is a single-board computer powered by a Rockchip RK3566 processor featuring four
 ARM Cortex-A55 CPU cores and Mali-G52-2EE graphics and designed for AIoT applications such
@@ -11,7 +14,7 @@ as AI robot, smart POS machine, face recognition terminal, and business display 
 equipment.
 
 1.2 RK3566 Specifications
-=========================
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. csv-table:: 
  :header: "Item", "Specifications"
@@ -23,7 +26,7 @@ equipment.
  "NPU", "0.8Tops"
 
 1.3 EM3566 Features
-=========================
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/EM3566-Interfaces.jpg
    :align: center
