@@ -90,6 +90,10 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 - Power supply – DC 3.3V 
 - Application – smart Device, advertising devices, TV box, POS systems, vehicle control terminals, AI robot, business display integrated equipment, etc.
 
+.. figure:: ./image/CM3566_PCB_Dimension.png
+   :align: center
+   :alt: CM3566_PCB_Dimension
+   :width: 500px
 
 2 Peripherals Introduction
 --------------------------
