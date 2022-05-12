@@ -73,7 +73,7 @@ equipment.
 
 1.4 Block Diagram
 ^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: ./image/EM3566_SBC_Block_diagram
+.. figure:: ./image/EM3566_SBC_Block_diagram.gif
    :align: center
    :alt: EM3566_SBC_Block_diagram
 
