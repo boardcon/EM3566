@@ -30,6 +30,7 @@ equipment.
 .. figure:: ./image/EM3566-Interfaces.jpg
    :align: center
    :alt: EM3566_interface
+   :width: 400px
    
 .. list-table:: 
     :widths: 15 30
