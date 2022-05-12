@@ -80,6 +80,17 @@ equipment.
 1.5 CPU module Introduction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash. 
+
+**CM3566 specification** 
+
+- Pin number – 186 pins, 0.9mm pitch
+- Dimension – 40mm x 47mm
+- Layer – 8 Layers, complying with EMS/EMI:
+- Power supply – DC 3.3V 
+- Application – smart Device, advertising devices, TV box, POS systems, vehicle control terminals, AI robot, business display integrated equipment, etc.
+
+
 2 Peripherals Introduction
 --------------------------
 
