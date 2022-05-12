@@ -42,8 +42,18 @@ equipment.
     * - Memory
       - 2GB, 4GB, or 8GB LPDDR4 RAM
         32Bit, supports all-data-link ECC
-    * - Gannet Ripple
-      - On a stick!
+    * - Storage
+      - 8GB / 32GB / 64GB / 128GB eMMC. 
+        M.2 PCIe 2.0 socket NVMe SSD (Expand with 2242 NVMe SSD).
+        MicroSD card slot (Expand with TF card). 
+        SATA3.0 (can switch between SATA and USB 3.0.
+    * - Power Supply
+      - 12V/3A DC input jack
+    * - 
+      -
+    * - 
+      - 
+
 
 
    
