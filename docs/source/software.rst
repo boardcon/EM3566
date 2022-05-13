@@ -38,8 +38,6 @@ Execute command
 
  source /etc/profile
 
-.. figure:: ![Image](http://www.armdesigner.com/images/img/16260736411.png)
-
 Check if the jdk has been installed successfully and check the revised version:
 
 .. code-block:: 
@@ -48,6 +46,12 @@ Check if the jdk has been installed successfully and check the revised version:
  
 1.2 Install Tools
 """"""""""""""""""
+
+. PC OS: ubuntu system
+. Network: online          
+. Permission: root
+
+
 
 2 Compile Source
 -----------------
@@ -70,6 +74,7 @@ Check if the jdk has been installed successfully and check the revised version:
 
 4.2
 """"""""""""""""""
+
 4.3
 """"""""""""""""""
 
@@ -81,30 +86,43 @@ Check if the jdk has been installed successfully and check the revised version:
 
 6.1
 """"""""""""""""""
+
 6.2
 """"""""""""""""""
+
 6.3
 """"""""""""""""""
+
 6.4
 """"""""""""""""""
+
 6.5
 """"""""""""""""""
+
 6.6
 """"""""""""""""""
+
 6.7
 """"""""""""""""""
+
 6.8
 """"""""""""""""""
+
 6.9
 """"""""""""""""""
+
 6.10
 """"""""""""""""""
+
 6.11
 """"""""""""""""""
+
 6.12
 """"""""""""""""""
+
 6.13
 """"""""""""""""""
+
 6.14
 """"""""""""""""""
 
