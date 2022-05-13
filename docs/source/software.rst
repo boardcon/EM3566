@@ -251,7 +251,7 @@ After the installation is complete in *Computer Management* can see the followin
 """""""""""""""""""""""""""""""""
 
 The serial terminal **SecureCRT** is used for debugging. It can be used directly after decompression. 
-Open **SecureCRT.exe** after copy to PC path :file:`tools/windows/SecureCRT.exe`, then click the icon Quick Connect to config
+Open **SecureCRT.exe** after copy to PC path :file:`tools/windows/SecureCRT.exe`, then click the icon *Quick Connect* to config
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_24.png
    :alt: SecureCRT UI
@@ -264,8 +264,18 @@ Set the parameters as follow:
 - Protocol: Serial
 - Port: To be specified by user PC
 - Baud rate: 1500000
-- Please **check XON/XOFF but not RTS/CTS**
-- Check Save session
+- Please check **XON/XOFF** but not **RTS/CTS**
+- Check *Save* session
+
+After all, click *connect*
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_26.png
+   :alt: Connect Serial
+ 
+:tip: If open more than one serial terminal tools, and they use the same serial port, there will be reported the port is busy.
+
+ **Solution** Turn off the serial tool that unnecessary.
+
 
 
 5 Burn Images
