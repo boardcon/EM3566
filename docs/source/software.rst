@@ -197,11 +197,12 @@ Step 3, Unpack finish as follow
    :align: left
    :alt: Unpack finish
 
-The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/Android/Image`
+The unzip files will be generated in :file:`\RKDevTool\RKDevTool_Release\Output\Android\Image`
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_15.png
    :align: left
    :alt: path
+
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_16.png
    :align: left
