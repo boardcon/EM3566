@@ -38,6 +38,8 @@ Execute command
 
  source /etc/profile
 
+![image](http://www.armdesigner.com/images/img/16260736411.png)
+
 
 
 Debian
