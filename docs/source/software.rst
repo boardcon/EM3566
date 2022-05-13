@@ -83,13 +83,14 @@ Step 3, compile the kernel
 
  cd kernel
  make ARCH=arm64 rockchip_defconfig rk356x_evb.config android-11.config
- 
- HDMI
+
+for HDMI
+
 .. code-block:: 
 
  make ARCH=arm64 em3566-boardcon-hdmi.img 
- 
- or LVDS
+
+or LVDS
  
 .. code-block:: 
 
