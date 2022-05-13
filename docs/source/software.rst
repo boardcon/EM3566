@@ -244,10 +244,28 @@ The WINDOW will pop up found New Hardware Wizard dialog box, choose to install f
 After the installation is complete in *Computer Management* can see the following information:
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_23.png
-   :alt: serial port path
+   :alt: installation complete
 
 4.3 Install Serial Terminal Tool
 """""""""""""""""""""""""""""""""
+
+The serial terminal **SecureCRT** is used for debugging. It can be used directly after decompression. 
+Open **SecureCRT.exe** after copy to PC path :file:`tools/windows/SecureCRT.exe`, then click the icon Quick Connect to config
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_24.png
+   :alt: SecureCRT UI
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_25.png
+   :alt: Quick Connect
+
+Set the parameters as follow:
+
+- Protocol: Serial
+- Port: To be specified by user PC
+- Baud rate: 1500000
+- Please **check XON/XOFF but not RTS/CTS**
+- Check Save session
+
 
 5 Burn Images
 ^^^^^^^^^^^^^^^^^^^^^^^
