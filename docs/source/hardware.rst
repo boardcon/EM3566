@@ -174,16 +174,45 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
       - 3.3V
     * - 14
       - GMAC1_TXD1_M0
+      -
       - GPIO3_B6_d
-      - 3.3V
+      - 3.3V 
     * - 15
       - GMAC1_TXEN_M0
+      -
       - GPIO3_B7_d
       - 3.3V
-
+    * - 16
+      -  GMAC1_RXDV_CRS_M0
+      - 
+      - GPIO3_B3_d
+      - 3.3V
+    * - 17
+      - GMAC1_RXD1_M0
+      - 
+      - GPIO3_B2_d
+      - 3.3V
+    * - 18
+      - GMAC1_RXD0_M0
+      - 
+      - GPIO3_B1_d
+      - 3.3V
+    * - 19
+      - GMAC1_RXD3_M0
+      -                                   
+      - GPIO3_A5_d
+      - 3.3V
+    * - 20
+      - GMAC1_RXD2_M0
+      - 
+      - GPIO3_A4_d
+      - 3.3V
 
 
       
+
+
+
 
 2 Peripherals Introduction
 --------------------------
