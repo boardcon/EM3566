@@ -93,7 +93,7 @@ or LVDS
  make ARCH=arm64 em3566-boardcon-lvds.img 
  
 .. note::
- It will pop out configuration the IO Domain Map power window when first time compile kernel, you need to configure according to the table below.
+ It will pop out **configuration the IO power Domain Map** window when first time compile kernel, you need to configure according to the table below.
  
  .. figure:: ./image/IO-power-Domain-Map.png
    :align: center
