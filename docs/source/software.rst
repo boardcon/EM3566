@@ -177,7 +177,7 @@ Step 3, the **update.img** will be generated in rockdev directory.
 
 Unzip Firmware in windows.
 
-Step1, open **RKDevTool.exe** :file:`RKDevTool_Release\RKDevTool.exe`
+Step1, open **RKDevTool.exe** :file:`RKDevTool_Release/RKDevTool.exe`
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_12.png
    :alt: open RKDevTool.exe
@@ -192,7 +192,7 @@ Step 3, Unpack finish as follow
 .. figure:: ./image/EM3566_SBC_Android11_figure_14.png
    :alt: Unpack finish
 
-The unzip files will be generated in :file:`\RKDevTool\RKDevTool_Release\Output\Android\Image`
+The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/Android/Image`
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_15.png
    :alt: path
