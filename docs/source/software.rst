@@ -222,9 +222,23 @@ Now the device will be listed under *Device Manager -> PORTS* with unique serial
 .. figure:: ./image/EM3566_SBC_Android11_figure_19.png
    :alt: serial port path
 
-
 4.2 Install Rockchip Driver Assistant
 """"""""""""""""""""""""""""""""""""""""
+
+Path :file:`DriverAssitant_v5.1.1/DriverInstall.exe`
+
+.. figure:: ./image/RK_Driver_Assitant_install-1.png
+   :alt: RK_Driver_Assitant_install-1
+   
+.. figure:: ./image/RK_Driver_Assitant_install-2.png
+   :alt: RK_Driver_Assitant_install-2
+
+After the installation is complete, connect the board and PC with Micro USB cable and press the "Recover" key and hold then power the board, in *Computer Management* can see the following information:
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_22.png
+   :alt: serial port path
+
+
 
 4.3 Install Serial Terminal Tool
 """""""""""""""""""""""""""""""""
