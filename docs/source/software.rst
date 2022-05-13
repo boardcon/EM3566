@@ -141,7 +141,9 @@ After compilation, execute the follow command to clean the build.
 """"""""""""""""""
 
 Step 1, copy all the files in Android directory :file:`rockdev/Image` to the windows :file:`AndroidTool/rockdev/Image`
+
 Step 2, enter :file:`AndroidTool/rockdev/`, double-click to run **mkupdate_rk356x.bat**.
+
 Step 3, the **update.img** will be generated in rockdev directory.
 
 
