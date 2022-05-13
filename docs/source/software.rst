@@ -173,7 +173,7 @@ Step 3, the **update.img** will be generated in rockdev directory.
 .. figure:: ./image/EM3566_SBC_Android11_figure_11.png
    :align: left
    :alt: generated update.img
-   
+
 3.2 Unzip Firmware
 """""""""""""""""""""""
 
