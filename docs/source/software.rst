@@ -150,11 +150,11 @@ Step 3, the **update.img** will be generated in rockdev directory.
    :align: center
    :alt: Android directory path
   
-.. figure:: ./image/EM3566_SBC_Android11_figure (5).png
+.. figure:: ./image/EM3566_SBC_Android11_figure_(5).png
    :align: center
    :alt: Android directory path
    
-.. figure:: ./image/EM3566_SBC_Android11_figure (16).png
+.. figure:: ./image/EM3566_SBC_Android11_figure%(16).png
    :align: center
    :alt: copy files
    
