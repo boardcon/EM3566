@@ -47,13 +47,15 @@ Check if the jdk has been installed successfully and check the revised version:
 1.2 Install Tools
 """"""""""""""""""
 
-. PC OS: ubuntu system
-. Network: online          
-. Permission: root
+* - PC OS
+  - ubuntu system
+* - Network
+  - online          
+* - Permission
+  -root
 
 .. code-block:: 
 
- sudo apt-get install build-essential zlib1g-dev flex libx11-dev gperf libncurses5-dev bison lsb-core lib32z1-dev g++-multilib lib32ncurses5-dev uboot-mkimage g++-4.4-multilib repo git ssh make gcc libssl-dev liblz4-tool expect g++ patchelf chrpath gawk texinfo chrpath diffstat binfmt-support qemu-user-static live-build bison flex fakeroot cmake gcc-multilib g++-multilibdevice-tree-compiler python-pip ncurses-dev pyelftools unzip
 
 2 Compile Source
 -----------------
