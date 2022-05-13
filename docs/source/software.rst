@@ -49,9 +49,7 @@ Check if the jdk has been installed successfully and check the revised version:
 
 +--------------+----------------+
 | PC OS        | ubuntu system  |
-+--------------+----------------+
 | Network      | online         |
-+--------------+----------------+
 | Permission   | root           |
 +--------------+----------------+
 
