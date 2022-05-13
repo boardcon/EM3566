@@ -36,7 +36,7 @@ equipment.
     :widths: 15 30
     :header-rows: 1
 
-    * - Specifications
+    * - Item
       - Description
     * - CPU
       - RockChip RK3566 quad-core Cortex-A55 @ up to 1.8GHz
