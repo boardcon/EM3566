@@ -95,8 +95,22 @@ or LVDS
 .. note::
  It will pop out configuration the IO Domain Map power window when first time compile kernel, you need to configure according to the table below.
  
+ .. figure:: ./image/IO-power-Domain-Map.png
+   :align: center
+   :alt: IO-power-Domain-Map
  
+ **boot.img** are generated in 'android11\kernel' directory.
  
+.. Note:: 
+ If only update kernel, complied kernel as follow
+ 
+.. code-block:: 
+
+ make ARCH=arm64 BOOT_IMG=../rockdev/Image-rk3566_r/boot.img em3566-boardcon-hdmi.img 
+ # or
+ make ARCH=arm64 BOOT_IMG=../rockdev/Image-rk3566_r/boot.img em3566-boardcon-lvds.img
+ 
+
 3 Images Operation
 ^^^^^^^^^^^^^^^^^^^^^^^
 
