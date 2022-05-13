@@ -99,7 +99,7 @@ or LVDS
    :align: center
    :alt: IO-power-Domain-Map
  
-**boot.img** are generated in 'android11\kernel' directory.
+**boot.img** are generated in :file:`android11\kernel` directory.
  
 .. Note:: 
  If only update kernel, compile kernel as follow
@@ -140,9 +140,9 @@ After compilation, execute the follow command to clean the build.
 3.1 Pack Image
 """"""""""""""""""
 
-Step 1, copy all the files in Android directory :file:`rockdev/Image` to the windows AndroidTool/rockdev/Image 
-Step 2, enter AndroidTool/rockdev/, double-click to run mkupdate_rk356x.bat.
-Step 3, the update.img will be generated in rockdev directory.
+Step 1, copy all the files in Android directory :file:`rockdev/Image` to the windows :file:`AndroidTool/rockdev/Image`
+Step 2, enter :file:`AndroidTool/rockdev/`, double-click to run **mkupdate_rk356x.bat**.
+Step 3, the **update.img** will be generated in rockdev directory.
 
 
 3.2 Unzip Firmware
