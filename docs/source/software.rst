@@ -14,7 +14,7 @@ Install Vmware10.0 in windows OS, and then install ubuntu18.04 in VMware to comp
 official website http://www.ubuntu.com/ to download and install ubuntu operating system.
 
 .. note::
-buildroot should be complied by ubuntu 64bit OS.
+   buildroot should be complied by ubuntu 64bit OS.
 
 
 1.2 Install OpenJDK1.8
