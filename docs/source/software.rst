@@ -184,8 +184,8 @@ Step1, open **RKDevTool.exe** :file:`RKDevTool_Release\RKDevTool.exe`
 .. figure:: ./image/EM3566_SBC_Android11_figure_12.png
    :align: left
    :alt: open RKDevTool.exe
-
-Step 2, click **Advanced Function -> Firmware**, select **update.img**. Click **Unpack** to Unzip.
+   
+Step 2, click *Advanced Function -> Firmware*, select **update.img**. Click *Unpack* to Unzip.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_13.png
    :align: left
