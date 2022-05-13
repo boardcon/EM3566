@@ -295,9 +295,30 @@ Step 3, connect PC and development board with Micro USB cable, keep pressing the
 .. figure:: ./image/EM3566_SBC_Android11_figure_29.jpg
    :alt: EM3566
    
-.. figure:: ./image/EM3566_SBC_Android11_figure_30.jpg
-   :alt: EM3566
+.. figure:: ./image/EM3566_SBC_Android11_figure_30.png
+   :alt: Found one LOADER Device
    
+Step 4, click *Upgrade Firmware -> Firmware*, select **update.img**, Click *Upgrade to flash*
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_31.png
+   :alt: select update.img
+ 
+.. figure:: ./image/EM3566_SBC_Android11_figure_32.png
+   :alt: Upgrade
+ 
+User can also update the firmware separately.
+
+Step 1, Click the column on the right side for the path of the file want to flash.
+
+Step 2, Select the checkbox on the left.
+
+Step 3, Click *run* to flash the image.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_33.png
+   :alt: Upgrade separately-1
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_34.png
+   :alt: Upgrade separately-2
 
 
 6 Android Application
