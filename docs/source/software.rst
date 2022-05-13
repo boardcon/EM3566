@@ -102,7 +102,7 @@ or LVDS
 **boot.img** are generated in 'android11\kernel' directory.
  
 .. Note:: 
- If only update kernel, complied kernel as follow
+ If only update kernel, compile kernel as follow
  
 .. code-block:: 
 
@@ -110,6 +110,29 @@ or LVDS
  # or
  make ARCH=arm64 BOOT_IMG=../rockdev/Image-rk3566_r/boot.img em3566-boardcon-lvds.img
  
+Step 4, compile Android
+
+.. code-block:: 
+
+ source build/envsetup.sh
+ lunch rk3566_r-userdebug
+ make -j8
+
+Step 5, Generated image file
+
+.. code-block:: 
+
+ ./mkimage.sh
+ ./build.sh -u
+ cd rockdev
+ ls
+ 
+Images and update.img are generated in current directory. 
+After compilation, execute the follow command to clean the build.
+
+.. code-block:: 
+
+ ./build.sh cleanall
 
 3 Images Operation
 ^^^^^^^^^^^^^^^^^^^^^^^
