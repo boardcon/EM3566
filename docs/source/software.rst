@@ -147,12 +147,15 @@ Step 2, enter :file:`AndroidTool/rockdev/`, double-click to run **mkupdate_rk356
 Step 3, the **update.img** will be generated in rockdev directory.
   
 .. figure:: ./image/EM3566_SBC_Android11_figure_5.png
+   :align: left
    :alt: Android directory path
    
 .. figure:: ./image/EM3566_SBC_Android11_figure_16.png
+   :align: left
    :alt: copy files
    
 .. figure:: ./image/EM3566_SBC_Android11_figure_7.png
+   :align: left
    :alt: run mkupdate_rk356x.bat
    
 .. figure:: ./image/EM3566_SBC_Android11_figure_8.png
@@ -168,12 +171,43 @@ Step 3, the **update.img** will be generated in rockdev directory.
    :alt: path
  
 .. figure:: ./image/EM3566_SBC_Android11_figure_11.png
+   :align: left
    :alt: generated update.img
    
-
- 
 3.2 Unzip Firmware
 """"""""""""""""""
+
+Unzip Firmware in windows.
+
+Step1, open **RKDevTool.exe** :file:`RKDevTool_Release\RKDevTool.exe`
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_12.png
+   :align: left
+   :alt: open RKDevTool.exe
+
+Step 2, click Advanced *Function -> Firmware*, select **update.img**. Click **Unpack** to Unzip.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_13.png
+   :align: left
+   :alt: Unpack
+
+Step 3, Unpack finish as follow
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_14.png
+   :align: left
+   :alt: Unpack finish
+
+The unzip files will be generated in :file:` \RKDevTool\RKDevTool_Release\Output\Android\Image`.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_15.png
+   :align: left
+   :alt: path
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_16.png
+   :align: left
+   :alt: unzip files
+
+
 
 4 Install Tools
 ^^^^^^^^^^^^^^^^^^^^^^^
