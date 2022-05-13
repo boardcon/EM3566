@@ -135,10 +135,10 @@ After compilation, execute the follow command to clean the build.
  ./build.sh cleanall
 
 3 Images Operation
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
 3.1 Pack Image
-""""""""""""""""""
+""""""""""""""
 
 Step 1, copy all the files in Android directory :file:`rockdev/Image` to the windows :file:`AndroidTool/rockdev/Image`
 
@@ -182,30 +182,24 @@ Unzip Firmware in windows.
 Step1, open **RKDevTool.exe** :file:`RKDevTool_Release\RKDevTool.exe`
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_12.png
-   :align: left
    :alt: open RKDevTool.exe
    
 Step 2, click *Advanced Function -> Firmware*, select **update.img**. Click *Unpack* to Unzip.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_13.png
-   :align: left
    :alt: Unpack
 
 Step 3, Unpack finish as follow
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_14.png
-   :align: left
    :alt: Unpack finish
 
 The unzip files will be generated in :file:`\RKDevTool\RKDevTool_Release\Output\Android\Image`
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_15.png
-   :align: left
    :alt: path
 
-
 .. figure:: ./image/EM3566_SBC_Android11_figure_16.png
-   :align: left
    :alt: unzip files
 
 
