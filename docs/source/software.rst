@@ -145,36 +145,32 @@ Step 1, copy all the files in Android directory :file:`rockdev/Image` to the win
 Step 2, enter :file:`AndroidTool/rockdev/`, double-click to run **mkupdate_rk356x.bat**.
 
 Step 3, the **update.img** will be generated in rockdev directory.
-
-.. figure:: ./image/EM3566_SBC_Android11_recording.jpg
-   :align: center
-   :alt: Android directory path
   
-.. figure:: ./image/EM3566_SBC_Android11_figure_(5).png
+.. figure:: ./image/EM3566_SBC_Android11_figure_5.png
    :align: center
    :alt: Android directory path
    
-.. figure:: ./image/EM3566_SBC_Android11_figure%(16).png
+.. figure:: ./image/EM3566_SBC_Android11_figure_16.png
    :align: center
    :alt: copy files
    
-.. figure:: ./image/EM3566_SBC_Android11_figure (7).png
+.. figure:: ./image/EM3566_SBC_Android11_figure_7.png
    :align: center
    :alt: run mkupdate_rk356x.bat
    
-.. figure:: ./image/EM3566_SBC_Android11_figure (8).png
+.. figure:: ./image/EM3566_SBC_Android11_figure_8.png
    :align: center
    :alt: run mkupdate_rk356x.bat print out-1
    
-.. figure:: ./image/EM3566_SBC_Android11_figure (9).png
+.. figure:: ./image/EM3566_SBC_Android11_figure_9.png
    :align: center
    :alt: run mkupdate_rk356x.bat print out-2
   
-.. figure:: ./image/EM3566_SBC_Android11_figure (10).png
+.. figure:: ./image/EM3566_SBC_Android11_figure_10.png
    :align: center
    :alt: path
  
-.. figure:: ./image/EM3566_SBC_Android11_figure (11).png
+.. figure:: ./image/EM3566_SBC_Android11_figure_11.png
    :align: center
    :alt: generated update.img
    
