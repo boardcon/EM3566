@@ -268,9 +268,12 @@ Set the parameters as follow:
 - Please check **XON/XOFF** but not **RTS/CTS**
 - Check *Save* session
 
+.. figure:: ./image/EM3566_SBC_Android11_figure_26.png
+   :alt: Set the parameters
+
 After all, click *connect*
 
-.. figure:: ./image/EM3566_SBC_Android11_figure_26.png
+.. figure:: ./image/EM3566_SBC_Android11_figure_27.png
    :alt: Connect Serial
  
 .. note:: 
@@ -278,10 +281,24 @@ After all, click *connect*
  If open more than one serial terminal tools, and they use the same serial port, there will be reported the port is busy.
  **Solution**: Turn off the serial tool that unnecessary.
 
-
-
 5 Burn Images
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+Step 1, unzip *RKDevTool-rk3566-buildroot* on Windows.
+Step 2, open *RKDevTool.exe*  Path :file:`RKDevTool_Release/RKDevTool.exe`
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_28.png
+   :alt: RKDevTool
+
+Step 3, connect PC and development board with Micro USB cable, keep pressing the **Recover** Key and power the board until the windows PC shows *Found one LOADER Device*
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_29.jpg
+   :alt: EM3566
+   
+.. figure:: ./image/EM3566_SBC_Android11_figure_30.jpg
+   :alt: EM3566
+   
+
 
 6 Android Application
 ^^^^^^^^^^^^^^^^^^^^^^^
