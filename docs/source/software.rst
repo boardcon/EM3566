@@ -27,10 +27,10 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 
 Add the following information in the end of "/etc/profile"::
 
-export JAVA_HOME=/usr/lib/java/java-8-openjdk-amd64
-export JRE_HOME=/usr/lib/java/java-8-openjdk-amd64/jre
-export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/jre/lib:$CLASSPATH
-export PATH=$JAVA_HOME/bin:$JRE_HOME/jre/bin:$PATH
+ export JAVA_HOME=/usr/lib/java/java-8-openjdk-amd64
+ export JRE_HOME=/usr/lib/java/java-8-openjdk-amd64/jre
+ export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/jre/lib:$CLASSPATH
+ export PATH=$JAVA_HOME/bin:$JRE_HOME/jre/bin:$PATH
 
 .. code-block:: 
 
