@@ -210,6 +210,7 @@ Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_17.png
    :alt: Install CP2102
+   :width: 472px
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_18.png
    :alt: Install successful
