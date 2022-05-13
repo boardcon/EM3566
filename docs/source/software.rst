@@ -200,13 +200,28 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
 .. figure:: ./image/EM3566_SBC_Android11_figure_16.png
    :alt: unzip files
 
-
-
 4 Install Tools
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 4.1 Install CP2102 Driver  
 """""""""""""""""""""""""""""
+
+Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows, then click *preInstaller.exe* to install
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_17.png
+   :alt: Install CP2102
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_18.png
+   :alt: Install successful
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_19.png
+   :alt: unzip files
+   
+Now the device will be listed under *Device Manager -> PORTS* with unique serial port assigned
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_19.png
+   :alt: serial port path
+
 
 4.2 Install Rockchip Driver Assistant
 """"""""""""""""""""""""""""""""""""""""
