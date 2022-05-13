@@ -56,7 +56,7 @@ Check if the jdk has been installed successfully and check the revised version:
  sudo apt-get install build-essential zlib1g-dev flex libx11-dev gperf libncurses5-dev bison lsb-core lib32z1-dev g++-multilib lib32ncurses5-dev uboot-mkimage g++-4.4-multilib repo git ssh make gcc libssl-dev liblz4-tool expect g++ patchelf chrpath gawk texinfo chrpath diffstat binfmt-support qemu-user-static live-build bison flex fakeroot cmake gcc-multilib g++-multilibdevice-tree-compiler python-pip ncurses-dev pyelftools unzip
 
 2 Compile Source
------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Step 1, unzip the source and set the compile board
 
@@ -94,7 +94,7 @@ or LVDS
 
  
 3 Images Operation
------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 3.1 Pack Image
 """"""""""""""""""
@@ -103,7 +103,7 @@ or LVDS
 """"""""""""""""""
 
 4 Install Tools
------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 4.1 Install CP2102 Driver  
 """""""""""""""""""""""""""""
@@ -115,10 +115,10 @@ or LVDS
 """""""""""""""""""""""""""""""""
 
 5 Burn Images
------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 6 Android Application
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 6.1 HDMI Display
 """"""""""""""""""
