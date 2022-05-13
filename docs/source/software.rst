@@ -20,7 +20,7 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 
 1.2 Install OpenJDK1.8
 """"""""""""""""""""""""""
-.. code-block:: sh
+.. code-block:: 
 
  sudo mkdir /usr/lib/java
  sudo tar zxvf java-8-openjdk-amd64.tar.gz –C /usr/lib/java/
