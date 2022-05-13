@@ -77,22 +77,23 @@ Step 2, compile uboo
  cd u-boot
  ./make.sh rk3566
 
- Step 3, compile the kernel
+Step 3, compile the kernel
  
 .. code-block:: 
 
  cd kernel
  make ARCH=arm64 rockchip_defconfig rk356x_evb.config android-11.config
  
+ HDMI
 .. code-block:: 
 
- #Support HDMI
  make ARCH=arm64 em3566-boardcon-hdmi.img 
+ 
+ or LVDS
  
 .. code-block:: 
 
-#Support LVDS
-make ARCH=arm64 em3566-boardcon-lvds.img 
+ make ARCH=arm64 em3566-boardcon-lvds.img 
 
  
 3 
