@@ -285,7 +285,7 @@ After all, click *connect*
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Step 1, unzip *RKDevTool-rk3566-buildroot* on Windows.
-Step 2, open *RKDevTool.exe*  Path :file:`RKDevTool_Release/RKDevTool.exe`
+Step 2, open *RKDevTool.exe* Path: :file:`RKDevTool_Release/RKDevTool.exe`
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_28.png
    :alt: RKDevTool
@@ -294,6 +294,7 @@ Step 3, connect PC and development board with Micro USB cable, keep pressing the
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_29.jpg
    :alt: EM3566
+   :width: 400px
    
 .. figure:: ./image/EM3566_SBC_Android11_figure_30.png
    :alt: Found one LOADER Device
