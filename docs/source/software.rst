@@ -62,7 +62,39 @@ Check if the jdk has been installed successfully and check the revised version:
 2 Compile Source
 -----------------
 
+Step 1, unzip the source and set the compile board
 
+.. code-block:: 
+
+ tar xvf android11.tar.gz
+ cd android11
+ ./build.sh -h   #view the build command
+
+Step 2, compile uboo
+
+.. code-block:: 
+
+ cd u-boot
+ ./make.sh rk3566
+
+ Step 3, compile the kernel
+ 
+.. code-block:: 
+
+ cd kernel
+ make ARCH=arm64 rockchip_defconfig rk356x_evb.config android-11.config
+ 
+.. code-block:: 
+
+ #Support HDMI
+ make ARCH=arm64 em3566-boardcon-hdmi.img 
+ 
+.. code-block:: 
+
+#Support LVDS
+make ARCH=arm64 em3566-boardcon-lvds.img 
+
+ 
 3 
 -----------------
 
