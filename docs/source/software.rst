@@ -94,12 +94,12 @@ or LVDS
  
 .. note::
  It will pop out **configuration the IO power Domain Map** window when first time compile kernel, you need to configure according to the table below.
- 
- .. figure:: ./image/IO-power-Domain-Map.png
+
+.. figure:: ./image/IO-power-Domain-Map.png
    :align: center
    :alt: IO-power-Domain-Map
  
- **boot.img** are generated in 'android11\kernel' directory.
+**boot.img** are generated in 'android11\kernel' directory.
  
 .. Note:: 
  If only update kernel, complied kernel as follow
