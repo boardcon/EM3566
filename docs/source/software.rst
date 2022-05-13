@@ -91,7 +91,11 @@ or LVDS
 .. code-block:: 
 
  make ARCH=arm64 em3566-boardcon-lvds.img 
-
+ 
+.. note::
+ It will pop out configuration the IO Domain Map power window when first time compile kernel, you need to configure according to the table below.
+ 
+ 
  
 3 Images Operation
 ^^^^^^^^^^^^^^^^^^^^^^^
