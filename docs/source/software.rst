@@ -102,6 +102,7 @@ or LVDS
 **boot.img** are generated in :file:`android11\kernel` directory.
  
 .. Note:: 
+
  If only update kernel, compile kernel as follow
  
 .. code-block:: 
