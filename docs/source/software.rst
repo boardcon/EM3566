@@ -118,9 +118,9 @@ or LVDS
 -----------------
 
 6 Android Application
------------------
+----------------------
 
-6.1  HDMI Display
+6.1 HDMI Display
 """"""""""""""""""
 
 6.2 SD Card
