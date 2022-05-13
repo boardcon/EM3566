@@ -167,7 +167,7 @@ Step 3, the **update.img** will be generated in rockdev directory.
    :alt: run mkupdate_rk356x.bat print out-2
   
 .. figure:: ./image/EM3566_SBC_Android11_figure_10.png
-   :align: center
+   :align: left
    :alt: path
  
 .. figure:: ./image/EM3566_SBC_Android11_figure_11.png
