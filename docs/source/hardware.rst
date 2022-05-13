@@ -137,151 +137,26 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
       - Ground
       - 
       - 0V
-    * - 7
-      - 
-      - 
-      - 
-      -       
-    * - 8
-      - 
-      - 
-      - 
-      - 
-    * - 9
-      - 
-      - 
-      - 
-      -   
-    * - 10
-      - 
-      - 
-      - 
+    * -  7                                                                                                                       
+      - HDMITX_CEC_M0
       -
-
-
- ================================================================================================================================== ========================================== ============================================== ========================= ===================== 
-  
-  Pin
-                                                                                                                          
-  Signal
-                               
-  Description or functions
-                 
-  GPIO serial
-         
-  IO Voltage
-     
- ================================================================================================================================== ========================================== ============================================== ========================= ===================== 
-  
-  1
-                                                                                                                            
-  VCC3V3_SYS
-                           
-  3.3V Main Power input
-                    
-  &nbsp;
-              
-  3.3V
-           
-  
-  2
-                                                                                                                            
-  VCC3V3_SYS
-                           
-  3.3V Main Power input
-                    
-  &nbsp;
-              
-  3.3V
-           
-  
-  3
-                                                                                                                            
-  VCC3V3_SYS
-                           
-  3.3V Main Power input
-                    
-  &nbsp;
-              
-  3.3V
-           
-  
-  4
-                                                                                                                            
-  VCC_RTC
-                              
-  RTC button
-  Cell Power input
-           
-  &nbsp;
-              
-  3.0V-1.8V
-      
-  
-  5
-                                                                                                                            
-  PMIC_32KOUT
-                          
-  RTC clock(32.768khz) output
-              
-  &nbsp;
-              
-  3.3V
-           
-  
-  6
-                                                                                                                            
-  GND
-                                  
-  Ground
-                                   
-  &nbsp;
-              
-  0V
-             
-  
-  7
-                                                                                                                            
-  HDMITX_CEC_M0
-                        
-  &nbsp;
-                                   
-  GPIO4_D1_u
-          
-  3.3V
-           
-  
-  8
-                                                                                                                            
-  HDMITX_SDA
-                           
-  Pull up 2.2K inside
-                      
-  GPIO4_D0_u
-          
-  3.3V
-           
-  
-  9
-                                                                                                                            
-  HDMITX_SCL
-                           
-  Pull up 2.2K inside
-                      
-  GPIO4_C7_u
-          
-  3.3V
-           
-  
-  10
-                                                                                                                           
-  GND
-                                  
-  Ground
-                                   
-  &nbsp;
-              
-  0V
+      - GPIO4_D1_u
+      -  3.3V
+    * - 8
+      - HDMITX_SDA
+      - Pull up 2.2K inside
+      - GPIO4_D0_u
+      - 3.3V
+    * - 9
+      - HDMITX_SCL
+      - Pull up 2.2K inside
+      - GPIO4_C7_u
+      - 3.3V
+    * - 10
+      - GND
+      - Ground
+      -
+      - 0V
              
   
   11
