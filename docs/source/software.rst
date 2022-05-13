@@ -17,7 +17,6 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 
    buildroot should be complied by ubuntu 64bit OS.
 
-
 1.2 Install OpenJDK1.8
 """"""""""""""""""""""""""
 .. code-block:: 
@@ -294,6 +293,7 @@ Step 3, connect PC and development board with Micro USB cable, keep pressing the
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_29.jpg
    :alt: EM3566
+   :align: center
    :width: 400px
    
 .. figure:: ./image/EM3566_SBC_Android11_figure_30.png
