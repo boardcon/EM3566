@@ -47,12 +47,13 @@ Check if the jdk has been installed successfully and check the revised version:
 1.2 Install Tools
 """"""""""""""""""
 
-* - PC OS
-  - ubuntu system
-* - Network
-  - online          
-* - Permission
-  -root
++--------------+----------------+
+| PC OS        | ubuntu system  |
++--------------+----------------+
+| Network      | online         |
++--------------+----------------+
+| Permission   | root           |
++--------------+----------------+
 
 .. code-block:: 
 
