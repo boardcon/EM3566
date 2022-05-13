@@ -40,7 +40,13 @@ Execute command
 
 ![image](http://www.armdesigner.com/images/img/16260736411.png)
 
+Check if the jdk has been installed successfully and check the revised version:
 
+.. code-block:: 
+
+ java -version
+ 
+ 
 
 Debian
 --------
