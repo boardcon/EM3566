@@ -272,7 +272,9 @@ After all, click *connect*
 .. figure:: ./image/EM3566_SBC_Android11_figure_26.png
    :alt: Connect Serial
  
-:note:: If open more than one serial terminal tools, and they use the same serial port, there will be reported the port is busy.
+:note:: 
+  
+  If open more than one serial terminal tools, and they use the same serial port, there will be reported the port is busy.
 
  **Solution**: Turn off the serial tool that unnecessary.
 
