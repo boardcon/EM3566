@@ -9,7 +9,7 @@ Install Debug Tools
 1 Install CP2102 Driver  
 """""""""""""""""""""""""""""
 
-Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows, then click *preInstaller.exe* to install
+Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows, then click **preInstaller.exe** to install
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_17.png
    :alt: Install CP2102
@@ -106,7 +106,7 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
  sudo mkdir /usr/lib/java
  sudo tar zxvf java-8-openjdk-amd64.tar.gz –C /usr/lib/java/
 
-Add the following information in the end of "/etc/profile"::
+Add the following information in the end of :file:`/etc/profile`:
 
  export JAVA_HOME=/usr/lib/java/java-8-openjdk-amd64
  export JRE_HOME=/usr/lib/java/java-8-openjdk-amd64/jre
@@ -561,13 +561,29 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 
 1.2 Install Tools
 
-+===========+===============+
-|PC OS      | ubuntu system |
-+-----------+---------------+
-|Network    | online        |
-+-----------+---------------+
-|Permission | root          |
-+===========+===============+
+* PC OS: ubuntu system
+* Network: online  
+* Permission: root
+
+.. code-block:: 
+
+  sudo apt-get install build-essential
+  sudo apt-get install zlib1g-dev
+  sudo apt-get install flex
+  sudo apt-get install libx11-dev
+  sudo apt-get install gperf
+  sudo apt-get install libncurses5-dev
+  sudo apt-get install bison
+  sudo apt-get install lsb-core
+  sudo apt-get install lib32z1-dev
+  sudo apt-get install g++-multilib
+  sudo apt-get install lib32ncurses5-dev
+  sudo apt-get install uboot-mkimage
+  sudo apt-get install g++-4.4-multilib
+  sudo apt-get install repo git ssh make gcc libssl-dev liblz4-tool
+  sudo apt-get install expect g++ patchelf chrpath gawk texinfo chrpath diffstat binfmt-support
+  sudo apt-get install qemu-user-static live-build bison flex fakeroot cmake gcc-multilib g++-multilib 
+  sudo apt-get install device-tree-compiler python-pip ncurses-dev pyelftools unzip
 
 2 Compile Source
 ^^^^^^^^^^^^^^^^^^
@@ -618,6 +634,10 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
   Buildroot should be complied by ubuntu 64bit OS.
   
 1.2 Install Tools
+
+* PC OS: ubuntu system
+* Network: online  
+* Permission: root
 
 2 Compile Source
 ^^^^^^^^^^^^^^^^^^^^^^^
