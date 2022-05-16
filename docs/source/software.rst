@@ -517,7 +517,7 @@ Format SSD to ext4 file system,then connect to board. Execute the follow command
    
 .. tips::
 
-If the ssd has been automatically mounted, execute the follow command to test 
+ If the ssd has been automatically mounted, execute the follow command to test 
 
 .. code-block:: 
 
