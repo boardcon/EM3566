@@ -299,7 +299,7 @@ Step 3, connect PC and development board with Micro USB cable, keep pressing the
 .. figure:: ./image/EM3566_SBC_Android11_figure_30.png
    :alt: Found one LOADER Device
    
-Step 4, click *Upgrade Firmware -> Firmware*, select **update.img**, Click *Upgrade to flash*
+Step 4, click *Upgrade Firmware -> Firmware*, select **update.img**, Click *Upgrade* to flash
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_31.png
    :alt: select update.img
@@ -313,7 +313,7 @@ Step 1, Click the column on the right side for the path of the file want to flas
 
 Step 2, Select the checkbox on the left.
 
-Step 3, Click *run* to flash the image.
+Step 3, Click *Run* to flash the image.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_33.png
    :alt: Upgrade separately-1
@@ -321,24 +321,60 @@ Step 3, Click *run* to flash the image.
 .. figure:: ./image/EM3566_SBC_Android11_figure_34.png
    :alt: Upgrade separately-2
 
-
 6 Android Application
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 6.1 HDMI Display
 """"""""""""""""""
+Connect the board and monitor with a HDMI cable, then start up.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_35.jpg
+   :alt: HDMI display
+   
+.. Note::
+Note: The system default HDMI display. If use LVDS, please reflash update_lvds.img.
 
 6.2 SD Card
 """"""""""""""""""
 
+EM3566 supports SD Hot-plug.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_36.png
+   :alt: SD storage-1
+   
+.. figure:: ./image/EM3566_SBC_Android11_figure_37.png
+   :alt: SD storage-2
+
 6.3 USB Host
 """"""""""""""""""
+The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices. The EM3566 supports USB3.0 by set the SW switch to **OFF OFF**.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_38.png
+   :alt: USB storage
 
 6.4 Vedio Player
 """"""""""""""""""
+Copy video files to sdcard/u_disk then insert it to the board. After system boot, open sdcard/udisk and click video file to play.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_39.png
+   :alt: Vedio player
+.. figure:: ./image/EM3566_SBC_Android11_HDMI_OUT.jpg
+   :alt: Vedio player
 
 6.5 Ethernet
 """"""""""""""""""
+Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL/IP at terminal, or open the browser to test Network.
+
+.. code-block:: 
+
+ ping www.boardcon.com
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_41.png
+   :alt: Ethernet
+.. figure:: ./image/EM3566_SBC_Android11_figure_42.png
+   :alt: Ethernet-2
+.. figure:: ./image/EM3566_SBC_Android11_Browse_site.jpg
+   :alt: Browse_site
 
 6.6 Record
 """"""""""""""""""
