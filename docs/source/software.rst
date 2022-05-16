@@ -688,8 +688,11 @@ Step 2, enter :file:`RKDevTool/rockdev/`, double-click to run **mkupdate.bat**.
 
 Step 3, the **update.img** will be generated in **rockdev** directory.
 
+.. figure:: ./image/EM3566_Debian_3.png
+   :alt: copy all files
+
 .. figure:: ./image/EM3566_Debian_31.png
-   :alt: Pack Image
+   :alt: Pack Image-1
    
 .. figure:: ./image/EM3566_Debian_32.png
    :alt: Pack Image-2
@@ -719,33 +722,153 @@ Unpack finish.
 The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/Android/Image` directory.
 
 .. figure:: ./image/EM3566_Debian_37.png
-   :alt:  unzip files path
+   :alt: unzip files path
 
 4 Burn Images
 --------------
 
+Step 1, unzip **RKDevTool.rar** on Windows.
+Step 2, open **RKDevTool.exe**  Path: :file:`RKDevTool_Release\RKDevTool.exe`
+
+.. figure:: ./image/EM3566_Debian_38.png
+   :alt: open RKDevTool
+
+Step 3, connect PC and development board with Micro USB cable, keep pressing the **Recover** Key and power the board until the windows PC shows *Found one LOADER Device* release the **Recover** Key.
+
+.. figure:: ./images/EM3566_SBC_Android11_figure_29.jpg
+   :alt: connect PC and development board
+   
+.. figure:: ./image/EM3566_Debian_2.png
+   :alt: Found one LOADER Device
+   
+Step 4, click *Upgrade Firmware -> Firmware*, select **update.img**. Click *Upgrade* to flash.
+
+.. figure:: ./image/EM3566_Debian_4.png
+   :alt: select update.img
+   
+.. figure:: ./image/EM3566_Debian_5.png
+   :alt: Upgrade
+   
+User can also update the firmware separately.
+
+Step 1, Click the column on the right side for the path of the file want to flash.
+
+Step 2, Select the checkbox on the left.
+
+Step 3, Click "Run" to flash the image.
+
+   
+.. figure:: ./image/EM3566_Debian_6.png
+   :alt: choose files and  check
+   
+.. figure:: ./image/EM3566_Debian_7.png
+   :alt: flash
+   
+.. figure:: ./image/EM3566_Debian_8.png
+   :alt: Download image ok
 
 5 Debian Application
 --------------------
 
+5.1 HDMI Display
+^^^^^^^^^^^^^^^^^
+Connect the board and monitor with a HDMI cable, then start up.
 
-5.1
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: ./image/EM3566_Debian_1.png
+   :alt: HDMI output
 
-5.2
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. Note::
 
-5.3
-^^^^^^^^^^^^^^^^^^^^^^^^
+ Note: The system default HDMI display. If use LVDS, please reflash update_lvds.img, or boot-mipi.img for MIPI LCD.
 
-5.4
-^^^^^^^^^^^^^^^^^^^^^^^^
+5.2 SD Card
+^^^^^^^^^^^^^
+EM3566 supports SD Hot-plug. 
 
-5.5
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: ./image/EM3566_Debian_9.png
+   :alt: SD test-1
+   
+.. figure:: ./image/EM3566_Debian_10.png
+   :alt: SD test-2
 
-5.6
-^^^^^^^^^^^^^^^^^^^^^^^^
+5.3 USB Host
+^^^^^^^^^^^^^
+The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices.
+
+.. figure:: ./image/EM3566_Debian_11.png
+   :alt: USB Host Test
+
+5.4 Video Player
+^^^^^^^^^^^^^^^^^
+
+Copy video file (eg. test.mp4) to SD card or U_disk, then insert it to the board. After system boot open  SD card or U_disk，copy test.mp4 to :file:`usr/local` and execute follow command to play.
+
+Test 1920x1080
+
+.. code-block:: 
+
+  ./usr/local/bin/test_dec-gst.sh
+  # or
+  gst-play-1.0 --flags=3 --videosink=xvimagesink /usr/local/test.mp4
+  
+.. figure:: ./image/EM3566_Debian_12.png
+   :alt: Test 1920x1080
+   
+.. figure:: ./image/EM3566_Debian_13.png
+   :alt: Test 1920x1080
+ 
+Test 4K(max-fps to 50fps)
+
+.. code-block:: 
+
+  echo performance | tee $(find /sys/devices -name *governor)
+  echo 400000000 > /sys/kernel/debug/clk/aclk_rkvdec/clk_rate
+  export GST_DEBUG=fpsdisplaysink:10
+  export KMSSINK_DISABLE_VSYNC=1
+  export GST_MPP_VIDEODEC_DEFAULT_ARM_AFBC=1
+  GST_DEBUG=fpsdisplaysink:5 gst-play-1.0 /media/linaro/TEST/test.mp4 --flags=3 --use-playbin3 --videosink="fpsdisplaysink  text-overlay=false video-sink=\"kmssink plane-id=87\" sync=false"
+
+.. figure:: ./image/EM3566_Debian_14.png
+   :alt: Test 4K
+   
+5.5 Ethernet
+^^^^^^^^^^^^^
+
+Connect the Board and router with an Ethernet cable (default DHCP=Yes). User can ping URL/IP at terminal, or open the browser to test Network.
+
+.. code-block:: 
+
+  ping www.boardcon.com
+  
+.. figure:: ./image/EM3566_Debian_15.png
+   :alt: check eth0 up
+   
+.. figure:: ./image/EM3566_Debian_16.png
+   :alt: ping IP
+    
+.. figure:: ./image/EM3566_Debian_17.png
+   :alt: browse site
+ 
+5.6 Record
+^^^^^^^^^^^^
+
+
+.. code-block:: 
+
+   aplay -l               # View sound card devices
+   arecord -Dhw:1,0 -d 10 -f cd -r 44100 -c 2 -t wav test.wav     # recording
+   
+for HDMI output 
+
+.. code-block:: 
+
+   aplay test.wav 
+   
+for earphone output
+                
+.. code-block:: 
+
+    aplay -Dhw:1,0 test.wav 
 
 5.7
 ^^^^^^^^^^^^^^^^^^^^^^^^
