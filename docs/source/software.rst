@@ -675,11 +675,25 @@ Step 1, copy all the files in :file:`rk3566_linux_source/rockdev/Image` to the w
 
 Step 2, enter :file:`RKDevTool/rockdev/`, double-click to run **mkupdate.bat**.
 
-Step 3, the **update.img** will be generated in rockdev directory.
+Step 3, the **update.img** will be generated in **rockdev** directory.
 
+.. figure:: ./image/EM3566_Debian_31.png
+   :alt: Pack Image
+   
+.. figure:: ./image/EM3566_Debian_32.png
+   :alt: Pack Image-2
 
+.. figure:: ./image/EM3566_Debian_33.png
+   :alt: Image path
+     
 3.2 Unzip Firmware
 """"""""""""""""""
+
+Unzip Firmware in windows.
+Step 1, open **RKDevTool.exe** Path: :file:`RKDevTool_Release/RKDevTool.exe`
+
+.. figure:: ./image/EM3566_Debian_34.png
+   :alt: RKDevTool
 
 
 4 Burn Images
