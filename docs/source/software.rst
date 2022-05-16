@@ -846,12 +846,11 @@ Connect the Board and router with an Ethernet cable (default DHCP=Yes). User can
 .. figure:: ./image/EM3566_Debian_16.png
    :alt: ping IP
     
-.. figure:: ./image/EM3566_Debian_17.png
+.. figure:: ./image/EM3566_Debian_17.jpg
    :alt: browse site
  
 5.6 Record
 ^^^^^^^^^^^^
-
 
 .. code-block:: 
 
