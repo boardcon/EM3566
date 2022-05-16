@@ -937,10 +937,51 @@ Execute follow command to mount.
 
   mount /dev/sda1 /mnt
   ls
+  
+.. figure:: ./image/EM3566_Debian_24.png
+   :alt: SATA test
 
-5.11
-^^^^^^^^^^^^^^^^^^^^^^^^
+5.11 RS485
+^^^^^^^^^^^^
+Connect the RS485 ports of Board A and B with the test cable. 
 
+.. figure:: ./image/EM3566_SBC_Android11_figure_55.png
+   :align: center
+   :alt: Connect Board A and B
+
+Copy the file **com** to the SD card, then insert the card into the board and powered on. After the system booting, execute the commands to copy the **com** from the SD card to the board.
+
+.. code-block:: 
+
+  cp /media/linaro/B412-0218/com /
+  ls
+  chmod 777 com    # Modify COM properties
+
+For Board A, execute the follow commands at **Serial terminal A** to set RS485 as Receiver or Transmitter. 
+
+.. code-block:: 
+
+ ./com /dev/ttyS3 115200 8 0 1 
+ 
+For Board B, execute the follow commands at **Serial terminal B** to set RS485 as Receiver or Transmitter. 
+
+.. code-block:: 
+
+  ./com /dev/ttyS3 115200 8 0 1 
+
+5.12 UART
+^^^^^^^^^^^
+
+Connect the UARTs RX and TX with the test cable. Execute the follow command to test.
+
+.. code-block:: 
+
+  ./com /dev/ttyS4 115200 8 0 1      # Test UART4
+  ./com /dev/ttyS5 115200 8 0 1      # Test UART5
+
+.. figure:: ./image/EM3566_Debian_25.png
+   :alt: test UART1
+ 
 5.12
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
