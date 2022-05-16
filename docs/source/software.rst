@@ -869,17 +869,74 @@ for earphone output
 
     aplay -Dhw:1,0 test.wav 
 
-5.7
+5.7 RTC
+^^^^^^^^^
+
+Execute the command hwclock at CRT terminal 
+
+.. code-block:: 
+
+  hwclock
+  
+Wait a moment then run *hwclock* again, it can be found the time has changed.
+
+.. figure:: ./image/EM3566_Debian_18.png
+   :alt: RTC test
+
+
+5.8 WiFi
+^^^^^^^^^^
+
+Connect the WiFi antenna, then click the network icon in the lower right corner of the UI interface, select the SSID from the list of available networks and enter the password.
+After connected, user can ping URL/IP at terminal.
+
+.. code-block:: 
+
+  ping www.boardcon.com
+  
+.. figure:: ./image/EM3566_Debian_19.png
+   :alt: WiFI test
+
+.. figure:: ./image/EM3566_Debian_20.png
+   :alt: input password
+
+5.9 Bluetooth
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.8
-^^^^^^^^^^^^^^^^^^^^^^^^
+Open Buletooth
 
-5.9
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. code-block:: 
 
-5.10
-^^^^^^^^^^^^^^^^^^^^^^^^
+  bt_load_rtk_firmware
+
+.. figure:: ./image/EM3566_Debian_21.png
+   :alt: Open Buletooth
+   
+Click the Buletooth icon in the lower right corner of the UI, select the available device in the list to pair.  
+
+.. figure:: ./image/EM3566_Debian_22.png
+   :alt: Buletooth test
+ 
+.. figure:: ./image/EM3566_Debian_23.png
+   :alt: BT pair
+
+5.10 SATA
+^^^^^^^^^^^^
+
+.. warning::
+
+ Hot-plug is not supported for SATA. Please connect the SATA to the development board before power on.
+ 
+The system is set to USB3.0 mode by default. Please reflash boot-sata.img before test. 
+
+Set the SW switch to SATA mode: ON ON 
+
+Execute follow command to mount.
+
+.. code-block:: 
+
+  mount /dev/sda1 /mnt
+  ls
 
 5.11
 ^^^^^^^^^^^^^^^^^^^^^^^^
