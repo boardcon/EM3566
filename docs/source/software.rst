@@ -694,7 +694,21 @@ Step 1, open **RKDevTool.exe** Path: :file:`RKDevTool_Release/RKDevTool.exe`
 
 .. figure:: ./image/EM3566_Debian_34.png
    :alt: RKDevTool
+   
+Step 2, click *Advanced Function -> Firmware*, select **update.img**. Click *Unpack* to unzip.
 
+.. figure:: ./image/EM3566_Debian_35.png
+   :alt: Unpack
+
+Unpack finish.
+
+.. figure:: ./image/EM3566_Debian_36.png
+   :alt: Unpack finish
+
+The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/Android/Image` directory.
+
+.. figure:: ./image/EM3566_Debian_37.png
+   :alt:  unzip files path
 
 4 Burn Images
 ^^^^^^^^^^^^^^
