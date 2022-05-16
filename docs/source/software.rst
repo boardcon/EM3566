@@ -535,7 +535,6 @@ If the ssd has been automatically mounted, execute the follow command to test
 Connect IR receiver to the IR port. The EM3566 supports remote control.
 
 .. figure:: ./image/EM3566_SBC_Android11_IR.jpg
-   :align: left
    :alt: test IR
    :width: 400px
 
