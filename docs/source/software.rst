@@ -515,9 +515,7 @@ Format SSD to ext4 file system,then connect to board. Execute the follow command
    mount -t ext4 /dev/block/nvme0n1 /data/ssd  
    ls /data/ssd
    
-.. tips::
-
- If the ssd has been automatically mounted, execute the follow command to test 
+If the ssd has been automatically mounted, execute the follow command to test 
 
 .. code-block:: 
 
