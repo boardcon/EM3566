@@ -455,7 +455,7 @@ Connect the RS485 ports of Board A and B with the test line.
    :align: center
    :alt: Connect Board A and B
 
-Open **cmd.exe** of PC (Path: :file:`Test\cmd.exe`). After power on, the PC will report that found new hardware if it never install the usb adb driver :file:`tools/adb`. At this time user need to click **InstallADB(x64).bat** or **InstallADB(x86).bat** to install. 
+Open **cmd.exe** of PC (Path: :file:`Test/cmd.exe`). After power on, the PC will report that found new hardware if it never install the usb adb driver :file:`tools/adb`. At this time user need to click **InstallADB(x64).bat** or **InstallADB(x86).bat** to install. 
 After install driver, copy the file **com** to windows C:\Users\Administrator, then execute the commands at cmd.
 
 .. code-block:: 
@@ -527,13 +527,17 @@ If the ssd has been automatically mounted, execute the follow command to test
 .. figure:: ./image/EM3566_SBC_Android11_figure_1.png
    :alt: test SATA
   
- 
 6.14 IR
 """"""""""""""""""
 
 Connect IR receiver to the IR port. The EM3566 supports remote control.
 
+.. figure:: ./image/EM3566_SBC_Android11_IR.jpg
+   :alt: test IR
+   :align: left
 
+.. figure:: ./image/EM3566_SBC_Android11_figure_3.jpg
+   :alt: test IR
 
 
 
