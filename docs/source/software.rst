@@ -452,6 +452,7 @@ Connect the camera module (OV13850) to the development board camera0 before powe
 Connect the RS485 ports of Board A and B with the test line. 
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_55.png
+   :align: center
    :alt: Connect Board A and B
 
 Open **cmd.exe** of PC (Path: :file:`Test\cmd.exe`). After power on, the PC will report that found new hardware if it never install the usb adb driver :file:`tools/adb`. At this time user need to click **InstallADB(x64).bat** or **InstallADB(x86).bat** to install. 
@@ -483,11 +484,57 @@ For Board B, execute the follow commands at **Serial terminal B** to set RS485 a
 6.12 RS232
 """"""""""""""""""
 
+Connect the RS232 RX and TX (UART1 Pin2&Pin3 or UART2 Pin2&Pin3) with the test line. Execute the follow command to test.
+
+For UART1
+
+.. code-block:: 
+
+  ./system/com /dev/ttyS4 115200 8 0 1 
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_57.png
+   :alt: test UART1
+ 
+
+For UART2
+
+.. code-block:: 
+
+  ./system/com /dev/ttyS5 115200 8 0 1 
+ 
+.. figure:: ./image/EM3566_SBC_Android11_figure_58.png
+   :alt: test UART2
+ 
 6.13 M.2 SATA
 """"""""""""""""""
+Format SSD to ext4 file system,then connect to board. Execute the follow command to mount ssd
 
+.. code-block:: 
+
+   mkdir /data/ssd 
+   mount -t ext4 /dev/block/nvme0n1 /data/ssd  
+   ls /data/ssd
+   
+.. tips::
+
+If the ssd has been automatically mounted, execute the follow command to test 
+
+.. code-block:: 
+
+     ls /run/media/nvme0n1 
+    
+.. figure:: ./image/EM3566_SBC_Android11_figure_59.png
+   :alt: test SATA
+   
+.. figure:: ./image/EM3566_SBC_Android11_figure_1.png
+   :alt: test SATA
+  
+ 
 6.14 IR
 """"""""""""""""""
+
+Connect IR receiver to the IR port. The EM3566 supports remote control.
+
 
 
 
