@@ -671,9 +671,9 @@ After compilation, execute the follow command to clean the build.
 3.1 Pack Image
 """"""""""""""
 
-Step 1, copy all the files in :file:'rk3566_linux_source/rockdev/Image` to the windows :file:'RKDevTool/rockdev/Image'
+Step 1, copy all the files in :file:`rk3566_linux_source/rockdev/Image` to the windows :file:`RKDevTool/rockdev/Image'
 
-Step 2, enter :file:'RKDevTool/rockdev/`, double-click to run **mkupdate.bat**.
+Step 2, enter :file:`RKDevTool/rockdev/`, double-click to run **mkupdate.bat**.
 
 Step 3, the **update.img** will be generated in rockdev directory.
 
