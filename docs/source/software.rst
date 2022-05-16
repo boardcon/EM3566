@@ -530,7 +530,7 @@ If the ssd has been automatically mounted, execute the follow command to test
    :alt: test SATA
   
 5.14 IR
-""""""""""""""""""
+"""""""""
 
 Connect IR receiver to the IR port. The EM3566 supports remote control.
 
@@ -670,7 +670,17 @@ After compilation, execute the follow command to clean the build.
 ^^^^^^^^^^^^^^^^^^^
 
 3.1 Pack Image
+""""""""""""""
+
+Step 1, copy all the files in :file:'rk3566_linux_source/rockdev/Image` to the windows :file:'RKDevTool/rockdev/Image'
+
+Step 2, enter :file:'RKDevTool/rockdev/`, double-click to run **mkupdate.bat**.
+
+Step 3, the **update.img** will be generated in rockdev directory.
+
+
 3.2 Unzip Firmware
+""""""""""""""""""
 
 
 4 Burn Images
@@ -680,20 +690,36 @@ After compilation, execute the follow command to clean the build.
 5 Debian Application
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-5.1 
+5.1
+""""""""""""""""""
 5.2
-5.34
+""""""""""""""""""
+5.3
+""""""""""""""""""
+5.4
+""""""""""""""""""
 5.5
+""""""""""""""""""
 5.6
+""""""""""""""""""
 5.7
+""""""""""""""""""
 5.8
+""""""""""""""""""
 5.9
+""""""""""""""""""
 5.10
+""""""""""""""""""
 5.11
+""""""""""""""""""
 5.12
+""""""""""""""""""
 5.13
+""""""""""""""""""
 5.14
+""""""""""""""""""
 5.15
+""""""""""""""""""
 
 Buildroot
 ----------
