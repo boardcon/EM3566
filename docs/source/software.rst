@@ -97,7 +97,7 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 
 .. note::
 
-   buildroot should be complied by ubuntu 64bit OS.
+  Android should be complied by ubuntu 64bit OS.
 
 1.2 Install OpenJDK1.8
 """"""""""""""""""""""""""
@@ -546,6 +546,87 @@ Connect IR receiver to the IR port. The EM3566 supports remote control.
 Debian
 --------
 
-Buildroot
---------
+1 Compiler Environment
+^^^^^^^^^^^^^^^^^^^^^^^
 
+1.1 Install ubuntu18.04
+""""""""""""""""""""""""""
+
+Install Vmware10.0 in windows OS, and then install ubuntu18.04 in VMware to compile. Please visit the
+official website http://www.ubuntu.com/ to download and install ubuntu operating system.
+
+.. note::
+
+  Debian should be complied by ubuntu 64bit OS.
+
+1.2 Install Tools
+
++===========+===============+
+|PC OS      | ubuntu system |
++-----------+---------------+
+|Network    | online        |
++-----------+---------------+
+|Permission | root          |
++===========+===============+
+
+2 Compile Source
+^^^^^^^^^^^^^^^^^^
+
+
+3 Images Operation
+^^^^^^^^^^^^^^^^^^^
+
+3.1 Pack Image
+3.2 Unzip Firmware
+
+
+4 Burn Images
+^^^^^^^^^^^^^^
+
+
+5 Debian Application
+^^^^^^^^^^^^^^^^^^^^^^^
+
+5.1 
+5.2
+5.34
+5.5
+5.6
+5.7
+5.8
+5.9
+5.10
+5.11
+5.12
+5.13
+5.14
+5.15
+
+Buildroot
+----------
+
+1 Compiler Environment
+^^^^^^^^^^^^^^^^^^^^^^^
+1.1 Install ubuntu18.04
+""""""""""""""""""""""""""
+
+Install Vmware10.0 in windows OS, and then install ubuntu18.04 in VMware to compile. Please visit the
+official website http://www.ubuntu.com/ to download and install ubuntu operating system.
+
+.. note::
+
+  Buildroot should be complied by ubuntu 64bit OS.
+  
+1.2 Install Tools
+
+2 Compile Source
+^^^^^^^^^^^^^^^^^^^^^^^
+
+3 Images Operation
+^^^^^^^^^^^^^^^^^^^^^^^
+
+4 Burn Images
+^^^^^^^^^^^^^^^^^^^^^^^
+
+5 Buildroot Application
+^^^^^^^^^^^^^^^^^^^^^^^
