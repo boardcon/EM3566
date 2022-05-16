@@ -91,7 +91,7 @@ Android
 --------------------
 
 1.1 Vmware10.0+ubuntu18.04
-""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install Vmware10.0 in windows OS, and then install ubuntu18.04 in VMware to compile. Please visit the
 official website http://www.ubuntu.com/ to download and install ubuntu operating system.
@@ -101,7 +101,8 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
   Android should be complied by ubuntu 64bit OS.
 
 1.2 Install OpenJDK1.8
-""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. code-block:: 
 
  sudo mkdir /usr/lib/java
@@ -127,7 +128,7 @@ Check if the jdk has been installed successfully and check the revised version:
  java -version
  
 1.2 Install Tools
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^
 
 * PC OS: ubuntu system
 * Network: online  
@@ -138,7 +139,7 @@ Check if the jdk has been installed successfully and check the revised version:
  sudo apt-get install build-essential zlib1g-dev flex libx11-dev gperf libncurses5-dev bison lsb-core lib32z1-dev g++-multilib lib32ncurses5-dev uboot-mkimage g++-4.4-multilib repo git ssh make gcc libssl-dev liblz4-tool expect g++ patchelf chrpath gawk texinfo chrpath diffstat binfmt-support qemu-user-static live-build bison flex fakeroot cmake gcc-multilib g++-multilibdevice-tree-compiler python-pip ncurses-dev pyelftools unzip
 
 2 Compile Source
-^^^^^^^^^^^^^^^^^
+-----------------
 
 Step 1, unzip the source and set the compile board
 
@@ -218,10 +219,10 @@ After compilation, execute the follow command to clean the build.
  ./build.sh cleanall
 
 3 Images Operation
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 3.1 Pack Image
-""""""""""""""
+^^^^^^^^^^^^^^^
 
 Step 1, copy all the files in Android directory :file:`rockdev/Image` to the windows :file:`AndroidTool/rockdev/Image`
 
@@ -256,7 +257,7 @@ Step 3, the **update.img** will be generated in rockdev directory.
    :alt: generated update.img
 
 3.2 Unzip Firmware
-""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
 
 Unzip Firmware in windows.
 
@@ -284,7 +285,7 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
    :alt: unzip files
 
 4 Burn Images
-^^^^^^^^^^^^^^^^^^^^^^^
+--------------
 
 Step 1, unzip *RKDevTool-rk3566-buildroot* on Windows.
 Step 2, open *RKDevTool.exe* Path: :file:`RKDevTool_Release/RKDevTool.exe`
@@ -325,10 +326,11 @@ Step 3, Click *Run* to flash the image.
    :alt: Upgrade separately-2
 
 5 Android Application
-^^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 5.1 HDMI Display
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^
+
 Connect the board and monitor with a HDMI cable, then start up.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_35.jpg
@@ -338,7 +340,7 @@ Connect the board and monitor with a HDMI cable, then start up.
 Note: The system default HDMI display. If use LVDS, please reflash update_lvds.img.
 
 5.2 SD Card
-""""""""""""""""""
+^^^^^^^^^^^^
 
 EM3566 supports SD Hot-plug.
 
@@ -349,14 +351,16 @@ EM3566 supports SD Hot-plug.
    :alt: SD storage-2
 
 5.3 USB Host
-""""""""""""""""""
+^^^^^^^^^^^^^
+
 The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices. The EM3566 supports USB3.0 by set the SW switch to **OFF OFF**.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_38.png
    :alt: USB storage
 
 5.4 Vedio Player
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^
+
 Copy video files to sdcard/u_disk then insert it to the board. After system boot, open sdcard/udisk and click video file to play.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_39.png
@@ -366,7 +370,8 @@ Copy video files to sdcard/u_disk then insert it to the board. After system boot
    :alt: Vedio player
 
 5.5 Ethernet
-""""""""""""""""""
+^^^^^^^^^^^^^
+
 Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL/IP at terminal, or open the browser to test Network.
 
 .. code-block:: 
@@ -382,7 +387,8 @@ Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL
    :alt: Browse_site
 
 5.6 Record
-""""""""""""""""""
+^^^^^^^^^^^
+
 Step 1, open the APP **Sound Recorder** in Android.
 Step 2, click **Start** button to recording.
 
@@ -399,7 +405,8 @@ Default storage path :file:`Internal Memory/Documents/Records`. If the headset i
    :alt: recording file
 
 5.7 RTC
-""""""""""""""""""
+^^^^^^^^
+
 Execute the command hwclock at CRT terminal 
 
 .. code-block:: 
@@ -412,7 +419,7 @@ Wait a moment then run *hwclock* again, it can be found the time has changed.
    :alt: RTC test
 
 5.8 WiFi
-""""""""""""""""""
+^^^^^^^^^
 
 Connect the WiFi antenna, then click *Settings -> Network&internet -> Wi-Fi -> turn on*, select the SSID from the list of available networks and enter the password.
 After connected, user can ping URL/IP at terminal, or open the browser to test Network.
@@ -429,7 +436,7 @@ After connected, user can ping URL/IP at terminal, or open the browser to test N
    :alt: connect wifi
 
 5.9 Bluetooth
-""""""""""""""""""
+^^^^^^^^^^^^^^
 
 Click *Settings -> Connected devices -> Pair new device*
 Select the available device in the list to pair. After pairing, devices can connect with each other automatically
@@ -440,7 +447,8 @@ Select the available device in the list to pair. After pairing, devices can conn
    :alt: BT pair
 
 5.10 Camera
-""""""""""""""""""
+^^^^^^^^^^^^
+
 Connect the camera module (OV13850) to the development board camera0 before power on，then click the camera app to test.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_53.png
@@ -450,7 +458,7 @@ Connect the camera module (OV13850) to the development board camera0 before powe
    :alt: Camera test
 
 5.11 RS485
-""""""""""""""""""
+^^^^^^^^^^^
 
 Connect the RS485 ports of Board A and B with the test line. 
 
@@ -485,7 +493,7 @@ For Board B, execute the follow commands at **Serial terminal B** to set RS485 a
   ./system/com /dev/ttyS3 115200 8 0 1 
 
 5.12 RS232
-""""""""""""""""""
+^^^^^^^^^^^
 
 Connect the RS232 RX and TX (UART1 Pin2&Pin3 or UART2 Pin2&Pin3) with the test line. Execute the follow command to test.
 
@@ -509,7 +517,8 @@ For UART2
    :alt: test UART2
  
 5.13 M.2 SATA
-""""""""""""""""""
+^^^^^^^^^^^^^^
+
 Format SSD to ext4 file system,then connect to board. Execute the follow command to mount ssd
 
 .. code-block:: 
@@ -531,7 +540,7 @@ If the ssd has been automatically mounted, execute the follow command to test
    :alt: test SATA
   
 5.14 IR
-"""""""""
+^^^^^^^^^^^
 
 Connect IR receiver to the IR port. The EM3566 supports remote control.
 
@@ -544,13 +553,13 @@ Connect IR receiver to the IR port. The EM3566 supports remote control.
    :width: 200px
 
 Debian
---------
+=========
 
 1 Compiler Environment
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 1.1 Install ubuntu18.04
-""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install Vmware10.0 in windows OS, and then install ubuntu18.04 in VMware to compile. Please visit the
 official website http://www.ubuntu.com/ to download and install ubuntu operating system.
@@ -586,7 +595,7 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
   sudo apt-get install device-tree-compiler python-pip ncurses-dev pyelftools unzip
 
 2 Compile Source
-^^^^^^^^^^^^^^^^^^
+-----------------
 Step 1, unzip the source and set the compile board
 
 .. code-block:: 
@@ -667,10 +676,10 @@ After compilation, execute the follow command to clean the build.
   ./build.sh cleanall
 
 3 Images Operation
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 3.1 Pack Image
-""""""""""""""
+^^^^^^^^^^^^^^^
 
 Step 1, copy all the files in :file:`rk3566_linux_source/rockdev/Image` to the windows :file:`RKDevTool/rockdev/Image'
 
@@ -688,7 +697,7 @@ Step 3, the **update.img** will be generated in **rockdev** directory.
    :alt: Image path
      
 3.2 Unzip Firmware
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^
 
 Unzip Firmware in windows.
 Step 1, open **RKDevTool.exe** Path: :file:`RKDevTool_Release/RKDevTool.exe`
@@ -712,51 +721,66 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
    :alt:  unzip files path
 
 4 Burn Images
-^^^^^^^^^^^^^^
+--------------
 
 
 5 Debian Application
-^^^^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 
 5.1
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.2
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.3
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.4
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.5
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.6
-""""""""""""""""""
+
+^^^^^^^^^^^^^^^^^^^^^^^^
 5.7
-""""""""""""""""""
+
+^^^^^^^^^^^^^^^^^^^^^^^^
 5.8
-""""""""""""""""""
+
+^^^^^^^^^^^^^^^^^^^^^^^^
 5.9
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.10
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.11
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.12
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.13
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.14
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.15
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Buildroot
-----------
+=========
 
 1 Compiler Environment
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
+
 1.1 Install ubuntu18.04
-""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Install Vmware10.0 in windows OS, and then install ubuntu18.04 in VMware to compile. Please visit the
 official website http://www.ubuntu.com/ to download and install ubuntu operating system.
@@ -766,13 +790,14 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
   Buildroot should be complied by ubuntu 64bit OS.
   
 1.2 Install Tools
+^^^^^^^^^^^^^^^^^
 
 * PC OS: ubuntu system
 * Network: online  
 * Permission: root
 
 2 Compile Source
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------
 
 
 .. note::
@@ -783,10 +808,10 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
    :alt: IO-power-Domain-Map
 
 3 Images Operation
-^^^^^^^^^^^^^^^^^^^^^^^
+-------------------
 
 4 Burn Images
-^^^^^^^^^^^^^^^^^^^^^^^
+-------------
 
 5 Buildroot Application
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
