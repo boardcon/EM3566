@@ -6,8 +6,8 @@ Boardcon EM3566 supports Android, Debian and Buildroot OS.
 Install Debug Tools
 --------------------
 
-0.1 Install CP2102 Driver  
-""""""""""""""""""""""""
+1 Install CP2102 Driver  
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows, then click **preInstaller.exe** to install
 
@@ -26,8 +26,8 @@ Now the device will be listed under *Device Manager -> PORTS* with unique serial
 .. figure:: ./image/EM3566_SBC_Android11_figure_19.png
    :alt: serial port path
 
-0.2 Install Rockchip Driver Assistant
-""""""""""""""""""""""""""""""""""""""""
+2 Install Rockchip Driver Assistant
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Path :file:`DriverAssitant_v5.1.1/DriverInstall.exe`
 
@@ -50,8 +50,8 @@ After the installation is complete in *Computer Management* can see the followin
 .. figure:: ./image/EM3566_SBC_Android11_figure_23.png
    :alt: installation complete
 
-0.3 Install Serial Terminal Tool
-"""""""""""""""""""""""""""""""""
+3 Install Serial Terminal Tool
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The serial terminal **SecureCRT** is used for debugging. It can be used directly after decompression. 
 Open **SecureCRT.exe** after copy to PC path :file:`tools/windows/SecureCRT.exe`, then click the icon *Quick Connect* to config
@@ -137,7 +137,7 @@ Check if the jdk has been installed successfully and check the revised version:
  sudo apt-get install build-essential zlib1g-dev flex libx11-dev gperf libncurses5-dev bison lsb-core lib32z1-dev g++-multilib lib32ncurses5-dev uboot-mkimage g++-4.4-multilib repo git ssh make gcc libssl-dev liblz4-tool expect g++ patchelf chrpath gawk texinfo chrpath diffstat binfmt-support qemu-user-static live-build bison flex fakeroot cmake gcc-multilib g++-multilibdevice-tree-compiler python-pip ncurses-dev pyelftools unzip
 
 2 Compile Source
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 
 Step 1, unzip the source and set the compile board
 
@@ -255,7 +255,7 @@ Step 3, the **update.img** will be generated in rockdev directory.
    :alt: generated update.img
 
 3.2 Unzip Firmware
-"""""""""""""""""""""""
+""""""""""""""""""""
 
 Unzip Firmware in windows.
 
