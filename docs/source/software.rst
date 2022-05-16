@@ -587,7 +587,84 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 
 2 Compile Source
 ^^^^^^^^^^^^^^^^^^
+Step 1, unzip the source and set the compile board
 
+.. code-block:: 
+
+  tar xvf rk3566_linux_source.tar.bz2
+  cd rk3566_linux_source\
+  ./build.sh -h             # view the build command
+  ./build.sh device/rockchip/rk356x/BoardConfig-rk3566-evb2-lp4x-v10.mk
+ 
+Step 2, compile uboot
+
+.. code-block:: 
+
+   ./build.sh uboot 
+   
+Step 3, compile the kernel
+
+.. code-block:: 
+
+   ./build.sh kernel
+   
+.. note::
+ It will pop out **configuration the IO power Domain Map** window when first time compile kernel, you need to configure according to the table below.
+
+.. figure:: ./image/IO-power-Domain-Map.png
+   :align: center
+   :alt: IO-power-Domain-Map
+
+**kernel.img, resource.img and boot.img** are generated in :file:`rk3566_linux_source/kernel`.
+
+If want to configure the kernel, do it as below:
+
+.. code-block:: 
+
+   cd kernel
+   make ARCH=arm64 menuconfig
+   
+Kernel use default config file is :file:`kernel/arch/arm64/config/rockchip_linux_defconfig` 
+
+After reconfigure the kernel, please use the file :file:`kernel/.config` to replace :file:`rockchip_linux_defconfig` 
+
+Step 4, compile recovery
+
+.. code-block:: 
+
+  ./build.sh recovery
+  
+Step 5, compile debian (Note: Compile debian need to use super user)
+
+.. code-block:: 
+
+  sudo tar xvf debian.tar.bz2
+  sudo ./build.sh debian	
+  
+After compile, it will get  **linaro-rootfs.img** in the debian directory.
+The directory :file:`debian/binary` is compile debian source get target file. If want to add files to debian system, please add to :file:`binary/` corresponding folder, and then use below command get **linaro-rootfs.img**:
+
+.. code-block:: 
+
+  sudo ./mk-image.sh
+  mv linaro-rootfs.img rootfs.img
+  
+The file **rootfst.img** is finally that use to burn to board. 
+
+Step 6, Generated other image file
+
+.. code-block:: 
+
+  ./mkfirmware.sh
+  cd rockdev
+  
+Images are generated in current directory. 
+
+After compilation, execute the follow command to clean the build.
+
+.. code-block:: 
+
+  ./build.sh cleanall
 
 3 Images Operation
 ^^^^^^^^^^^^^^^^^^^
@@ -641,6 +718,14 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 
 2 Compile Source
 ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. note::
+ It will pop out **configuration the IO power Domain Map** window when first time compile kernel, you need to configure according to the table below.
+
+.. figure:: ./image/IO-power-Domain-Map.png
+   :align: center
+   :alt: IO-power-Domain-Map
 
 3 Images Operation
 ^^^^^^^^^^^^^^^^^^^^^^^
