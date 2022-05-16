@@ -127,7 +127,7 @@ Check if the jdk has been installed successfully and check the revised version:
 
  java -version
  
-1.2 Install Tools
+1.3 Install Tools
 ^^^^^^^^^^^^^^^^^^
 
 * PC OS: ubuntu system
@@ -569,6 +569,7 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
   Debian should be complied by ubuntu 64bit OS.
 
 1.2 Install Tools
+^^^^^^^^^^^^^^^^^^
 
 * PC OS: ubuntu system
 * Network: online  
@@ -744,14 +745,14 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 5.6
-
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.7
-
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.8
-
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
 5.9
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
