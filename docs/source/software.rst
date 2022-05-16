@@ -1,6 +1,88 @@
 Software
 ========
 
+Boardcon EM3566 supports Android, Debian and Buildroot OS. 
+
+Install Debug Tools
+--------------------
+
+1 Install CP2102 Driver  
+"""""""""""""""""""""""""""""
+
+Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows, then click *preInstaller.exe* to install
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_17.png
+   :alt: Install CP2102
+   :width: 472px
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_18.png
+   :alt: Install successful
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_19.png
+   :alt: unzip files
+      
+Now the device will be listed under *Device Manager -> PORTS* with unique serial port assigned
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_19.png
+   :alt: serial port path
+
+2 Install Rockchip Driver Assistant
+""""""""""""""""""""""""""""""""""""""""
+
+Path :file:`DriverAssitant_v5.1.1/DriverInstall.exe`
+
+.. figure:: ./image/RK_Driver_Assitant_install-1.png
+   :alt: RK_Driver_Assitant_install-1
+   :width: 300px
+   
+.. figure:: ./image/RK_Driver_Assitant_install-2.png
+   :alt: RK_Driver_Assitant_install-2
+   :width: 300px
+
+After the installation is complete, connect the board and PC with Micro USB cable and press the **Recover** key and hold then power the board, in *Computer Management* can see the following information:
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_22.png
+   :alt: serial port path
+
+The WINDOW will pop up found New Hardware Wizard dialog box, choose to install from the specified location, and then select :file:`/DriverAssitant_v5.11/DriverAssitant_v5.1.1/ADBDriver`.
+After the installation is complete in *Computer Management* can see the following information:
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_23.png
+   :alt: installation complete
+
+3 Install Serial Terminal Tool
+"""""""""""""""""""""""""""""""""
+
+The serial terminal **SecureCRT** is used for debugging. It can be used directly after decompression. 
+Open **SecureCRT.exe** after copy to PC path :file:`tools/windows/SecureCRT.exe`, then click the icon *Quick Connect* to config
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_24.png
+   :alt: SecureCRT UI
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_25.png
+   :alt: Quick Connect
+
+Set the parameters as follow:
+
+- Protocol: Serial
+- Port: To be specified by user PC
+- Baud rate: 1500000
+- Please check **XON/XOFF** but not **RTS/CTS**
+- Check *Save* session
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_26.png
+   :alt: Set the parameters
+
+After all, click *connect*
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_27.png
+   :alt: Connect Serial
+ 
+.. note:: 
+
+ If open more than one serial terminal tools, and they use the same serial port, there will be reported the port is busy.
+ **Solution**: Turn off the serial tool that unnecessary.
+
 Android
 --------
 
@@ -200,87 +282,7 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
 .. figure:: ./image/EM3566_SBC_Android11_figure_16.png
    :alt: unzip files
 
-4 Install Tools
-^^^^^^^^^^^^^^^^^^^^^^^
-
-4.1 Install CP2102 Driver  
-"""""""""""""""""""""""""""""
-
-Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows, then click *preInstaller.exe* to install
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_17.png
-   :alt: Install CP2102
-   :width: 472px
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_18.png
-   :alt: Install successful
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_19.png
-   :alt: unzip files
-      
-Now the device will be listed under *Device Manager -> PORTS* with unique serial port assigned
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_19.png
-   :alt: serial port path
-
-4.2 Install Rockchip Driver Assistant
-""""""""""""""""""""""""""""""""""""""""
-
-Path :file:`DriverAssitant_v5.1.1/DriverInstall.exe`
-
-.. figure:: ./image/RK_Driver_Assitant_install-1.png
-   :alt: RK_Driver_Assitant_install-1
-   :width: 300px
-   
-.. figure:: ./image/RK_Driver_Assitant_install-2.png
-   :alt: RK_Driver_Assitant_install-2
-   :width: 300px
-
-After the installation is complete, connect the board and PC with Micro USB cable and press the **Recover** key and hold then power the board, in *Computer Management* can see the following information:
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_22.png
-   :alt: serial port path
-
-The WINDOW will pop up found New Hardware Wizard dialog box, choose to install from the specified location, and then select :file:`/DriverAssitant_v5.11/DriverAssitant_v5.1.1/ADBDriver`.
-After the installation is complete in *Computer Management* can see the following information:
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_23.png
-   :alt: installation complete
-
-4.3 Install Serial Terminal Tool
-"""""""""""""""""""""""""""""""""
-
-The serial terminal **SecureCRT** is used for debugging. It can be used directly after decompression. 
-Open **SecureCRT.exe** after copy to PC path :file:`tools/windows/SecureCRT.exe`, then click the icon *Quick Connect* to config
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_24.png
-   :alt: SecureCRT UI
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_25.png
-   :alt: Quick Connect
-
-Set the parameters as follow:
-
-- Protocol: Serial
-- Port: To be specified by user PC
-- Baud rate: 1500000
-- Please check **XON/XOFF** but not **RTS/CTS**
-- Check *Save* session
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_26.png
-   :alt: Set the parameters
-
-After all, click *connect*
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_27.png
-   :alt: Connect Serial
- 
-.. note:: 
-
- If open more than one serial terminal tools, and they use the same serial port, there will be reported the port is busy.
- **Solution**: Turn off the serial tool that unnecessary.
-
-5 Burn Images
+4 Burn Images
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Step 1, unzip *RKDevTool-rk3566-buildroot* on Windows.
@@ -321,10 +323,10 @@ Step 3, Click *Run* to flash the image.
 .. figure:: ./image/EM3566_SBC_Android11_figure_34.png
    :alt: Upgrade separately-2
 
-6 Android Application
+5 Android Application
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-6.1 HDMI Display
+5.1 HDMI Display
 """"""""""""""""""
 Connect the board and monitor with a HDMI cable, then start up.
 
@@ -334,7 +336,7 @@ Connect the board and monitor with a HDMI cable, then start up.
 .. Note::
 Note: The system default HDMI display. If use LVDS, please reflash update_lvds.img.
 
-6.2 SD Card
+5.2 SD Card
 """"""""""""""""""
 
 EM3566 supports SD Hot-plug.
@@ -345,14 +347,14 @@ EM3566 supports SD Hot-plug.
 .. figure:: ./image/EM3566_SBC_Android11_figure_37.png
    :alt: SD storage-2
 
-6.3 USB Host
+5.3 USB Host
 """"""""""""""""""
 The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices. The EM3566 supports USB3.0 by set the SW switch to **OFF OFF**.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_38.png
    :alt: USB storage
 
-6.4 Vedio Player
+5.4 Vedio Player
 """"""""""""""""""
 Copy video files to sdcard/u_disk then insert it to the board. After system boot, open sdcard/udisk and click video file to play.
 
@@ -362,7 +364,7 @@ Copy video files to sdcard/u_disk then insert it to the board. After system boot
    :align: center
    :alt: Vedio player
 
-6.5 Ethernet
+5.5 Ethernet
 """"""""""""""""""
 Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL/IP at terminal, or open the browser to test Network.
 
@@ -378,7 +380,7 @@ Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL
    :align: center
    :alt: Browse_site
 
-6.6 Record
+5.6 Record
 """"""""""""""""""
 Step 1, open the APP **Sound Recorder** in Android.
 Step 2, click **Start** button to recording.
@@ -395,7 +397,7 @@ Default storage path :file:`Internal Memory/Documents/Records`. If the headset i
 .. figure:: ./image/EM3566_SBC_Android11_recording.jpg
    :alt: recording file
 
-6.7 RTC
+5.7 RTC
 """"""""""""""""""
 Execute the command hwclock at CRT terminal 
 
@@ -408,7 +410,7 @@ Wait a moment then run *hwclock* again, it can be found the time has changed.
 .. figure:: ./image/EM3566_SBC_Android11_figure_47.png
    :alt: RTC test
 
-6.8 WiFi
+5.8 WiFi
 """"""""""""""""""
 
 Connect the WiFi antenna, then click *Settings -> Network&internet -> Wi-Fi -> turn on*, select the SSID from the list of available networks and enter the password.
@@ -425,7 +427,7 @@ After connected, user can ping URL/IP at terminal, or open the browser to test N
 .. figure:: ./image/EM3566_SBC_Android11_figure_50.png
    :alt: connect wifi
 
-6.9 Bluetooth
+5.9 Bluetooth
 """"""""""""""""""
 
 Click *Settings -> Connected devices -> Pair new device*
@@ -436,7 +438,7 @@ Select the available device in the list to pair. After pairing, devices can conn
 .. figure:: ./image/EM3566_SBC_Android11_figure_52.jpg
    :alt: BT pair
 
-6.10 Camera
+5.10 Camera
 """"""""""""""""""
 Connect the camera module (OV13850) to the development board camera0 before power on，then click the camera app to test.
 
@@ -446,7 +448,7 @@ Connect the camera module (OV13850) to the development board camera0 before powe
 .. figure:: ./image/EM3566_SBC_Android11_camera.jpg
    :alt: Camera test
 
-6.11 RS485
+5.11 RS485
 """"""""""""""""""
 
 Connect the RS485 ports of Board A and B with the test line. 
@@ -481,7 +483,7 @@ For Board B, execute the follow commands at **Serial terminal B** to set RS485 a
 
   ./system/com /dev/ttyS3 115200 8 0 1 
 
-6.12 RS232
+5.12 RS232
 """"""""""""""""""
 
 Connect the RS232 RX and TX (UART1 Pin2&Pin3 or UART2 Pin2&Pin3) with the test line. Execute the follow command to test.
@@ -505,7 +507,7 @@ For UART2
 .. figure:: ./image/EM3566_SBC_Android11_figure_58.png
    :alt: test UART2
  
-6.13 M.2 SATA
+5.13 M.2 SATA
 """"""""""""""""""
 Format SSD to ext4 file system,then connect to board. Execute the follow command to mount ssd
 
@@ -527,7 +529,7 @@ If the ssd has been automatically mounted, execute the follow command to test
 .. figure:: ./image/EM3566_SBC_Android11_figure_1.png
    :alt: test SATA
   
-6.14 IR
+5.14 IR
 """"""""""""""""""
 
 Connect IR receiver to the IR port. The EM3566 supports remote control.
