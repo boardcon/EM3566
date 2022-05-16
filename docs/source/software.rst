@@ -735,7 +735,7 @@ Step 2, open **RKDevTool.exe**  Path: :file:`RKDevTool_Release\RKDevTool.exe`
 
 Step 3, connect PC and development board with Micro USB cable, keep pressing the **Recover** Key and power the board until the windows PC shows *Found one LOADER Device* release the **Recover** Key.
 
-.. figure:: ./images/EM3566_SBC_Android11_figure_29.jpg
+.. figure:: ./image/EM3566_SBC_Android11_figure_29.jpg
    :alt: connect PC and development board
    
 .. figure:: ./image/EM3566_Debian_2.png
