@@ -539,10 +539,7 @@ Connect IR receiver to the IR port. The EM3566 supports remote control.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_3.jpg
    :alt: test IR
-   :align: right
    :width: 200px
-
-
 
 Debian
 --------
