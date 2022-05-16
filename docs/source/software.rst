@@ -375,6 +375,7 @@ Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL
 .. figure:: ./image/EM3566_SBC_Android11_figure_42.png
    :alt: Ethernet-2
 .. figure:: ./image/EM3566_SBC_Android11_Browse_site.jpg
+   :align: center
    :alt: Browse_site
 
 6.6 Record
@@ -385,6 +386,7 @@ Step 2, click **Start** button to recording.
 .. figure:: ./image/EM3566_SBC_Android11_figure_44.png
    :alt: recorder
 .. figure:: ./image/EM3566_SBC_Android11_record.jpg
+   :align: center
    :alt: start record
    
 After finish recording, click **Stop** and select **Save** to store file.
@@ -431,7 +433,7 @@ Select the available device in the list to pair. After pairing, devices can conn
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_54.png
    :alt: Bluetooth Setting
-.. figure:: ./image/EM3566_SBC_Android11_figure_52.png
+.. figure:: ./image/EM3566_SBC_Android11_figure_52.jpg
    :alt: BT pair
 
 6.10 Camera
@@ -453,13 +455,13 @@ Connect the RS485 ports of Board A and B with the test line.
    :alt: Connect Board A and B
 
 Open **cmd.exe** of PC (Path: :file:`Test\cmd.exe`). After power on, the PC will report that found new hardware if it never install the usb adb driver :file:`tools/adb`. At this time user need to click **InstallADB(x64).bat** or **InstallADB(x86).bat** to install. 
-After install driver execute the commands at cmd
+After install driver, copy the file **com** to windows C:\Users\Administrator, then execute the commands at cmd.
 
 .. code-block:: 
 
  adb root
  adb remount
- adb push com /system     # Before execute need copy com to windows C:\Users\Administrator
+ adb push com /system  
  adb shell
  chmod 777 /system/com    # Modify COM properties
 
@@ -469,11 +471,13 @@ After install driver execute the commands at cmd
 For Board A, execute the follow commands at **Serial terminal A** to set RS485 as Receiver or send. 
 
 .. code-block:: 
+
  ./system/com /dev/ttyS3 115200 8 0 1 
  
 For Board B, execute the follow commands at **Serial terminal B** to set RS485 as Receiver or send. 
 
 .. code-block:: 
+
   ./system/com /dev/ttyS3 115200 8 0 1 
 
 6.12 RS232
