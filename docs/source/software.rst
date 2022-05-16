@@ -359,6 +359,7 @@ Copy video files to sdcard/u_disk then insert it to the board. After system boot
 .. figure:: ./image/EM3566_SBC_Android11_figure_39.png
    :alt: Vedio player
 .. figure:: ./image/EM3566_SBC_Android11_HDMI_OUT.jpg
+   :align: center
    :alt: Vedio player
 
 6.5 Ethernet
@@ -378,21 +379,102 @@ Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL
 
 6.6 Record
 """"""""""""""""""
+Step 1, open the APP **Sound Recorder** in Android.
+Step 2, click **Start** button to recording.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_44.png
+   :alt: recorder
+.. figure:: ./image/EM3566_SBC_Android11_record.jpg
+   :alt: start record
+   
+After finish recording, click **Stop** and select **Save** to store file.
+Default storage path :file:`Internal Memory/Documents/Records`. If the headset is connected, default headset output, otherwise HDMI output.
+
+.. figure:: ./image/EM3566_SBC_Android11_recording.jpg
+   :alt: recording file
 
 6.7 RTC
 """"""""""""""""""
+Execute the command hwclock at CRT terminal 
+
+.. code-block:: 
+
+  hwclock
+  
+Wait a moment then run *hwclock* again, it can be found the time has changed.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_47.png
+   :alt: RTC test
 
 6.8 WiFi
 """"""""""""""""""
 
+Connect the WiFi antenna, then click *Settings -> Network&internet -> Wi-Fi -> turn on*, select the SSID from the list of available networks and enter the password.
+After connected, user can ping URL/IP at terminal, or open the browser to test Network.
+
+.. code-block:: 
+
+  ping www.boardcon.com
+  
+.. figure:: ./image/EM3566_SBC_Android11_figure_48.png
+   :alt: settings UI
+.. figure:: ./image/EM3566_SBC_Android11_figure_49.png
+   :alt: WIFI Setting
+.. figure:: ./image/EM3566_SBC_Android11_figure_50.png
+   :alt: connect wifi
+
 6.9 Bluetooth
 """"""""""""""""""
 
+Click *Settings -> Connected devices -> Pair new device*
+Select the available device in the list to pair. After pairing, devices can connect with each other automatically
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_54.png
+   :alt: Bluetooth Setting
+.. figure:: ./image/EM3566_SBC_Android11_figure_52.png
+   :alt: BT pair
+
 6.10 Camera
 """"""""""""""""""
+Connect the camera module (OV13850) to the development board camera0 before power on，then click the camera app to test.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_53.png
+   :alt: Camera icon
+
+.. figure:: ./image/EM3566_SBC_Android11_camera.jpg
+   :alt: Camera test
 
 6.11 RS485
 """"""""""""""""""
+
+Connect the RS485 ports of Board A and B with the test line. 
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_55.png
+   :alt: Connect Board A and B
+
+Open **cmd.exe** of PC (Path: :file:`Test\cmd.exe`). After power on, the PC will report that found new hardware if it never install the usb adb driver :file:`tools/adb`. At this time user need to click **InstallADB(x64).bat** or **InstallADB(x86).bat** to install. 
+After install driver execute the commands at cmd
+
+.. code-block:: 
+
+ adb root
+ adb remount
+ adb push com /system     # Before execute need copy com to windows C:\Users\Administrator
+ adb shell
+ chmod 777 /system/com    # Modify COM properties
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_56.png
+   :alt: Eexecute commands at cmd
+
+For Board A, execute the follow commands at **Serial terminal A** to set RS485 as Receiver or send. 
+
+.. code-block:: 
+ ./system/com /dev/ttyS3 115200 8 0 1 
+ 
+For Board B, execute the follow commands at **Serial terminal B** to set RS485 as Receiver or send. 
+
+.. code-block:: 
+  ./system/com /dev/ttyS3 115200 8 0 1 
 
 6.12 RS232
 """"""""""""""""""
