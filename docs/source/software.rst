@@ -6,8 +6,8 @@ Boardcon EM3566 supports Android, Debian and Buildroot OS.
 Install Debug Tools
 --------------------
 
-1 Install CP2102 Driver  
-"""""""""""""""""""""""""""""
+0.1 Install CP2102 Driver  
+""""""""""""""""""""""""
 
 Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows, then click **preInstaller.exe** to install
 
@@ -26,7 +26,7 @@ Now the device will be listed under *Device Manager -> PORTS* with unique serial
 .. figure:: ./image/EM3566_SBC_Android11_figure_19.png
    :alt: serial port path
 
-2 Install Rockchip Driver Assistant
+0.2 Install Rockchip Driver Assistant
 """"""""""""""""""""""""""""""""""""""""
 
 Path :file:`DriverAssitant_v5.1.1/DriverInstall.exe`
@@ -50,7 +50,7 @@ After the installation is complete in *Computer Management* can see the followin
 .. figure:: ./image/EM3566_SBC_Android11_figure_23.png
    :alt: installation complete
 
-3 Install Serial Terminal Tool
+0.3 Install Serial Terminal Tool
 """""""""""""""""""""""""""""""""
 
 The serial terminal **SecureCRT** is used for debugging. It can be used directly after decompression. 
@@ -716,6 +716,7 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
 
 5 Debian Application
 ^^^^^^^^^^^^^^^^^^^^^^^
+
 
 5.1
 """"""""""""""""""
