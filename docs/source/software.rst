@@ -688,7 +688,7 @@ Step 2, enter :file:`RKDevTool/rockdev/`, double-click to run **mkupdate.bat**.
 
 Step 3, the **update.img** will be generated in **rockdev** directory.
 
-.. figure:: ./image/EM3566_Debian_3.png
+.. figure:: ./image/EM3566_Debian_3.jpg
    :alt: copy all files
 
 .. figure:: ./image/EM3566_Debian_31.png
@@ -774,7 +774,7 @@ Step 3, Click "Run" to flash the image.
 ^^^^^^^^^^^^^^^^^
 Connect the board and monitor with a HDMI cable, then start up.
 
-.. figure:: ./image/EM3566_Debian_1.png
+.. figure:: ./image/EM3566_Debian_1.jpg
    :alt: HDMI output
 
 .. Note::
@@ -814,7 +814,7 @@ Test 1920x1080
 .. figure:: ./image/EM3566_Debian_12.png
    :alt: Test 1920x1080
    
-.. figure:: ./image/EM3566_Debian_13.png
+.. figure:: ./image/EM3566_Debian_13.jpg
    :alt: Test 1920x1080
  
 Test 4K(max-fps to 50fps)
