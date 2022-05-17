@@ -1038,13 +1038,15 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PH-4A.jpg
   :alt: PH-4A
+  :align: center
   :height: 90px
 
 2.12 MIPI Camera (J30, J31)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/LCD_connector.jpg
+.. figure:: ./image/LCD_connector.png
   :alt: LCD_connector
+  :align: center
   :height: 90px
   
 
@@ -1053,6 +1055,7 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PH-3A.jpg
   :alt: PH-3A
+  :align: center
   :height: 90px
   
 2.14 UART (J10, J11, J12)
@@ -1060,10 +1063,12 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PH-3A.jpg
   :alt: PH-3A
+  :align: center
   :height: 90px
   
 .. figure:: ./image/PH-4A.jpg
   :alt: PH-4A
+  :align: center
   :height: 90px
   
 
@@ -1072,10 +1077,12 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PH-3A-1.jpg
   :alt: PH-3A
+  :align: center
   :height: 90px
   
 .. figure:: ./image/Pin_header.jpg
   :alt: 2-pin header
+  :align: center
   :height: 90px
 
 2.16 Button (K3)
@@ -1083,6 +1090,7 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/button.jpg
   :alt: BUTTON
+  :align: center
   :height: 60px
   
 
@@ -1091,6 +1099,7 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PCIe.jpg
   :alt: PCIe
+  :align: center
   :height: 90px
   
 .. figure:: ./image/4G.jpg
@@ -1099,6 +1108,7 @@ J6 / J17 (4-pin connector)
   
 .. figure:: ./image/Nano_sim.jpg
   :alt: Nano_sim
+  :align: center
   :height: 90px
   
 2.18 Micro SD (J3) 
@@ -1106,6 +1116,7 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/Micro_SD.jpg
   :alt: micro SD
+  :align: center
   :height: 90px
 
 2.19 WiFi&Bluetooth (U20)
@@ -1113,6 +1124,7 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/wifi.jpg
   :alt: wifi model
+  :align: center
   :height: 120px
 
 2.20 SSD (CON3)
@@ -1120,6 +1132,7 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/mPCIe.jpg
   :alt: mPCIe
+  :align: center
   :height: 90px
 
 2.21 GPS (MU4)
@@ -1127,13 +1140,16 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/GPS.jpg
   :alt: GPS model
+  :align: center
   :height: 120px
 
 2.22 RTC (BT1)
 ^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/RTC.jpg
+   :align: center
   :alt: RTC battery
+  :height: 120px
 
 3 Product Configurations
 --------------------------
