@@ -497,26 +497,26 @@ For Board B, execute the follow commands at **Serial terminal B** to set RS485 a
 5.12 RS232
 ^^^^^^^^^^^
 
-Connect the RS232 RX and TX (UART1 Pin2&Pin3 or UART2 Pin2&Pin3) with the test cable. Execute the follow command to test.
+Connect the RS232 RX and TX (UART4 Pin2&Pin3 or UART5 Pin2&Pin3) with the test cable. Execute the follow command to test.
 
-For UART1
+For UART4
 
 .. code-block:: 
 
   ./system/com /dev/ttyS4 115200 8 0 1 
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_57.png
-   :alt: test UART1
+   :alt: test UART4
  
 
-For UART2
+For UART5
 
 .. code-block:: 
 
   ./system/com /dev/ttyS5 115200 8 0 1 
  
 .. figure:: ./image/EM3566_SBC_Android11_figure_58.png
-   :alt: test UART2
+   :alt: test UART5
  
 5.13 M.2 SATA
 ^^^^^^^^^^^^^^
