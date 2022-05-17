@@ -1218,5 +1218,39 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
 4 Burn Images
 -------------
 
+Step 1, unzip **RKDevTool-rk3566-buildroot** on Windows.
+
+Step 2, open **RKDevTool.exe** Path: :file:`RKDevTool_Release/RKDevTool.exe`
+
+.. figure:: ./image/EM3566_Buildroot_open_RKDevTool.png
+   :alt: open RKDevTool
+
+Step 3, connect PC and development board with Micro USB cable, keep pressing the **Recover** Key and power the board until the windows PC shows **Found one LOADER Device**.
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_29.jpg
+   :alt: connect USB OTG
+   
+.. figure:: ./image/EM3566_Buildroot_Found_LOADER_Device.png
+   :alt: Found one LOADER Device
+   
+Step 4, click *Upgrade Firmware -> Firmware*, select **update.img**. Click *Upgrade* to flash.
+
+.. figure:: ./image/EM3566_Buildroot_Upgrade.png
+   :alt: Upgrade
+ 
+User can also update the firmware separately.
+
+Step 1, Click the column on the right side for the path of the file want to flash.
+
+Step 2, Select the checkbox on the left.
+
+Step 3, Click *Run* to flash the image.
+
+.. figure:: ./image/EM3566_Buildroot_update_separately.png
+   :alt: Upgrade
+ 
+.. figure:: ./image/EM3566_Buildroot_flash_image.png
+   :alt: download OK
+ 
 5 Buildroot Application
 -----------------------
