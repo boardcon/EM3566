@@ -409,7 +409,7 @@ Default storage path :file:`Internal Memory/Documents/Records`. If the headset i
 5.7 RTC
 ^^^^^^^^
 
-Execute the command hwclock at CRT terminal 
+Execute the command **hwclock** at CRT terminal 
 
 .. code-block:: 
 
@@ -513,8 +513,8 @@ Connect the RS232 RX and TX (UART4 Pin2&Pin3 or UART5 Pin2&Pin3) with the test c
 .. figure:: ./image/EM3566_SBC_Android11_figure_58.png
    :alt: test UART5
  
-5.13 M.2 SATA
-^^^^^^^^^^^^^^
+5.13 M.2 SATA (SSD)
+^^^^^^^^^^^^^^^^^^^^^
 
 Format SSD to ext4 file system,then connect to board. Execute the follow command to mount SSD.
 
@@ -675,7 +675,7 @@ After compilation, execute the follow command to clean the build.
 3.1 Pack Image
 ^^^^^^^^^^^^^^^
 
-Step 1, copy all the files in :file:`rk3566_linux_source/rockdev/Image` to the windows :file:`RKDevTool/rockdev/Image'
+Step 1, copy all the files in :file:`rk3566_linux_source/rockdev/Image` to the windows :file:`RKDevTool/rockdev/Image`
 
 Step 2, enter :file:`RKDevTool/rockdev/`, double-click to run **mkupdate.bat**.
 
@@ -868,7 +868,7 @@ for earphone output
 5.7 RTC
 ^^^^^^^^^
 
-Execute the command hwclock at CRT terminal 
+Execute the command **hwclock** at CRT terminal 
 
 .. code-block:: 
 
@@ -978,8 +978,8 @@ Connect the UARTs RX and TX with the test cable. Execute the follow command to t
 .. figure:: ./image/EM3566_Debian_25.png
    :alt: test UART
  
-5.13 M.2 SATA
-^^^^^^^^^^^^^^
+5.13 M.2 SATA (SSD)
+^^^^^^^^^^^^^^^^^^^
 
 Format SSD to ext4 file system on ubuntu system before test: 
 
@@ -1020,7 +1020,7 @@ Then connect the SSD to board. Execute the follow command to mount.
 5.15 IR
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Connect IR receiver to the IR connector then power on. Execute follow command to test.
+Connect IR receiver to the connector then power on. Execute follow command to test.
 
 .. code-block::
    cat /dev/input/event0
@@ -1029,7 +1029,6 @@ Connect IR receiver to the IR connector then power on. Execute follow command to
    :alt: test IR
 
 .. figure:: ./image/EM3566_SBC_Android11_IR.jpg
-   :align: center
    :width: 300px
    :alt: connect IR
   
@@ -1288,7 +1287,7 @@ The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB
 5.4 Video player
 ^^^^^^^^^^^^^^^^^^
 
-Copy video file to SD_card/U_disk then insert it to the board. After system boot open SD_card/U_disk and click video file to play.
+Copy video file to SD_card or U_disk and insert to the board to test.
 
 .. figure:: ./image/EM3566_Buildroot_Video_Player.gif
    :alt: Video file
@@ -1334,7 +1333,7 @@ After finish recording, execute follow command to play record file by earphone.
 .. figure:: ./image/EM3566_Buildroot_audio_play.png
    :alt: play recording file
    
-If it is HDMI display, execute follow command to test record:
+for HDMI display, execute follow command to test record:
 
 .. code-block::
 
