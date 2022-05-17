@@ -761,6 +761,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 ^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/power_adapter.png
+  :aline: center
   :alt: power_adapter
   
 The DC JACK is 5.5 x 2.1mm, 3-pin plug Type. Typical 12V/3A DC adapter. 
@@ -783,6 +784,7 @@ The DC JACK is 5.5 x 2.1mm, 3-pin plug Type. Typical 12V/3A DC adapter.
 
 .. figure:: ./image/PJ-327E.jpg
   :alt: PJ327E
+  :height: 90px
 
 The EM3566 adopts audio codec ES8388 to provide stereo audio
 output/input.
@@ -816,6 +818,7 @@ output/input.
 
 .. figure:: ./image/opt.jpg
   :align: center
+  :height: 90px
   :alt: OPT
 
 The Optical Adaptor DLT1120 is used for S/PDIF data output.
@@ -1047,7 +1050,8 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PH-3A.jpg
   :alt: PH-3A
-
+  :height: 90px
+  
 2.14 UART (J10, J11, J12)
 ^^^^^^^^^^^^^^^^^^^^^^
 
