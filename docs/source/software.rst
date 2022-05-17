@@ -445,7 +445,7 @@ Select the available device in the list to pair. After pairing, devices can conn
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_54.png
    :alt: Bluetooth Setting
-.. figure:: ./image/EM3566_SBC_Android11_figure_52.png
+.. figure:: ./image/EM3566_android_BT.jpg
    :alt: BT pair
 
 5.10 Camera
