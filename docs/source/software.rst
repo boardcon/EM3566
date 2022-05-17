@@ -385,7 +385,6 @@ Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL
 .. figure:: ./image/EM3566_SBC_Android11_figure_42.png
    :alt: Ethernet-2
 .. figure:: ./image/EM3566_SBC_Android11_Browse_site.jpg
-   :align: center
    :alt: Browse_site
 
 5.6 Record
@@ -398,8 +397,8 @@ Step 2, click **Start** button to recording.
 .. figure:: ./image/EM3566_SBC_Android11_figure_44.png
    :alt: recorder
 .. figure:: ./image/EM3566_SBC_Android11_record.jpg
-   :align: center
    :alt: start record
+   :width: 350px
    
 After finish recording, click **Stop** and select **Save** to store file.
 Default storage path :file:`Internal Memory/Documents/Records`. If the headset is connected, default headset output, otherwise HDMI output.
