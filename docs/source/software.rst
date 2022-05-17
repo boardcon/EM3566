@@ -182,7 +182,7 @@ or LVDS
    :align: center
    :alt: IO-power-Domain-Map
  
-**boot.img** are generated in :file:`android11/kernel` directory.
+**boot.img** are generated in :file:`android11/kernel`.
  
 .. Note:: 
 
@@ -721,7 +721,7 @@ Unpack finish.
 .. figure:: ./image/EM3566_Debian_36.png
    :alt: Unpack finish
 
-The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/Android/Image` directory.
+The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/Android/Image`.
 
 .. figure:: ./image/EM3566_Debian_37.png
    :alt: unzip files path
@@ -1054,16 +1054,79 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 
   Buildroot should be complied by ubuntu 64bit OS.
   
-1.2 Install Tools
+1.2 Install OpenJDK1.8
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block::
+  sudo mkdir /usr/lib/java
+  sudo tar zxvf java-8-openjdk-amd64.tar.gz –C /usr/lib/java/
+  
+Add the following information in the end of :file:`/etc/profile`:
+
+ export JAVA_HOME=/usr/lib/java/java-8-openjdk-amd64
+ export JRE_HOME=/usr/lib/java/java-8-openjdk-amd64/jre
+ export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/jre/lib:$CLASSPATH
+ export PATH=$JAVA_HOME/bin:$JRE_HOME/jre/bin:$PATH
+
+.. code-block::
+  
+  source /etc/profile
+  
+Check if the jdk has been installed successfully and view the revised version
+  
+.. code-block::
+   
+   java -version
+  
+1.3 Install Tools
 ^^^^^^^^^^^^^^^^^
 
 * PC OS: ubuntu system
 * Network: online  
 * Permission: root
 
+.. code-block::
+  
+  sudo apt-get install build-essential
+  sudo apt-get install zlib1g-dev
+  sudo apt-get install flex
+  sudo apt-get install libx11-dev
+  sudo apt-get install gperf
+  sudo apt-get install libncurses5-dev
+  sudo apt-get install bison
+  sudo apt-get install lsb-core
+  sudo apt-get install lib32z1-dev
+  sudo apt-get install g++-multilib
+  sudo apt-get install lib32ncurses5-dev
+  sudo apt-get install uboot-mkimage
+  sudo apt-get install g++-4.4-multilib
+  sudo apt-get install repo git ssh make gcc libssl-dev liblz4-tool
+  sudo apt-get install expect g++ patchelf chrpath gawk texinfo chrpath diffstat binfmt-support
+  sudo apt-get install qemu-user-static live-build bison flex fakeroot cmake gcc-multilib g++-multilib 
+  sudo apt-get install device-tree-compiler python-pip ncurses-dev pyelftools unzip
+
 2 Compile Source
 -----------------
 
+Step 1, unzip the source and set the compile board
+
+.. code-block::
+
+  tar xvf rk3566_linux_source.tar.bz2
+  cd rk3566_linux_source\
+  ./build.sh -h             # view the build command
+  ./build.sh device/rockchip/rk356x/BoardConfig-rk3566-evb2-lp4x-v10.mk
+  
+Step 2, compile uboot
+
+.. code-block::
+
+  ./build.sh uboot 
+  
+Step 3, compile the kernel
+
+.. code-block::
+   ./build.sh kernel
 
 .. note::
  It will pop out **configuration the IO power Domain Map** window when first time compile kernel, you need to configure according to the table below.
@@ -1071,6 +1134,38 @@ official website http://www.ubuntu.com/ to download and install ubuntu operating
 .. figure:: ./image/IO-power-Domain-Map.png
    :align: center
    :alt: IO-power-Domain-Map
+   
+**kernel.img, resource.img and boot.img** are generated in :file:`rk3566_linux_source/kernel` 
+
+Step 4, compile recovery
+
+.. code-block::
+
+   ./build.sh recovery
+
+Step 5, compile buildroot
+
+.. code-block::
+
+   ./build.sh buildroot	
+   # or
+   ./build.sh rootfs
+
+Step 6, Generated image file
+
+.. code-block::
+
+  ./mkfirmware.sh
+  cd rockdev
+  ls
+
+Images are generated in current directory. 
+
+After compilation, execute the follow command to clean the build.
+
+.. code-block::
+
+  ./build.sh cleanall
 
 3 Images Operation
 -------------------
