@@ -991,15 +991,72 @@ J6 / J17 (4-pin connector)
 2.6 USB3.0/SATA3.0 (J25, J34)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The USB3.0 and SATA3.0 share the same USB signal. The SW1 is a DIP
+Switch for the selection of USB3.0 or SATA.
+
++-----------------+----------------+-----------------+-----------------+
+| **SW1**         | **1**          | **2**           | |image3|        |
+|                 |                |                 |                 |
+| **Mode**        |                |                 |                 |
++=================+================+=================+=================+
+| USB3.0          | OFF            | OFF             | |image4|        |
++-----------------+----------------+-----------------+-----------------+
+| SATA            | ON             | ON              | |image5|        |
++-----------------+----------------+-----------------+-----------------+
+
 .. figure:: ./image/SATA3.0.png
   :alt: SATA3.0
   :align: center
   :height: 100px
   
++---+-------------+---------------+---+------------+----------------+
+| P | Signal      | Description   | P | Signal     | Description    |
+| i |             |               | i |            |                |
+| n |             |               | n |            |                |
++===+=============+===============+===+============+================+
+| 1 | V           | USB Power. DC | 2 | USB3_DM    | USB data-      |
+|   | CC5V0_HOST1 | 5V            |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | USB3_DP     | USB Data+     | 4 | GND        | Ground         |
++---+-------------+---------------+---+------------+----------------+
+| 5 | USB3_SSRXN  | USB SSRX      | 6 | USB3_SSRXP | USB SSRX Data+ |
+|   |             | Data-         |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 7 | GND         | Ground        | 8 | USB3_SSTXN | USB SSTX Data- |
++---+-------------+---------------+---+------------+----------------+
+| 9 | USB3_SSTXP  | USB SSTX      |   |            |                |
+|   |             | Data+         |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+
+EM3566 on-board 7-pin SATA Interface. It requires 5V power supply.
+
++---+------------+----------------+---+------------+----------------+
+| P | Signal     | Description    | P | Signal     | Description    |
+| i |            |                | i |            |                |
+| n |            |                | n |            |                |
++===+============+================+===+============+================+
+| 1 | GND        | Ground         | 2 | USB3_SSTXP | USB SSTX Data+ |
++---+------------+----------------+---+------------+----------------+
+| 3 | USB3_SSTXN | USB SSTX Data- | 4 | GND        | Ground         |
++---+------------+----------------+---+------------+----------------+
+| 5 | USB3_SSRXN | USB SSRX Data- | 6 | USB3_SSRXP | USB SSRX Data+ |
++---+------------+----------------+---+------------+----------------+
+| 7 | GND        | Ground         |   |            |                |
++---+------------+----------------+---+------------+----------------+
+
 .. figure:: ./image/PH-2A.jpg
   :alt: PH-2A
   :align: center
   :height: 90px
+  
++---+-------------+---------------+---+--------------+---------------+
+| P | Signal      | Description   | P | Signal       | Description   |
+| i |             |               | i |              |               |
+| n |             |               | n |              |               |
++===+=============+===============+===+==============+===============+
+| 1 | GND         | Ground        | 2 | VCC5V0_HOST1 | SATA power.   |
+|   |             |               |   |              | DC 5V         |
++---+-------------+---------------+---+--------------+---------------+
 
 2.7 Ethernet (JP1)
 ^^^^^^^^^^^^^^^^^^^^
@@ -1008,14 +1065,136 @@ J6 / J17 (4-pin connector)
   :alt: RJ45
   :align: center
   :height: 100px
+  
+EM3566 adopts RTL8211F as the Ethernet chip. RJ45 connector.
+
+**Feature**
+
+-  Supports 10/100/1000-Mbps data transfer rates with the MII/RGMII
+   interfaces
+-  Supports both full-duplex and half-duplex operation
+-  Implements the full 802.3 specification
+
++---+-----------+-------------------+---+-------+--------------------+
+| P | Signal    | Description       | P | S     | Description        |
+| i |           |                   | i | ignal |                    |
+| n |           |                   | n |       |                    |
++===+===========+===================+===+=======+====================+
+| 1 | DA+       | Bi-directional    | 2 | DA-   | Bi-directional     |
+|   |           | transmit/receive  |   |       | transmit/receive   |
+|   |           | pair A            |   |       | pair A             |
++---+-----------+-------------------+---+-------+--------------------+
+| 3 | DB+       | Bi-directional    | 4 | DC+   | Bi-directional     |
+|   |           | transmit/receive  |   |       | transmit/receive   |
+|   |           | pair B            |   |       | pair C             |
++---+-----------+-------------------+---+-------+--------------------+
+| 5 | DC-       | Bi-directional    | 6 | DB-   | Bi-directional     |
+|   |           | transmit/receive  |   |       | transmit/receive   |
+|   |           | pair C            |   |       | pair B             |
++---+-----------+-------------------+---+-------+--------------------+
+| 7 | DD+       | Bi-directional    | 8 | DD-   | Bi-directional     |
+|   |           | transmit/receive  |   |       | transmit/receive   |
+|   |           | pair D            |   |       | pair D             |
++---+-----------+-------------------+---+-------+--------------------+
+| 9 | GND       | Ground            | 1 | GND   | Ground             |
+|   |           |                   | 0 |       |                    |
++---+-----------+-------------------+---+-------+--------------------+
+| 1 | LED2      | LED2              | 1 | GND   | Ground             |
+| 1 | /CFG_LDO1 |                   | 2 |       |                    |
++---+-----------+-------------------+---+-------+--------------------+
+| 1 | LED1      | LED1              | 1 | GND   | Ground             |
+| 3 | /CFG_LDO0 |                   | 4 |       |                    |
++---+-----------+-------------------+---+-------+--------------------+
 
 2.8 eDP/LVDS/MIPI Panel (CON1)
 ^^^^^^^^^^^^^^^^^^^^^^
+EM3566 supports 10.1-inch HD capacitive LCD, up to 1280 x 800
+resolution.
 
 .. figure:: ./image/MIPI_Header.jpg
   :alt: MIPI_Header
   :align: center
   :height: 160px
+
++---+-------------+---------------+---+------------+----------------+
+| P | Signal      | Description   | P | Signal     | Description    |
+| i |             |               | i |            |                |
+| n |             |               | n |            |                |
++===+=============+===============+===+============+================+
+| 1 | VDD5V       | 5V power      | 2 | VDD5V      | 5V power       |
+|   |             | supply        |   |            | supply         |
++---+-------------+---------------+---+------------+----------------+
+| 3 | GND         | Ground        | 4 | GND        | Ground         |
++---+-------------+---------------+---+------------+----------------+
+| 5 | VCC3V3_LCD  | 3.3V power    | 6 | VCC3V3_LCD | 3.3V power     |
+|   |             | supply        |   |            | supply         |
++---+-------------+---------------+---+------------+----------------+
+| 7 | GND         | Ground        | 8 | GND        | Ground         |
++---+-------------+---------------+---+------------+----------------+
+| 9 | I2C2_SCL_TP | TP I2C serial | 1 | I          | TP I2C data    |
+|   |             | clock line    | 0 | 2C2_SDA_TP | line           |
++---+-------------+---------------+---+------------+----------------+
+| 1 | TOUCH_RST   | Touch screen  | 1 | TOUCH_INT  | Touch screen   |
+| 1 |             | reset         | 2 |            | Interrupt      |
++---+-------------+---------------+---+------------+----------------+
+| 1 | LCD_PWREN_H | LCD Power     | 1 | LCD_BL_PWM | LCD Backlight  |
+| 3 |             | enable high   | 4 |            | PWM output     |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 1 | GND        | GND            |
+| 5 |             |               | 6 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | EDP_TX_AUXP | eDP CH-AUX    | 1 | E          | eDP CH-AUX     |
+| 7 |             | positive      | 8 | DP_TX_AUXP | negative       |
+|   |             | differential  |   |            | differential   |
+|   |             | output        |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 2 | GND        | Ground         |
+| 9 |             |               | 0 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | EDP_TX_D3P  | eDP data lane | 2 | EDP_TX_D3N | eDP data lane  |
+| 1 |             | positive      | 2 |            | negative       |
+|   |             | output        |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 2 | EDP_TX_D2P  | eDP data lane | 2 | EDP_TX_D2N | eDP data lane  |
+| 3 |             | positive      | 4 |            | negative       |
+|   |             | output        |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 2 | EDP_TX_D1P  | eDP data lane | 2 | EDP_TX_D1N | eDP data lane  |
+| 5 |             | positive      | 6 |            | negative       |
+|   |             | output        |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 2 | EDP_TX_D0P  | eDP data lane | 2 | EDP_TX_D0N | eDP data lane  |
+| 7 |             | positive      | 8 |            | negative       |
+|   |             | output        |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 2 | MIPI_DSI_   | MIPI/LVDS     | 3 | M          | MIPI/LVDS      |
+| 9 | TX0_CLKP/LV | clock         | 0 | IPI_DSI_TX | clock negative |
+|   | DS_TX0_CLKP | positive      |   | 0_CLKN/LVD |                |
+|   |             |               |   | S_TX0_CLKN |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | GND         | Ground        | 3 | GND        | Ground         |
+| 1 |             |               | 2 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | MIPI_DS     | MIPI/LVDS     | 3 | MIPI_DSI_  | MIPI/LVDS data |
+| 3 | I_TX0_D3P/L | data lane     | 4 | TX0_D3N/LV | lane negative  |
+|   | VDS_TX0_D3P | positive      |   | DS_TX0_D3N | output         |
+|   |             | output        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | MIPI_DS     | MIPI/LVDS     | 3 | MIPI_DSI_  | MIPI/LVDS data |
+| 5 | I_TX0_D2P/L | data lane     | 6 | TX0_D2N/LV | lane negative  |
+|   | VDS_TX0_D2P | positive      |   | DS_TX0_D2N | output         |
+|   |             | output        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | MIPI_DS     | MIPI/LVDS     | 3 | MIPI_DSI_  | MIPI/LVDS data |
+| 7 | I_TX0_D1P/L | data lane     | 8 | TX0_D1N/LV | lane negative  |
+|   | VDS_TX0_D1P | positive      |   | DS_TX0_D1N | output         |
+|   |             | output        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | MIPI_DS     | MIPI/LVDS     | 4 | MIPI_DSI_  | MIPI/LVDS data |
+| 9 | I_TX0_D0P/L | data lane     | 0 | TX0_D0N/LV | lane negative  |
+|   | VDS_TX0_D0P | positive      |   | DS_TX0_D0N | output         |
+|   |             | output        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
 
 2.9 BT656 (J26) 
 ^^^^^^^^^^^^^^^^
@@ -1025,6 +1204,34 @@ J6 / J17 (4-pin connector)
   :align: center
   :height: 120px
   
+J26 is used to connect MEMS module for Video output.
+
++---+-------------+---------------+---+-------------+----------------+
+| P | Signal      | Description   | P | Signal      | Description    |
+| i |             |               | i |             |                |
+| n |             |               | n |             |                |
++===+=============+===============+===+=============+================+
+| 1 | VCC3V3_SYS  | 3.3V power    | 2 | VCC3V3_SYS  | 3.3V power     |
+|   |             | supply        |   |             | supply         |
++---+-------------+---------------+---+-------------+----------------+
+| 3 | GND         | Ground        | 4 | GND         | Ground         |
++---+-------------+---------------+---+-------------+----------------+
+| 5 | VOP_        | BT656 data    | 6 | VOP_        | BT656 data     |
+|   | BT656_D0_M1 |               |   | BT656_D1_M1 |                |
++---+-------------+---------------+---+-------------+----------------+
+| 7 | VOP_        | BT656 data    | 8 | VOP_        | BT656 data     |
+|   | BT656_D2_M1 |               |   | BT656_D3_M1 |                |
++---+-------------+---------------+---+-------------+----------------+
+| 9 | VOP_        | BT656 data    | 1 | VOP_        | BT656 data     |
+|   | BT656_D4_M1 |               | 0 | BT656_D5_M1 |                |
++---+-------------+---------------+---+-------------+----------------+
+| 1 | VOP_        | BT656 data    | 1 | VOP_        | BT656 data     |
+| 1 | BT656_D6_M1 |               | 2 | BT656_D7_M1 |                |
++---+-------------+---------------+---+-------------+----------------+
+| 1 | VOP_B       | BT656 clock   | 1 | NC          | Not connect    |
+| 3 | T656_CLK_M1 |               | 4 |             |                |
++---+-------------+---------------+---+-------------+----------------+
+
 2.10 GPIO (CON4)
 ^^^^^^^^^^^^^^^^
 
