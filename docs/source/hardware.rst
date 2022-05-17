@@ -813,66 +813,283 @@ output/input.
 
 .. figure:: ./image/OPT.gif
   :alt: OPT
- 
+
+The Optical Adaptor DLT1120 is used for S/PDIF data output.
+
++---+--------------+---------------+---+------------+----------------+
+| P | Signal       | Description   | P | Signal     | Description    |
+| i |              |               | i |            |                |
+| n |              |               | n |            |                |
++===+==============+===============+===+============+================+
+| 1 | SPDIF_TX_M2  | SPDIF signal  | 2 | VCC3V3_SYS | 3.3V power     |
+|   |              |               |   |            | supply         |
++---+--------------+---------------+---+------------+----------------+
+| 3 | GND          | Ground        |   |            |                |
++---+--------------+---------------+---+------------+----------------+
+
 2.3 HDMI OUT (J4)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/HDMI.gif
+  :alt: HDMI
+  
+EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
+
+-  HPD input analog comparator
+-  13.5–600MHz input reference clock
+-  Up to 10-bit Deep Color modes
+-  Up to 18Gbps aggregate bandwidth
+-  Up to 1080p at 120Hz and 4kx2k at 60Hz HDTV display resolutions and
+   up to QXGA graphic display resolutions
+-  3-D video formats
+-  Link controller flexible interface with 30-, 60- or 120-bit SDR data
+   access
+
++---+---------------+--------------+---+--------------+--------------+
+| P | Signal        | Description  | P | Signal       | Description  |
+| i |               |              | i |              |              |
+| n |               |              | n |              |              |
++===+===============+==============+===+==============+==============+
+| 1 | HDMI_TX2P     | HDMI data 2  | 2 | GND          | Ground       |
+|   |               | pair         |   |              |              |
++---+---------------+--------------+---+--------------+--------------+
+| 3 | HDMI_TX2N     |              | 4 | HDMI_TX1P    | HDMI data 1  |
+|   |               |              |   |              | pair         |
++---+---------------+--------------+---+--------------+--------------+
+| 5 | GND           | Ground       | 6 | HDMI_TX1N    |              |
++---+---------------+--------------+---+--------------+--------------+
+| 7 | HDMI_TX0P     | HDMI data 0  | 8 | GND          | Ground       |
+|   |               | pair         |   |              |              |
++---+---------------+--------------+---+--------------+--------------+
+| 9 | HDMI_TX0N     |              | 1 | HDMI_TXCLKP  | HDMI clock   |
+|   |               |              | 0 |              | pair         |
++---+---------------+--------------+---+--------------+--------------+
+| 1 | GND           | Ground       | 1 | HDMI_TXCLKN  |              |
+| 1 |               |              | 2 |              |              |
++---+---------------+--------------+---+--------------+--------------+
+| 1 | HDMITX_CEC_M0 | Consumer     | 1 | NC           | Not connect  |
+| 3 |               | electronics  | 4 |              |              |
+|   |               | control      |   |              |              |
++---+---------------+--------------+---+--------------+--------------+
+| 1 | HDMI_SCL      | HDMI serial  | 1 | HDMI_SDA     | HDMI serial  |
+| 5 |               | clock        | 6 |              | data         |
++---+---------------+--------------+---+--------------+--------------+
+| 1 | GND           | Ground       | 1 | HDMI_VCC     | 5V power     |
+| 7 |               |              | 8 |              | supply       |
++---+---------------+--------------+---+--------------+--------------+
+| 1 | HDMI_TX_HPDIN | Hot Plug     |   |              |              |
+| 9 |               | Detect       |   |              |              |
++---+---------------+--------------+---+--------------+--------------+
 
 2.4 USB OTG (J29)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: Micro_USB
+  
+EM3566 OTG is a Micro USB2.0 port, it is used to download image and ADB
+transfer file.
+
+**Feature**
+
+-  Compatible with USB OTG2.0 specification
+-  Supports USB 2.0 High Speed (480Mbps), Full Speed (12Mbps) and Low
+   Speed (1.5Mbps) operation in host mode
+-  Supports USB 2.0 High Speed (480 Mbps) and Full Speed (12 Mbps)
+   operation in peripheral mode.
+-  Hardware support for OTG signaling, session request protocol, and
+   host negotiation protocol.
+
++---+-------------+---------------+---+--------------+--------------+
+| P | Signal      | Description   | P | Signal       | Description  |
+| i |             |               | i |              |              |
+| n |             |               | n |              |              |
++===+=============+===============+===+==============+==============+
+| 1 | VCC_OTG     | USB OTG Power | 2 | USB_OTG0DM   | USB OTG0     |
+|   |             |               |   |              | data -       |
++---+-------------+---------------+---+--------------+--------------+
+| 3 | USB_OTG0DP  | USB OTG0      | 4 | USB_OTG0ID   | USB OTG0 ID  |
+|   |             | data+         |   |              | indicator    |
++---+-------------+---------------+---+--------------+--------------+
+| 5 | GND         | Ground        |   |              |              |
++---+-------------+---------------+---+--------------+--------------+
 
 2.5 USB HOST (P3, J6, J17)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Dual-USB.gif
+  :alt: Dual-USB
+  
+.. figure:: ./image/PH-4A.gif
+  :alt: PH-4A
+  
+The 4-ch USB HOST interfaces are extended by GL850G which is a fully
+compliant with the USB 2.0 hub specification and is designed to work
+with USB host as a high-speed hub. It is used to connect USB mouse, U
+disk, USB camera, and other USB devices. Support hot-plug.
+
+**Feature**
+
+-  Supports high-speed (480Mbps), full-speed (12Mbps) and low-speed
+   (1.5Mbps) mode
+-  Supports automatic switching between bus- and self-powered modes
+-  Provides 16 host mode channels
+-  Support periodic out channel in host mode
+
+Dual-USB
++---+------------+----------------+---+------------+----------------+
+| P | Signal     | Description    | P | Signal     | Description    |
+| i |            |                | i |            |                |
+| n |            |                | n |            |                |
++===+============+================+===+============+================+
+| 1 | VCC_USB    | USB Power. DC  | 2 | USB_DM1    | USB data-      |
+|   |            | 5V             |   |            |                |
++---+------------+----------------+---+------------+----------------+
+| 3 | USB_DP1    | USB Data+      | 4 | GND        | Ground         |
++---+------------+----------------+---+------------+----------------+
+| 5 | VCC_USB    | USB Power. DC  | 6 | USB_DM2    | USB data-      |
+|   |            | 5V             |   |            |                |
++---+------------+----------------+---+------------+----------------+
+| 7 | USB_DP2    | USB Data+      | 8 | GND        | Ground         |
++---+------------+----------------+---+------------+----------------+
+
+J6 / J17 (4-pin connector)
++---+------------+----------------+---+------------+----------------+
+| P | Signal     | Description    | P | Signal     | Description    |
+| i |            |                | i |            |                |
+| n |            |                | n |            |                |
++===+============+================+===+============+================+
+| 1 | VD         | 5V power       | 2 | US         | USB data-      |
+|   | D5V0_HOST2 | supply         |   | B_DM4(J6)/ |                |
+|   |            |                |   | US         |                |
+|   |            |                |   | B_DM3(J17) |                |
++---+------------+----------------+---+------------+----------------+
+| 3 | US         | USB Data+      | 4 | GND        | Ground         |
+|   | B_DP4(J6)/ |                |   |            |                |
+|   | US         |                |   |            |                |
+|   | B_DP3(J17) |                |   |            |                |
++---+------------+----------------+---+------------+----------------+
 
 2.6 USB3.0/SATA3.0 (J25, J34)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ./image/Dual-USB.gif
+  :alt: 
+  
+.. figure:: ./image/PH-4A.gif
+  :alt: 
+
 2.7 Ethernet (JP1)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
 2.8 eDP/LVDS/MIPI Panel (CON1)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-2.9 BT656 (J26) 
-^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
+2.9 BT656 (J26) 
+^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+  
 2.10 GPIO (CON4)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
 2.11 ADC (J18)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
 2.12 MIPI Camera (J30, J31)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+  
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+
 2.13 IR (J24)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
 2.14 UART (J10, J11, J12)
 ^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+  
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+  
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+
 2.15 RS485 (J32, JP2)
 ^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+  
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+
 2.16 Button (K3)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+  
 
 2.17 4G Module (CON2, P4)	25
 ^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+  
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+
 2.18 Micro SD (J3) 
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
 2.19 WiFi&Bluetooth (U20)
 ^^^^^^^^^^^^^^^^^^^^^^
 
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
+
 2.20 SSD (CON3)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
 2.21 GPS (MU4)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
 2.22 RTC (BT1)
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
+
+.. figure:: ./image/Micro_USB.gif
+  :alt: 
 
 
 3 Product Configurations
