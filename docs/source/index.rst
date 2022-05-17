@@ -13,4 +13,3 @@ Contents
 
    hardware
    software
-   accessories
