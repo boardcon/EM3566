@@ -547,6 +547,8 @@ If the SSD has been automatically mounted, execute the follow command to test
 The EM3566 supports remote control. Connect IR receiver to the IR port. 
 
 .. figure:: ./image/EM3566_SBC_Android11_IR.jpg
+   :aline: center
+   :width: 400px
    :alt: test IR
 
 Debian
@@ -1031,6 +1033,8 @@ Connect IR receiver to the IR connector then power on. Execute follow command to
    :alt: test IR
 
 .. figure:: ./image/EM3566_SBC_Android11_IR.jpg
+   :align: center
+   :width: 400px
    :alt: connect IR
   
 Buildroot
