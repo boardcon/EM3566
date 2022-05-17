@@ -546,10 +546,9 @@ If the SSD has been automatically mounted, execute the follow command to test
 
 The EM3566 supports remote control. Connect IR receiver to the IR port. 
 
-.. figure:: ./image/EM3566_SBC_Android11_IR.jpg
-   :aline: center
-   :width: 400px
-   :alt: test IR
+   :align: center
+   :width: 300px
+   :alt: connect IR
 
 Debian
 =========
@@ -1034,8 +1033,9 @@ Connect IR receiver to the IR connector then power on. Execute follow command to
 
 .. figure:: ./image/EM3566_SBC_Android11_IR.jpg
    :align: center
-   :width: 400px
+   :width: 300px
    :alt: connect IR
+  
   
 Buildroot
 =========
@@ -1258,20 +1258,95 @@ Step 3, Click *Run* to flash the image.
 5.1 HDMI Display
 ^^^^^^^^^^^^^^^^^^^
 
+Connect the board and monitor with a HDMI cable, then start up.
+
+.. figure:: ./image/EM3566_Buildroot_HDMI.jpg
+   :alt: HDMI Display
+   
+.. Note::
+
+ Note: The system default HDMI display. If use LVDS, please reflash update_lvds.img, or boot-mipi_10.1inch_lcd.img for MIPI LCD.
+ 
 5.2 SD Card
 ^^^^^^^^^^^^^^^^^^^
 
-5.3 USB Host
-^^^^^^^^^^^^^^^^^^^
+EM3566 supports SD Hot-plug
 
+.. figure:: ./image/EM3566_Buildroot_menu.jpg
+   :alt: EM3566_Buildroot_menu
+   
+.. figure:: ./image/EM3566_Buildroot_SD.gif
+   :alt: SD Test
+ 
+5.3 USB Host
+^^^^^^^^^^^^^
+
+The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices.
+
+.. figure:: ./image/EM3566_Buildroot_file_manager.gif
+   :alt: U-Disk
+ 
 5.4 Video player
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
+
+Copy video file to SD_card/U_disk then insert it to the board. After system boot open SD_card/U_disk and click video file to play.
+
+.. figure:: ./image/EM3566_Buildroot_Video_Player.gif
+   :alt: Video file
+   
+.. figure:: ./image/EM3566_Buildroot_video.jpg
+   :alt: Video play
 
 5.5 Ethernet
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+
+Connect the Board and router with an Ethernet cable (default DHCP=Yes). User can ping URL/IP at terminal.
+
+.. code-block::
+   ping www.boardcon.com
+
+.. figure:: ./image/EM3566_Buildroot_Ping.png
+   :alt: Ping IP
 
 5.6 Record
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^
+
+Execute follow command to start recording, speech in front of the microphone then can record.
+
+.. code-block::
+
+   aplay -l                       # View audio equipment
+
+List of player device (LVDS display)
+
+.. figure:: ./image/EM3566_Buildroot_audio.png
+   :alt: List of player device
+
+.. code-block::
+
+   arecord -Dhw:0,0 -d 10 -f cd -r 44100 -c 2 -t wav test.wav  # recording and save as test.wav 
+   
+After finish recording, execute follow command to play record file by earphone. 
+
+.. code-block::
+
+  aplay test.wav
+    
+.. figure:: ./image/EM3566_Buildroot_audio_play.png
+   :alt: play recording file
+   
+If it is HDMI display, execute follow command to test record:
+
+.. code-block::
+
+  arecord -Dhw:1,0 -d 10 -f cd -r 44100 -c 2 -t wav test.wav
+  
+After finish recording, execute follow command to play.
+
+.. code-block::
+
+  aplay test.wav            # HDMI output
+  aplay -Dhw:1,0 test.wav   # headphone output
 
 5.7 RTC
 ^^^^^^^^^^^^^^^^^^^
