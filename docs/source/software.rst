@@ -548,11 +548,6 @@ The EM3566 supports remote control. Connect IR receiver to the IR port.
 
 .. figure:: ./image/EM3566_SBC_Android11_IR.jpg
    :alt: test IR
-   :width: 400px
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_3.jpg
-   :alt: test IR
-   :width: 200px
 
 Debian
 =========
@@ -1035,7 +1030,7 @@ Connect IR receiver to the IR connector then power on. Execute follow command to
 .. figure:: ./image/EM3566_Debian_30.png
    :alt: test IR
 
-.. figure:: ./image/EEM3566_SBC_Android11_IR.jpg
+.. figure:: ./image/EM3566_SBC_Android11_IR.jpg
    :alt: connect IR
   
 Buildroot
