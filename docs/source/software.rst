@@ -983,20 +983,61 @@ Connect the UARTs RX and TX with the test cable. Execute the follow command to t
   ./com /dev/ttyS5 115200 8 0 1      # Test UART5
 
 .. figure:: ./image/EM3566_Debian_25.png
-   :alt: test UART1
+   :alt: test UART
  
-5.12
+5.13 M.2 SATA
+^^^^^^^^^^^^^^
+
+Format SSD to ext4 file system on ubuntu system before test: 
+
+.. code-block::
+
+  mke2fs -t ext4 /dev/block/nvme0n1 
+  
+Then connect the SSD to board. Execute the follow command to mount. 
+
+.. code-block::
+
+ mkdir /mnt/ssd 
+ mount -t ext4 /dev/nvme0n1 /mnt/ssd 
+ ls /mnt/ssd
+
+.. figure:: ./image/EM3566_Debian_26.png
+   :alt: test SSD
+
+5.14 4G (EC25/EC20 model)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.13
+.. code-block::
+
+ ifconfig eth0 down 
+ cd  /etc/ppp/peers
+ pppd call quectel-ppp & 
+ ping www.boardcon.com
+
+.. figure:: ./image/EM3566_Debian_27.png
+   :alt: test 4G
+   
+.. figure:: ./image/EM3566_Debian_28.png
+   :alt: test 4G
+
+.. figure:: ./image/EM3566_Debian_29.png
+   :alt: test 4G
+   
+5.15 IR
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.14
-^^^^^^^^^^^^^^^^^^^^^^^^
+Connect IR receiver to the IR connector then power on. Execute follow command to test.
 
-5.15
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. code-block::
+   cat /dev/input/event0
+   
+.. figure:: ./image/EM3566_Debian_30.png
+   :alt: test IR
 
+.. figure:: ./image/EEM3566_SBC_Android11_IR.jpg
+   :alt: connect IR
+  
 Buildroot
 =========
 
