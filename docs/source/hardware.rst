@@ -760,6 +760,9 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 2.1 Power (P1)
 ^^^^^^^^^^^^^^^^
 
+.. figure:: ./image/power_adapter.png
+  :alt: power_adapter
+  
 The DC JACK is 5.5 x 2.1mm, 3-pin plug Type. Typical 12V/3A DC adapter. 
 
 +---+-------------+------------------+---+------+--------------------+
@@ -778,7 +781,7 @@ The DC JACK is 5.5 x 2.1mm, 3-pin plug Type. Typical 12V/3A DC adapter.
 ^^^^^^^^^^^^^^^
 -  **Headphone (J7, 3.5mm jack)**
 
-.. figure:: ./image/PJ327E.gif
+.. figure:: ./image/PJ-327E.jpg
   :alt: PJ327E
 
 The EM3566 adopts audio codec ES8388 to provide stereo audio
@@ -811,7 +814,7 @@ output/input.
 
 -  **SPIF-OUT (DJ2)**
 
-.. figure:: ./image/OPT.gif
+.. figure:: ./image/OPT.jpg
   :alt: OPT
 
 The Optical Adaptor DLT1120 is used for S/PDIF data output.
@@ -830,7 +833,7 @@ The Optical Adaptor DLT1120 is used for S/PDIF data output.
 2.3 HDMI OUT (J4)
 ^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/HDMI.gif
+.. figure:: ./image/HDMI.jpg
   :alt: HDMI
   
 EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
@@ -884,7 +887,7 @@ EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
 2.4 USB OTG (J29)
 ^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
+.. figure:: ./image/Micro_USB.jpg
   :alt: Micro_USB
   
 EM3566 OTG is a Micro USB2.0 port, it is used to download image and ADB
@@ -917,10 +920,10 @@ transfer file.
 2.5 USB HOST (P3, J6, J17)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Dual-USB.gif
+.. figure:: ./image/Dual-USB.jpg
   :alt: Dual-USB
   
-.. figure:: ./image/PH-4A.gif
+.. figure:: ./image/PH-4A.jpg
   :alt: PH-4A
   
 The 4-ch USB HOST interfaces are extended by GL850G which is a fully
@@ -975,124 +978,122 @@ J6 / J17 (4-pin connector)
 2.6 USB3.0/SATA3.0 (J25, J34)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Dual-USB.gif
-  :alt: 
+.. figure:: ./image/SATA3.0.png
+  :alt: SATA3.0
   
-.. figure:: ./image/PH-4A.gif
+.. figure:: ./image/PH-2A.jpg
   :alt: 
 
 2.7 Ethernet (JP1)
 ^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/RJ45.jpg
+  :alt: RJ45
 
 2.8 eDP/LVDS/MIPI Panel (CON1)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/MIPI_Header.jpg
+  :alt: MIPI_Header
 
 2.9 BT656 (J26) 
 ^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/VOP_Header.jpg
+  :alt: VOP_Header
   
 2.10 GPIO (CON4)
 ^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/CIP_Header.jpg
+  :alt: CIP_Header
 
 2.11 ADC (J18)
 ^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/PH-4A.jpg
+  :alt: PH-4A
 
 2.12 MIPI Camera (J30, J31)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/LCD_connector.jpg
+  :alt: LCD_connector
   
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
 
 2.13 IR (J24)
 ^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/PH-3A.jpg
+  :alt: PH-3A
 
 2.14 UART (J10, J11, J12)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/PH-3A.jpg
+  :alt: PH-3A
   
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/PH-4A.jpg
+  :alt: PH-4A
   
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
 
 2.15 RS485 (J32, JP2)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/PH-3A-1.jpg
+  :alt: PH-3A
   
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/Pin_header.jpg
+  :alt: 2-pin header
 
 2.16 Button (K3)
 ^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
+.. figure:: ./image/button.jpg
   :alt: 
   
 
 2.17 4G Module (CON2, P4)	25
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/PCIe.jpg
+  :alt: PCIe
   
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
-
+.. figure:: ./image/4G.jpg
+  :alt: 4G model
+  
+.. figure:: ./image/Nano_sim.jpg
+  :alt: Nano_sim
+  
 2.18 Micro SD (J3) 
 ^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/Micro_SD.jpg
+  :alt: micro SD
 
 2.19 WiFi&Bluetooth (U20)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/wifi.jpg
+  :alt: wifi model
 
 2.20 SSD (CON3)
 ^^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/mPCIe.jpg
+  :alt: mPCIe
 
 2.21 GPS (MU4)
 ^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
+.. figure:: ./image/GPS.jpg
+  :alt: GPS model
 
 2.22 RTC (BT1)
 ^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/Micro_USB.gif
-  :alt: 
-
+.. figure:: ./image/RTC.JPG
+  :alt: RTC battery
 
 3 Product Configurations
 --------------------------
