@@ -1252,6 +1252,36 @@ J26 is used to connect MEMS module for Video output.
   :align: center
   :height: 100px
 
+The GPIO is a 14-pin header connector. The pins can be defined as data
+input / output.
+
++---+-------------+---------------+---+-------------+----------------+
+| P | Signal      | Description   | P | Signal      | Description    |
+| i |             |               | i |             |                |
+| n |             |               | n |             |                |
++===+=============+===============+===+=============+================+
+| 1 | CIF         | CIF 8BIT      | 2 | CI          | GPIO           |
+|   | _8BIT_CLKIN | clock/GPIO    |   | F_8BIT_HREF |                |
++---+-------------+---------------+---+-------------+----------------+
+| 3 | CIF_8BIT_D7 | CIF 8BIT      | 4 | CIF_8BIT_D6 | CIF 8BIT       |
+|   |             | data/GPIO     |   |             | data/GPIO      |
++---+-------------+---------------+---+-------------+----------------+
+| 5 | CIF_8BIT_D5 | CIF 8BIT      | 6 | CIF_8BIT_D4 | CIF 8BIT       |
+|   |             | data/GPIO     |   |             | data/GPIO      |
++---+-------------+---------------+---+-------------+----------------+
+| 7 | CIF_8BIT_D3 | CIF 8BIT      | 8 | CIF_8BIT_D2 | CIF 8BIT       |
+|   |             | data/GPIO     |   |             | data/GPIO      |
++---+-------------+---------------+---+-------------+----------------+
+| 9 | CIF_8BIT_D1 | CIF 8BIT      | 1 | CIF_8BIT_D0 | CIF 8BIT       |
+|   |             | data/GPIO     | 0 |             | data/GPIO      |
++---+-------------+---------------+---+-------------+----------------+
+| 1 | VDDIO_18    | 1.8V IO       | 1 | VDDIO_18    | 1.8V IO        |
+| 1 |             | voltage       | 2 |             | voltage        |
++---+-------------+---------------+---+-------------+----------------+
+| 1 | GND         | Ground        | 1 | GND         | Ground         |
+| 3 |             |               | 4 |             |                |
++---+-------------+---------------+---+-------------+----------------+
+
 2.11 ADC (J18)
 ^^^^^^^^^^^^^^^^
 
@@ -1260,15 +1290,179 @@ J26 is used to connect MEMS module for Video output.
   :align: center
   :height: 90px
 
+4pin connector. It is used to connect the ADC device.
+
++---+--------------+---------------+---+------------+----------------+
+| P | Signal       | Description   | P | Signal     | Description    |
+| i |              |               | i |            |                |
+| n |              |               | n |            |                |
++===+==============+===============+===+============+================+
+| 1 | VDDIO_18     | 1.8V power    | 2 | SARADC_VI  | ADC signal     |
+|   |              | supply        |   | N2_HP_HOOK |                |
++---+--------------+---------------+---+------------+----------------+
+| 3 | SARADC_VIN3  | ADC signal    | 4 | GND        | Ground         |
++---+--------------+---------------+---+------------+----------------+
+
 2.12 MIPI Camera (J30, J31)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+EM3566 features two 26-pin MIPI connectors for camera (OV13850).
+
+**Features**
+
+-  Support 4 data lane, providing up to 6Gbps data rate
+-  Support 1080p@60fps output
+-  Lane operation ranging from 80 Mbps to 1.5Gbps in forward direction.
 
 .. figure:: ./image/LCD_connector.png
   :alt: LCD_connector
   :align: center
   :height: 90px
   
-
++---+-------------+---------------+---+------------+----------------+
+| J |             |               |   |            |                |
+| 3 |             |               |   |            |                |
+| 0 |             |               |   |            |                |
++===+=============+===============+===+============+================+
+| P | Signal      | Description   | P | Signal     | Description    |
+| i |             |               | i |            |                |
+| n |             |               | n |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 2 | GND        | Ground         |
++---+-------------+---------------+---+------------+----------------+
+| 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
+|   |             |               |   |            | supply         |
++---+-------------+---------------+---+------------+----------------+
+| 5 | I2C4        | I2C data line | 6 | I2C4_      | I2C clock line |
+|   | _SDA_M0_1V8 |               |   | SCL_M0_1V8 |                |
++---+-------------+---------------+---+------------+----------------+
+| 7 | NC          | Not connect   | 8 | A          | DVP 2.8V power |
+|   |             |               |   | VDD2V8_DVP | supply         |
++---+-------------+---------------+---+------------+----------------+
+| 9 | CA          | Camera reset  | 1 | CIF_       | GPIO4_B7_d     |
+|   | MERAB_RST_L |               | 0 | 8BIT_VSYNC |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 1 | MIPI_      | MIPI CSI       |
+| 1 |             |               | 2 | CSI_RX_D3P | positive       |
+|   |             |               |   |            |                |
+|   |             |               |   |            | differential   |
+|   |             |               |   |            | data line      |
+|   |             |               |   |            |                |
+|   |             |               |   |            | transceiver    |
+|   |             |               |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 1 | MIPI        | IMIPI CSI     | 1 | GND        | Ground         |
+| 3 | _CSI_RX_D3N | negative      | 4 |            |                |
+|   |             |               |   |            |                |
+|   |             | differential  |   |            |                |
+|   |             | data line     |   |            |                |
+|   |             |               |   |            |                |
+|   |             | transceiver   |   |            |                |
+|   |             | output        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | MIPI        | MIPI CSI      | 1 | MIPI_      | MIPI CSI       |
+| 5 | _CSI_RX_D2P | positive      | 6 | CSI_RX_D2N | negative       |
+|   |             |               |   |            |                |
+|   |             | differential  |   |            | differential   |
+|   |             | data line     |   |            | data line      |
+|   |             |               |   |            |                |
+|   |             | transceiver   |   |            | transceiver    |
+|   |             | output        |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 1 | MIPI_CS    | MIPI CSI       |
+| 7 |             |               | 8 | I_RX_CLK1P | positive       |
+|   |             |               |   |            |                |
+|   |             |               |   |            | differential   |
+|   |             |               |   |            | data line      |
+|   |             |               |   |            |                |
+|   |             |               |   |            | transceiver    |
+|   |             |               |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 1 | MIPI_C      | MIPI CSI      | 2 | GND        | Ground         |
+| 9 | SI_RX_CLK1N | negative      | 0 |            |                |
+|   |             | differential  |   |            |                |
+|   |             | data line     |   |            |                |
+|   |             | transceiver   |   |            |                |
+|   |             | output        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | DVDD1V2     | VDD 1.2V      | 2 | VCC1V8_DVP | VCC 1.8V       |
+| 1 |             |               | 2 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | GND         | Ground        | 2 | MIPI_MCLK1 | MIPI clock     |
+| 3 |             |               | 4 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| J |             |               |   |            |                |
+| 3 |             |               |   |            |                |
+| 1 |             |               |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| P | Signal      | Description   | P | Signal     | Description    |
+| i |             |               | i |            |                |
+| n |             |               | n |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 2 | GND        | Ground         |
++---+-------------+---------------+---+------------+----------------+
+| 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
+|   |             |               |   |            | supply         |
++---+-------------+---------------+---+------------+----------------+
+| 5 | I2C4        | I2C data line | 6 | I2C4_      | I2C clock line |
+|   | _SDA_M0_1V8 |               |   | SCL_M0_1V8 |                |
++---+-------------+---------------+---+------------+----------------+
+| 7 | NC          | Not connect   | 8 | A          | DVP 2.8V power |
+|   |             |               |   | VDD2V8_DVP | supply         |
++---+-------------+---------------+---+------------+----------------+
+| 9 | CA          | Camera reset  | 1 | GPIO       | GPIO           |
+|   | MERAF_RST_L |               | 0 | 4_B5_d_1V8 |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 1 | MIPI_      | MIPI CSI       |
+| 1 |             |               | 2 | CSI_RX_D1P | positive       |
+|   |             |               |   |            |                |
+|   |             |               |   |            | differential   |
+|   |             |               |   |            | data line      |
+|   |             |               |   |            |                |
+|   |             |               |   |            | transceiver    |
+|   |             |               |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 1 | MIPI        | IMIPI CSI     | 1 | GND        | Ground         |
+| 3 | _CSI_RX_D1N | negative      | 4 |            |                |
+|   |             |               |   |            |                |
+|   |             | differential  |   |            |                |
+|   |             | data line     |   |            |                |
+|   |             |               |   |            |                |
+|   |             | transceiver   |   |            |                |
+|   |             | output        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | MIPI        | MIPI CSI      | 1 | MIPI_      | MIPI CSI       |
+| 5 | _CSI_RX_D0P | positive      | 6 | CSI_RX_D0N | negative       |
+|   |             |               |   |            |                |
+|   |             | differential  |   |            | differential   |
+|   |             | data line     |   |            | data line      |
+|   |             |               |   |            |                |
+|   |             | transceiver   |   |            | transceiver    |
+|   |             | output        |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 1 | MIPI_CS    | MIPI CSI       |
+| 7 |             |               | 8 | I_RX_CLK0P | positive       |
+|   |             |               |   |            |                |
+|   |             |               |   |            | differential   |
+|   |             |               |   |            | data line      |
+|   |             |               |   |            |                |
+|   |             |               |   |            | transceiver    |
+|   |             |               |   |            | output         |
++---+-------------+---------------+---+------------+----------------+
+| 1 | MIPI_C      | MIPI CSI      | 2 | GND        | Ground         |
+| 9 | SI_RX_CLK0N | negative      | 0 |            |                |
+|   |             | differential  |   |            |                |
+|   |             | data line     |   |            |                |
+|   |             | transceiver   |   |            |                |
+|   |             | output        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | DVDD1V2     | VDD 1.2V      | 2 | VCC1V8_DVP | VCC 1.8V       |
+| 1 |             |               | 2 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | GND         | Ground        | 2 | MIPI_MCLK0 | MIPI clock     |
+| 3 |             |               | 4 |            |                |
++---+-------------+---------------+---+------------+----------------+
+  
 2.13 IR (J24)
 ^^^^^^^^^^^^^^^
 
@@ -1277,32 +1471,127 @@ J26 is used to connect MEMS module for Video output.
   :align: center
   :height: 90px
   
+3-pin connector. It is used to connect the IR receiver.
+  
++---+-------------+---------------+---+------------+----------------+
+| P | Signal      | Description   | P | Signal     | Description    |
+| i |             |               | i |            |                |
+| n |             |               | n |            |                |
++===+=============+===============+===+============+================+
+| 1 | VCC3V3_SYS  | 3.3V Power    | 2 | PWM3_IR    | IR in          |
+|   |             | supply        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | GND         | Ground        |   |            |                |
++---+-------------+---------------+---+------------+----------------+
+  
 2.14 UART (J10, J11, J12)
 ^^^^^^^^^^^^^^^^^^^^^^
+
+-  UART2 with 2 wires for debug tools
+-  Embedded two 64byte FIFO
+-  Support auto flow control mode for UART1-5
 
 .. figure:: ./image/PH-3A.jpg
   :alt: PH-3A
   :align: center
   :height: 90px
-  
+   
+The J10 is 3-pin connector. The debug serial port baud rate is 1500000.
+
++---+-------------+---------------+---+-------------+---------------+
+| P | Signal      | Description   | P | Signal      | Description   |
+| i |             |               | i |             |               |
+| n |             |               | n |             |               |
++===+=============+===============+===+=============+===============+
+| 1 | UART2DBG_RX | Serial data   | 2 | UART2DBG_TX | Serial data   |
+|   |             | input         |   |             | output        |
++---+-------------+---------------+---+-------------+---------------+
+| 3 | GND         | Ground        |   |             |               |
++---+-------------+---------------+---+-------------+---------------+
+
 .. figure:: ./image/PH-4A.jpg
   :alt: PH-4A
   :align: center
   :height: 90px
   
+The J11 J12 used for RS232.
+
++---+--------------+---------------+---+------------+----------------+
+| J |              |               |   |            |                |
+| 1 |              |               |   |            |                |
+| 1 |              |               |   |            |                |
++===+==============+===============+===+============+================+
+| P | Signal       | Description   | P | Signal     | Description    |
+| i |              |               | i |            |                |
+| n |              |               | n |            |                |
++---+--------------+---------------+---+------------+----------------+
+| 1 | VCC3V3_SYS   | 3.3V power    | 2 | U          | Transmit Data  |
+|   |              | supply        |   | ART4_TX_M0 |                |
++---+--------------+---------------+---+------------+----------------+
+| 3 | UART4_RX_M0  | Receive Data  | 4 | GND        | Ground         |
++---+--------------+---------------+---+------------+----------------+
+| J |              |               |   |            |                |
+| 1 |              |               |   |            |                |
+| 2 |              |               |   |            |                |
++---+--------------+---------------+---+------------+----------------+
+| P | Signal       | Description   | P | Signal     | Description    |
+| i |              |               | i |            |                |
+| n |              |               | n |            |                |
++---+--------------+---------------+---+------------+----------------+
+| 1 | VCC3V3_SYS   | 3.3V power    | 2 | U          | Transmit Data  |
+|   |              | supply        |   | ART5_TX_M1 |                |
++---+--------------+---------------+---+------------+----------------+
+| 3 | UART5_RX_M1  | Receive Data  | 4 | GND        | Ground         |
++---+--------------+---------------+---+------------+----------------+
+
 
 2.15 RS485 (J32, JP2)
 ^^^^^^^^^^^^^^^^^^^^^^
+
+SN75176B Differential bus transceiver.
+
+-  Bidirectional Transceivers
+-  ± 200mV Receiver Input Sensitivity
+-  50mV Type Receiver Input Hysteresis
 
 .. figure:: ./image/PH-3A-1.jpg
   :alt: PH-3A
   :align: center
   :height: 90px
   
++---+-------------+----------------+---+------------+---------------+
+| J |             |                |   |            |               |
+| 3 |             |                |   |            |               |
+| 2 |             |                |   |            |               |
++===+=============+================+===+============+===============+
+| P | Signal      | Description    | P | Signal     | Description   |
+| i |             |                | i |            |               |
+| n |             |                | n |            |               |
++---+-------------+----------------+---+------------+---------------+
+| 1 | GND         | Ground         | 2 | RS485_B    | RS-485 Data   |
+|   |             |                |   |            | Line          |
++---+-------------+----------------+---+------------+---------------+
+| 3 | RS485_A     | RS-485 Data    |   |            |               |
+|   |             | Line           |   |            |               |
++---+-------------+----------------+---+------------+---------------+
+  
 .. figure:: ./image/Pin_header.jpg
   :alt: 2-pin header
   :align: center
   :height: 90px
+
++---+-------------+----------------+---+------------+---------------+
+| J |             |                |   |            |               |
+| P |             |                |   |            |               |
+| 2 |             |                |   |            |               |
++===+=============+================+===+============+===============+
+| P | Signal      | Description    | P | Signal     | Description   |
+| i |             |                | i |            |               |
+| n |             |                | n |            |               |
++---+-------------+----------------+---+------------+---------------+
+| 1 | RS485_A     | RS-485 Data    | 2 | RS485_B    | RS-485 Data   |
+|   |             | Line           |   |            | Line          |
++---+-------------+----------------+---+------------+---------------+
 
 2.16 Button (K3)
 ^^^^^^^^^^^^^^^^^
@@ -1311,10 +1600,25 @@ J26 is used to connect MEMS module for Video output.
   :alt: BUTTON
   :align: center
   :height: 60px
-  
+
++---+-------------+----------------+---+-------------+--------------+
+| P | Signal      | Description    | P | Signal      | Description  |
+| i |             |                | i |             |              |
+| n |             |                | n |             |              |
++===+=============+================+===+=============+==============+
+| 1 | GND         | Ground         | 2 | SA          | RECOVERY     |
+|   |             |                |   | RADC_VIN0_K |              |
+|   |             |                |   | EY/RECOVERY |              |
++---+-------------+----------------+---+-------------+--------------+
 
 2.17 4G Module (CON2, P4)	25
 ^^^^^^^^^^^^^^^^^^^^^^
+
+EM3566 adopts the standard PCI Express® MiniCard form factor (MiniPCIe)
+and provides global network coverage on the connectivity of 4G. It
+delivers 50Mbps-up and100Mbps-down data rates on 4G FDD networks and can
+also be fully backward compatible with existing UMTS and GSM/GPRS
+networks.
 
 .. figure:: ./image/PCIe.jpg
   :alt: PCIe
@@ -1326,18 +1630,163 @@ J26 is used to connect MEMS module for Video output.
   :align: center
   :height: 120px
   
++---+-------------+---------------+---+------------+----------------+
+| C |             |               |   |            |                |
+| O |             |               |   |            |                |
+| N |             |               |   |            |                |
+| 2 |             |               |   |            |                |
++===+=============+===============+===+============+================+
+| P | Signal      | Description   | P | Signal     | Description    |
+| i |             |               | i |            |                |
+| n |             |               | n |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | 4G_OUT_P    | Line output + | 2 | 3GVCC      | DC 3.3V        |
++---+-------------+---------------+---+------------+----------------+
+| 3 | 4G_OUT_N    | Line output - | 4 | GND        | Ground         |
++---+-------------+---------------+---+------------+----------------+
+| 5 | MIC1P       | MIC +         | 6 | NC         | Not connect    |
++---+-------------+---------------+---+------------+----------------+
+| 7 | MIC1N       | MIC -         | 8 | SIM_VCC    | SIM power      |
++---+-------------+---------------+---+------------+----------------+
+| 9 | GND         | Ground        | 1 | SIM_DATA   | SIM data       |
+|   |             |               | 0 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | NC          | Not connect   | 1 | SIM_CLK    | SIM Clock      |
+| 1 |             |               | 2 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | NC          | Not connect   | 1 | SIM_RST    | SIM Reset      |
+| 3 |             |               | 4 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | GND         | Ground        | 1 | NC         | Not connect    |
+| 5 |             |               | 6 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | NC          | Not connect   | 1 | GND        | Ground         |
+| 7 |             |               | 8 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 1 | NC          | Not connect   | 2 | 3GVCC      | DC 3.3V        |
+| 9 |             |               | 0 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | GND         | Ground        | 2 | PERST      | GPIO0_A0_d     |
+| 1 |             |               | 2 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | NC          | Not connect   | 2 | 3GVCC      | DC 3.3V        |
+| 3 |             |               | 4 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | NC          | Not connect   | 2 | GND        | Ground         |
+| 5 |             |               | 6 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | GND         | Ground        | 2 | NC         | Not connect    |
+| 7 |             |               | 8 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 2 | GND         | Ground        | 3 | NC         | Not connect    |
+| 9 |             |               | 0 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | NC          | Not connect   | 3 | NC         | Not connect    |
+| 1 |             |               | 2 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | NC          | Not connect   | 3 | GND        | Ground         |
+| 3 |             |               | 4 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | GND         | Ground        | 3 | USB        | Host data DN   |
+| 5 |             |               | 6 | 2_HOST2_DM |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | GND         | Ground        | 3 | USB        | Host data DP   |
+| 7 |             |               | 8 | 2_HOST2_DP |                |
++---+-------------+---------------+---+------------+----------------+
+| 3 | 3GVCC       | DC 3.3V       | 4 | GND        | Ground         |
+| 9 |             |               | 0 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 4 | 3GVCC       | DC 3.3V       | 4 | LED_WWAN   | LED            |
+| 1 |             |               | 2 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 4 | GND         | Ground        | 4 | NC         | Not connect    |
+| 3 |             |               | 4 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 4 | NC          | Not connect   | 4 | NC         | Not connect    |
+| 5 |             |               | 6 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 4 | NC          | Not connect   | 4 | NC         | Not connect    |
+| 7 |             |               | 8 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 4 | NC          | Not connect   | 5 | GND        | Ground         |
+| 9 |             |               | 0 |            |                |
++---+-------------+---------------+---+------------+----------------+
+| 5 | NC          | Not connect   | 5 | 3GVCC      | DC 3.3V        |
+| 1 |             |               | 2 |            |                |
++---+-------------+---------------+---+------------+----------------+
+
+P4 is an auto pop-up SIM card slot which is compatible to the standard
+SIM Card and can be used for wireless transmission with a 3G/4G module.
+  
 .. figure:: ./image/Nano_sim.jpg
   :alt: Nano_sim
   :align: center
   :height: 90px
   
++---+-------------+---------------+---+--------------+--------------+
+| S |             |               |   |              |              |
+| I |             |               |   |              |              |
+| M |             |               |   |              |              |
+| C |             |               |   |              |              |
+| a |             |               |   |              |              |
+| r |             |               |   |              |              |
+| d |             |               |   |              |              |
+| s |             |               |   |              |              |
+| l |             |               |   |              |              |
+| o |             |               |   |              |              |
+| t |             |               |   |              |              |
+| ( |             |               |   |              |              |
+| P |             |               |   |              |              |
+| 4 |             |               |   |              |              |
+| ) |             |               |   |              |              |
++===+=============+===============+===+==============+==============+
+| P | Signal      | Description   | P | Signal       | Description  |
+| i |             |               | i |              |              |
+| n |             |               | n |              |              |
++---+-------------+---------------+---+--------------+--------------+
+| 1 | SIM_CLK     | Clock         | 2 | SIM_DATA     | s            |
+|   |             |               |   |              | end/receiver |
+|   |             |               |   |              | data I/O     |
+|   |             |               |   |              | control      |
++---+-------------+---------------+---+--------------+--------------+
+| 3 | SIM_RST     | Reset         | 4 | SIM_VCC      | SIM power    |
+|   |             |               |   |              | supply       |
++---+-------------+---------------+---+--------------+--------------+
+| 5 | SIM_VCC     | SIM power     | 6 | GND          | Ground       |
+|   |             | supply        |   |              |              |
++---+-------------+---------------+---+--------------+--------------+
+| 7 | NC          | Not connect   |   |              |              |
++---+-------------+---------------+---+--------------+--------------+
+  
 2.18 Micro SD (J3) 
 ^^^^^^^^^^^^^^^^^^^^
+
+The Micro SD card is used as an external storage device. The MMC
+controller interface supports up to 4-bit transfer modes. MMC is always
+accessible through the carrier board interface.
 
 .. figure:: ./image/Micro_SD.jpg
   :alt: micro SD
   :align: center
   :height: 90px
+
++---+------------+-----------------+---+--------------+--------------+
+| P | Signal     | Description     | P | Signal       | Description  |
+| i |            |                 | i |              |              |
+| n |            |                 | n |              |              |
++===+============+=================+===+==============+==============+
+| 1 | SDMMC0_D2  | SD/MMC data2    | 2 | SDMMC0_D3    | SD/MMC data3 |
++---+------------+-----------------+---+--------------+--------------+
+| 3 | SDMMC0_CMD | SD/MMC command  | 4 | VCC3V3_SD    | 3.3V         |
+|   |            | signal          |   |              |              |
++---+------------+-----------------+---+--------------+--------------+
+| 5 | SDMMC0_CLK | SD/MMC clock    | 6 | GND          | Ground       |
++---+------------+-----------------+---+--------------+--------------+
+| 7 | SDMMC0_D0  | SD/MMC data0    | 8 | SDMMC0_D1    | SD/MMC data1 |
++---+------------+-----------------+---+--------------+--------------+
+| 9 | SD         | SD/MMC detect   |   |              |              |
+|   | MMC0_DET_L | signal          |   |              |              |
++---+------------+-----------------+---+--------------+--------------+
 
 2.19 WiFi&Bluetooth (U20)
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -1347,13 +1796,257 @@ J26 is used to connect MEMS module for Video output.
   :align: center
   :height: 120px
 
+The Realtek RTL8723BS is a low-power consumption module which has
+incorporated Wi-Fi and Bluetooth into one chip. The integrated module
+provides SDIO interface for WiFi, UART / PCM for Bluetooth.
+
+-  The WIFI throughput can go up to 150Mbps in theory by using 1x1
+   802.11n b/g/n MIMO
+
+-  Full-featured software utility for easy configuration and management
+
+-  RTL8723BS with shared antenna between WLAN and Bluetooth
+
+**RTL8723BS Module Specifications**
+
++-----------------------+----------------------------------------------+
+| Standard              | WiFi: IEEE 802.11b/g/n                       |
+|                       | BT: V2.1+EDR/BT v3.0+HS/BT v4.0              |
++=======================+==============================================+
+| Host Interface        | SDIO and UART                                |
++-----------------------+----------------------------------------------+
+| Frequency Range       | 2.4GHz~2.4835GHz                             |
++-----------------------+----------------------------------------------+
+| Power Consumption     | standby mode 140mA at 3.3V, TX mode 280mA at |
+|                       | 3.3V                                         |
++-----------------------+----------------------------------------------+
+| Dimension             | 12x12x2.0mm                                  |
++-----------------------+----------------------------------------------+
+| Working Temp.         | 0°C to +70°C                                 |
++-----------------------+----------------------------------------------+
+| Power supply          | DC 3.3V (±0.2V)                              |
++-----------------------+----------------------------------------------+
+
++---+-------------+----------------+---+-------------+---------------+
+| P | Signal      | Description    | P | Signal      | Description   |
+| i |             |                | i |             |               |
+| n |             |                | n |             |               |
++===+=============+================+===+=============+===============+
+| 1 | GND         | Ground         | 2 | WL_BT_ANT   | RF I/O        |
+|   |             |                |   |             | (Connect to   |
+|   |             |                |   |             | IPEX)         |
++---+-------------+----------------+---+-------------+---------------+
+| 3 | GND         | Ground         | 4 | NC          | Not connect   |
++---+-------------+----------------+---+-------------+---------------+
+| 5 | NC          | Not connect    | 6 | HOS         | HOST wake-up  |
+|   |             |                |   | T_WAKE_BT_H | Bluetooth     |
+|   |             |                |   |             | device        |
++---+-------------+----------------+---+-------------+---------------+
+| 7 | BT_         | Bluetooth      | 8 | NC          | Not connect   |
+|   | WAKE_HOST_H | device to      |   |             |               |
+|   |             | wake-up HOST   |   |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 9 | VBAT_WL     | 3.3V power     | 1 | XTAL_IN     | Crystal input |
+|   |             | supply         | 0 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 1 | XTAL_OUT    | Crystal output | 1 | WI          | Internal      |
+| 1 |             |                | 2 | FI_REG_ON_H | regulators    |
+|   |             |                |   |             | power         |
+|   |             |                |   |             | e             |
+|   |             |                |   |             | nable/disable |
++---+-------------+----------------+---+-------------+---------------+
+| 1 | WIFI_       | WLAN to        | 1 | WIFI_D2     | WiFi data     |
+| 3 | WAKE_HOST_H | wake-up HOST   | 4 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 1 | WIFI_D3     | WiFi data      | 1 | WIFI_CMD    | WiFi command  |
+| 5 |             |                | 6 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 1 | WIFI_CLK    | WiFi clock     | 1 | WIFI_D0     | WiFi data     |
+| 7 |             |                | 8 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 1 | WIFI_D1     | WiFi data      | 2 | GND         | Ground        |
+| 9 |             |                | 0 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 2 | VIN_LDO_OUT | Internal Buck  | 2 | VCCIO_WL    | 1.8 V power   |
+| 1 |             | voltage        | 2 |             | supply        |
+|   |             | generation pin |   |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 2 | VIN_LDO     | Internal Buck  | 2 | PMIC        | LPO           |
+| 3 |             | voltage        | 4 | _32KOUT_SOC |               |
+|   |             | generation pin |   |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 2 | I2S2_SDI_M0 | PCM Data       | 2 | I2S2        | PCM clock     |
+| 5 |             | output         | 6 | _LRCK_TX_M0 |               |
++---+-------------+----------------+---+-------------+---------------+
+| 2 | I2S2_SDO_M0 | PCM data input | 2 | I2S2        | PCM sync      |
+| 7 |             |                | 8 | _SCLK_TX_M0 | signal        |
++---+-------------+----------------+---+-------------+---------------+
+| 2 | NC          | Not connect    | 3 | GND         | Ground        |
+| 9 |             |                | 0 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 3 | GND         | Ground         | 3 | NC          | Not connect   |
+| 1 |             |                | 2 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 3 | GND         | Ground         | 3 | BT_REG_ON_H | Enable PIN    |
+| 3 |             |                | 4 |             | for WLAN      |
+|   |             |                |   |             | Device        |
+|   |             |                |   |             |               |
+|   |             |                |   |             | ON: Pull high |
++---+-------------+----------------+---+-------------+---------------+
+| 3 | NC          | Not connect    | 3 | GND         | Ground        |
+| 5 |             |                | 6 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 3 | NC          | Not connect    | 3 | NC          | Not connect   |
+| 7 |             |                | 8 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 3 | NC          | Not connect    | 4 | NC          | Not connect   |
+| 9 |             |                | 0 |             |               |
++---+-------------+----------------+---+-------------+---------------+
+| 4 | UA          | Bluetooth UART | 4 | UART1_RX_M0 | Bluetooth     |
+| 1 | RT1_CTSn_M0 | interface      | 2 |             | UART          |
+|   |             |                |   |             | interface     |
++---+-------------+----------------+---+-------------+---------------+
+| 4 | UART1_TX_M0 | Bluetooth UART | 4 | UA          | Bluetooth     |
+| 3 |             | interface      | 4 | RT1_RTSn_M0 | UART          |
+|   |             |                |   |             | interface     |
++---+-------------+----------------+---+-------------+---------------+
+
 2.20 SSD (CON3)
 ^^^^^^^^^^^^^^^^^
+
+M.2 M key socket (PCIe) for NVMe SSD.
 
 .. figure:: ./image/mPCIe.jpg
   :alt: mPCIe
   :align: center
   :height: 90px
+
++---+-------------+---------------+---+-----------+-------------------+
+| P |             |               |   |           |                   |
+| C |             |               |   |           |                   |
+| I |             |               |   |           |                   |
+| e |             |               |   |           |                   |
+| ( |             |               |   |           |                   |
+| f |             |               |   |           |                   |
+| o |             |               |   |           |                   |
+| r |             |               |   |           |                   |
+| S |             |               |   |           |                   |
+| S |             |               |   |           |                   |
+| D |             |               |   |           |                   |
+| m |             |               |   |           |                   |
+| o |             |               |   |           |                   |
+| d |             |               |   |           |                   |
+| u |             |               |   |           |                   |
+| l |             |               |   |           |                   |
+| e |             |               |   |           |                   |
+| ) |             |               |   |           |                   |
++===+=============+===============+===+===========+===================+
+| P | Signal      | Description   | P | Signal    | Description       |
+| i |             |               | i |           |                   |
+| n |             |               | n |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 1 | GND         | Ground        | 2 | PCIE_3V3  | 3.3V power supply |
++---+-------------+---------------+---+-----------+-------------------+
+| 3 | GND         | Ground        | 4 | PCIE_3V3  | 3.3V power supply |
++---+-------------+---------------+---+-----------+-------------------+
+| 5 | NC          | Not connect   | 6 | NC        | Not connect       |
++---+-------------+---------------+---+-----------+-------------------+
+| 7 | NC          | Not connect   | 8 | NC        | Not connect       |
++---+-------------+---------------+---+-----------+-------------------+
+| 9 | GND         | Ground        | 1 | DAS       | PCIE DAS          |
+|   |             |               | 0 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 1 | NC          | Not connect   | 1 | PCIE_3V3  | 3.3V power supply |
+| 1 |             |               | 2 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 1 | NC          | Not connect   | 1 | PCIE_3V3  | 3.3V power supply |
+| 3 |             |               | 4 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 1 | GND         | Ground        | 1 | PCIE_3V3  | 3.3V power supply |
+| 5 |             |               | 6 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 1 | NC          | Not connect   | 1 | PCIE_3V3  | 3.3V power supply |
+| 7 |             |               | 8 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 1 | NC          | Not connect   | 2 | NC        | Not connect       |
+| 9 |             |               | 0 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 2 | GND         | Ground        | 2 | NC        | Not connect       |
+| 1 |             |               | 2 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 2 | NC          | Not connect   | 2 | NC        | Not connect       |
+| 3 |             |               | 4 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 2 | NC          | Not connect   | 2 | NC        | Not connect       |
+| 5 |             |               | 6 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 2 | GND         | Ground        | 2 | NC        | Not connect       |
+| 7 |             |               | 8 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 2 | NC          | Not connect   | 3 | NC        | Not connect       |
+| 9 |             |               | 0 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 3 | NC          | Not connect   | 3 | NC        | Not connect       |
+| 1 |             |               | 2 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 3 | GND         | Ground        | 3 | NC        | Not connect       |
+| 3 |             |               | 4 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 3 | NC          | Not connect   | 3 | NC        | Not connect       |
+| 5 |             |               | 6 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 3 | NC          | Not connect   | 3 | PC        | PCIE Device Sleep |
+| 7 |             |               | 8 | IE_DEVSLP |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 3 | GND         | Ground        | 4 | NC        | Not connect       |
+| 9 |             |               | 0 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 4 | PCIE2       | PCIe RX -     | 4 | NC        | Not connect       |
+| 1 | 0_SATA2_RXN |               | 2 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 4 | PCIE2       | PCIe RX +     | 4 | NC        | Not connect       |
+| 3 | 0_SATA2_RXP |               | 4 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 4 | GND         | Ground        | 4 | NC        | Not connect       |
+| 5 |             |               | 6 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 4 | SATA2_TXN   | PCIe TX -     | 4 | NC        | Not connect       |
+| 7 |             |               | 8 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 4 | SATA2_TXP   | PCIe TX +     | 5 | PCIE20_   | PCIe reset        |
+| 9 |             |               | 0 | PERSTn_M2 |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 5 | GND         | Ground        | 5 | PCIE20_C  | Clock Request     |
+| 1 |             |               | 2 | LKREQn_M2 |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 5 | PCI         | PCIe          | 5 | PCIE20    | PCIe PME Wake     |
+| 3 | E20_REFCLKN | Reference     | 4 | _WAKEn_M2 |                   |
+|   |             | Clock signals |   |           |                   |
+|   |             | -             |   |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 5 | PCI         | PCIe          | 5 | NC        | Not connect       |
+| 5 | E20_REFCLKP | Reference     | 6 |           |                   |
+|   |             | Clock signals |   |           |                   |
+|   |             | +             |   |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 5 | GND         | Ground        | 5 | NC        | Not connect       |
+| 7 |             |               | 8 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 6 | NC          | Not connect   | 6 | PMIC_3    | Suspend Clock     |
+| 7 |             |               | 8 | 2KOUT_SOC | (32KHz)           |
++---+-------------+---------------+---+-----------+-------------------+
+| 6 | NC          | Not connect   | 7 | PCIE_3V3  | 3.3V power supply |
+| 9 |             |               | 0 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 7 | GND         | Ground        | 7 | PCIE_3V3  | 3.3V power supply |
+| 1 |             |               | 2 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 7 | GND         | Ground        | 7 | PCIE_3V3  | 3.3V power supply |
+| 3 |             |               | 4 |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
+| 7 | GND         | Ground        |   |           |                   |
+| 5 |             |               |   |           |                   |
++---+-------------+---------------+---+-----------+-------------------+
 
 2.21 GPS (MU4)
 ^^^^^^^^^^^^^^^
@@ -1363,6 +2056,74 @@ J26 is used to connect MEMS module for Video output.
   :align: center
   :height: 120px
 
+The GPS module (Model: ST-91-U7) uses ublox 7 chipset which is high
+performance u-blox 7 multi-GNSS (GPS, GLONASS, QZSS, SBAS – Galileo and
+Compass ready) position engine delivers exceptional sensitivity and
+acquisition times.
+
+**Features**
+
+-  Ublox 7 high performance and low power consumption GPS Chipset
+
+-  Very high sensitivity (Tracking Sensitivity: -162dBm)
+
+-  Extremely fast TTFF (Time to First Fix) at low signal level
+
+-  Two serial port: UART, I2C
+
+-  Built-in LNA
+
+-  A-GPS Support
+
+-  Exceptional jamming immunity
+
+-  Support NMEA 0183 and ublox binary protocol
+
+-  Channels: 56
+
+-  Available Baud: 9,600 bps
+
+-  The antenna band is 1575.42MHZ; Voltage: 3.0-5.0V
+
++---+-------------+---------------+---+--------------+--------------+
+| P | Signal      | Description   | P | Signal       | Description  |
+| i |             |               | i |              |              |
+| n |             |               | n |              |              |
++===+=============+===============+===+==============+==============+
+| 1 | GND         | Ground        | 2 | UART3_RX_M0  | UART3        |
+|   |             |               |   |              | receive      |
++---+-------------+---------------+---+--------------+--------------+
+| 3 | UART3_TX_M0 | UART3         | 4 | NC           | Not connect  |
+|   |             | transmit      |   |              |              |
++---+-------------+---------------+---+--------------+--------------+
+| 5 | NC          | Not connect   | 6 | VCC_RTC      | Backup       |
+|   |             |               |   |              | voltage      |
+|   |             |               |   |              | supply       |
++---+-------------+---------------+---+--------------+--------------+
+| 7 | GPSVDDIO    | IO Supply     | 8 | VDD_GPS      | Supply       |
+|   |             | Voltage       |   |              | voltage      |
++---+-------------+---------------+---+--------------+--------------+
+| 9 | GPSRST      | Reset         | 1 | GND          | Ground       |
+|   |             |               | 0 |              |              |
++---+-------------+---------------+---+--------------+--------------+
+| 1 | GPS_RFIN    | GPS signal    | 1 | GND          | Ground       |
+| 1 |             | input         | 2 |              |              |
++---+-------------+---------------+---+--------------+--------------+
+| 1 | NC          | Not connect   | 1 | RFVCC        | Output       |
+| 3 |             |               | 4 |              | Voltage RF   |
+|   |             |               |   |              | section      |
++---+-------------+---------------+---+--------------+--------------+
+| 1 | NC          | Not connect   | 1 | NC           | Not connect  |
+| 5 |             |               | 6 |              |              |
++---+-------------+---------------+---+--------------+--------------+
+| 1 | NC          | Not connect   | 1 | NC           | Not connect  |
+| 7 |             |               | 8 |              |              |
++---+-------------+---------------+---+--------------+--------------+
+
+.. Note::
+ RS485 and GPS are multiplexed with UART3 signal, Default support
+RS485 does not support GPS.
+
 2.22 RTC (BT1)
 ^^^^^^^^^^^^^^^^
 
@@ -1370,6 +2131,17 @@ J26 is used to connect MEMS module for Video output.
   :align: center
   :alt: RTC battery
   :height: 100px
+  
+The backup battery (3V) is used to ensure the RTC (frequency 32.768KHz)
+is still able to work after power off. Lithium cell model: CR1220.
+
++---+-------------+---------------+---+--------------+--------------+
+| P | Signal      | Description   | P | Signal       | Description  |
+| i |             |               | i |              |              |
+| n |             |               | n |              |              |
++===+=============+===============+===+==============+==============+
+| 1 | VBuck       | 3V battery    | 2 | GND          | Ground       |
++---+-------------+---------------+---+--------------+--------------+
 
 3 Product Configurations
 --------------------------
@@ -1377,5 +2149,35 @@ J26 is used to connect MEMS module for Video output.
 3.1 Standard Contents
 ^^^^^^^^^^^^^^^^^^^^^^
 
++----+-------------+---------+-----------------------------------------+
+| *  | **Item**    | **Qty.  | **Description**                         |
+| *N |             | (PCS)** |                                         |
+| O. |             |         |                                         |
+| ** |             |         |                                         |
++====+=============+=========+=========================================+
+| 1  | EM3566      | 1       | Standard Content (2GB RAM, 8GB eMMC)    |
+|    | board       |         |                                         |
++----+-------------+---------+-----------------------------------------+
+| 2  | TF card /   | 1       | Android/Debian BSP, Documents, tools,   |
+|    | CD-ROM      |         | Schematic Drawing, datasheets           |
++----+-------------+---------+-----------------------------------------+
+| 3  | Ethernet    | 1       | 1.5m Crossover cable                    |
+|    | cable       |         |                                         |
++----+-------------+---------+-----------------------------------------+
+| 4  | Serial      | 1       | CP2102                                  |
+|    | Cable       |         |                                         |
++----+-------------+---------+-----------------------------------------+
+| 5  | USB Cable   | 1       | USB OTG                                 |
++----+-------------+---------+-----------------------------------------+
+| 6  | Power       | 1       | 12V/3A DC                               |
+|    | adaptor     |         |                                         |
++----+-------------+---------+-----------------------------------------+
+
 3.2 Optional Parts
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+
+-  MIPI camera Module (OV13850)
+-  LCD Module (10.1-inch MIPI panel or 10.1-inch LVDS panel)
+-  4G Module
+-  SSD
+-  GPS
