@@ -1363,7 +1363,7 @@ Wait a moment then run *hwclock* again, it can be found the time has changed.
 5.8 WiFi
 ^^^^^^^^^^
 
-Connect the WiFi antenna, then click* qsetting -> WiFi -> turn on*, select the SSID from the list of available networks and enter the password.
+Connect the WiFi antenna, then click *qsetting -> WiFi -> turn on*, select the SSID from the list of available networks and enter the password.
 
 After connected, user can ping URL/IP at terminal.
 
@@ -1497,11 +1497,11 @@ Execute the follow command to test 4G:
 .. figure:: ./image/EM3566_Buildroot_test_4G.png
    :alt: test_4G
 
-.. figure:: ./image/EM3566_Buildroot_test_4G_2.png
-   :alt: test_4G
+.. figure:: ./image/EM3566_Buildroot_test_4G-2.png
+   :alt: test_4G-2
 
-.. figure:: ./EM3566_Buildroot_Ping_IP.png
-   :alt: test_4G
+.. figure:: ./image/EM3566_Buildroot_Ping_IP.png
+   :alt: test_4G-3
 
 5.15 GPS
 ^^^^^^^^^
@@ -1513,10 +1513,10 @@ Execute the follow command to test GPS in the 4G model:
    echo -e "AT+QGPS=1\r\n" > /dev/ttyUSB2
    cat /dev/ttyUSB1 
 
-.. figure:: ./EM3566_Buildroot_Test_GPS.png
+.. figure:: ./image/EM3566_Buildroot_Test_GPS.png
    :alt: Test GPS
 
-.. figure:: ./EM3566_Buildroot_Test_GPS-2.png
+.. figure:: ./image/EM3566_Buildroot_Test_GPS-2.png
    :alt: Test GPS
 
 5.16 IR
@@ -1530,7 +1530,7 @@ Connect IR receiver to the IR port. Execute command
    
 Press the button on the control, the board will receive the signals.
 
-.. figure:: ./EM3566_Buildroot_IR.png
+.. figure:: ./image/EM3566_Buildroot_IR.png
    :alt: Test IR
 
 .. figure:: ./image/EM3566_SBC_Android11_IR.jpg
