@@ -59,7 +59,7 @@ equipment.
     * - Serial
       - 1x Serial port for debug, 3-pin connector. 2x UART, 4-pin connectors. 1x RS485, 2-pin header or 3-pin connector.
     * - Video
-      - HDMI 2.0, 4Kp60. MIPI DSI/LVDS, 1080p60. eDP 1.3, 2560x1600@60Hz. MEMS_Module for Video output.
+      - HDMI 2.0, 4Kp60. MIPI DSI/LVDS, 1080p60. eDP 1.3, 2560x1600 @60Hz. MEMS_Module for Video output.
     * - Audio
       - 3.5mm audio I/O jack. ES8388 audio codec. 8-channel audio via HDMI.
     * - Camera(optional)
@@ -207,7 +207,105 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
       - 
       - GPIO3_A4_d
       - 3.3V
-
+    * - 21
+      - GMAC1_RXCLK_M0
+      - 
+      -  GPIO3_A7_d
+      - 3.3V
+    * - 22
+      - GMAC1_TXD2_M0
+      - 
+      - GPIO3_A2_d
+      - 3.3V
+    * - 23
+      - GMAC1_TXD3_M0
+      - 
+      - GPIO3_A3_d
+      - 3.3V       
+    * - 24
+      - GMAC1_TXCLK_M0
+      - 
+      - GPIO3_A6_d
+      - 3.3V
+    * - 25
+      - MIPI_DSI_TX0_D3N/LVDS_TX0_D3N
+      - MIPI DSI or LVDS TXD3N
+      - 
+      - 1.8V
+    * - 26
+      - MIPI_DSI_TX0_D3P/LVDS_TX0_D3P
+      - MIPI DSI or LVDS TXD3P
+      - 
+      - 1.8V
+    * - 27
+      - MIPI_DSI_TX0_D2N/LVDS_TX0_D2N
+      - MIPI DSI or LVDS TXD2N
+      - 
+      - 1.8V
+    * - 28
+      - MIPI_DSI_TX0_D2P/LVDS_TX0_D2P
+      - MIPI DSI or LVDS TXD2P
+      - 
+      - 1.8V
+    * - 29
+      - MIPI_DSI_TX0_D1N/LVDS_TX0_D1N
+      - MIPI DSI or LVDS TXD1N
+      - 
+      - 1.8V
+    * - 30
+      - MIPI_DSI_TX0_D1P/LVDS_TX0_D1P
+      - MIPI DSI or LVDS TXD1P
+      - 
+      - 1.8V
+    * - 31
+      - MIPI_DSI_TX0_D0N/LVDS_TX0_D0N
+      - MIPI DSI or LVDS TXD1N
+      - 
+      - 1.8V
+    * -  32
+      - MIPI_DSI_TX0_D0P/LVDS_TX0_D0P
+      - MIPI DSI or LVDS TXD1P
+      - 
+      - 1.8V
+    * - 33
+      - MIPI_DSI_TX0_CLKN/LVDS_TX0_CLKN
+      - MIPI DSI or LVDS TXD1N
+      - 
+      - 1.8V
+    * - 34
+      - MIPI_DSI_TX0_CLKP/LVDS_TX0_CLKP
+      - MIPI DSI or LVDS TXD1P
+      - 
+      - 1.8V
+    * -  35
+      - HDMI_TX_HPDIN
+      - HDMI HPD input
+      - 
+      - 3.3V
+    * - 36
+      - HDMI_TXCLKN
+      - 
+      - 
+      - 1.8V
+    * - 37
+      - HDMI_TXCLKP
+      - 
+      - 
+      - 1.8V
+    * - 38
+      - HDMI_TX0N
+      - 
+      - 
+      - 1.8V
+    * - 39
+      - HDMI_TX0P
+      - 
+      - 
+      -  1.8V
+    * - 40
+      - HDMI_TX1N
+      - 
+      - 1.8V
 
       
 
