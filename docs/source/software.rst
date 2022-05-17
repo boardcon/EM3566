@@ -355,7 +355,7 @@ EM3566 supports SD Hot-plug.
 5.3 USB Host
 ^^^^^^^^^^^^^
 
-The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices. The EM3566 supports USB3.0 by set the SW switch to **OFF OFF**.
+The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices. The EM3566 supports USB3.0(set the SW switch to **OFF OFF**).
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_38.png
    :alt: USB storage
@@ -367,8 +367,8 @@ Copy video files to SD card or U_disk then insert it to the board. After system 
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_39.png
    :alt: Vedio player
+   
 .. figure:: ./image/EM3566_SBC_Android11_HDMI_OUT.jpg
-   :align: center
    :alt: Vedio player
 
 5.5 Ethernet
