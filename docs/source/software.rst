@@ -1170,6 +1170,19 @@ After compilation, execute the follow command to clean the build.
 3 Images Operation
 -------------------
 
+3.1 Pack Image
+^^^^^^^^^^^^^^
+
+Step 1, copy all the files in Buildroot directory :file:`rockdev/Image` to the windows :file:`RKDevTool-rk3566-buildroot/rockdev/Image`
+
+Step 2, enter :file:`RKDevTool-rk3566-buildroot/rockdev/`, double-click to run **mkupdate.bat**.
+
+Step 3, the **update.img** will be generated in rockdev directory.
+
+.. figure:: ./image/EM3566_Buildroot_Pack_Image-1.png
+   :align: center
+   :alt: IO-power-Domain-Map  
+
 4 Burn Images
 -------------
 
