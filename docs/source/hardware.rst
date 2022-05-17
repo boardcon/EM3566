@@ -937,6 +937,7 @@ disk, USB camera, and other USB devices. Support hot-plug.
 -  Support periodic out channel in host mode
 
 Dual-USB
+
 +---+------------+----------------+---+------------+----------------+
 | P | Signal     | Description    | P | Signal     | Description    |
 | i |            |                | i |            |                |
@@ -954,6 +955,7 @@ Dual-USB
 +---+------------+----------------+---+------------+----------------+
 
 J6 / J17 (4-pin connector)
+
 +---+------------+----------------+---+------------+----------------+
 | P | Signal     | Description    | P | Signal     | Description    |
 | i |            |                | i |            |                |
