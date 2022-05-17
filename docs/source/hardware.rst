@@ -761,7 +761,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 ^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/power_adapter.png
-  :aline: center
+  :align: center
   :alt: power_adapter
   
 The DC JACK is 5.5 x 2.1mm, 3-pin plug Type. Typical 12V/3A DC adapter. 
@@ -784,6 +784,7 @@ The DC JACK is 5.5 x 2.1mm, 3-pin plug Type. Typical 12V/3A DC adapter.
 
 .. figure:: ./image/PJ-327E.jpg
   :alt: PJ327E
+  :align: center
   :height: 90px
 
 The EM3566 adopts audio codec ES8388 to provide stereo audio
