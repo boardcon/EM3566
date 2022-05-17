@@ -841,7 +841,7 @@ The Optical Adaptor DLT1120 is used for S/PDIF data output.
 .. figure:: ./image/HDMI.jpg
   :alt: HDMI
   :align: center
-  :height: 90px
+  :height: 120px
   
 EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
 
@@ -931,10 +931,12 @@ transfer file.
 
 .. figure:: ./image/Dual-USB.jpg
   :alt: Dual-USB
+  :align: center
   :height: 100px
   
 .. figure:: ./image/PH-4A.jpg
   :alt: PH-4A
+  :align: center
   :height: 90px
   
 The 4-ch USB HOST interfaces are extended by GL850G which is a fully
@@ -1026,8 +1028,8 @@ J6 / J17 (4-pin connector)
 2.10 GPIO (CON4)
 ^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/CIP_Header.jpg
-  :alt: CIP_Header
+.. figure:: ./image/CIF_Header.jpg
+  :alt: CIF_Header
   :align: center
   :height: 120px
 
