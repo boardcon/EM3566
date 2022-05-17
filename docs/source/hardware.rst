@@ -1202,7 +1202,7 @@ resolution.
 .. figure:: ./image/VOP_Header.jpg
   :alt: VOP_Header
   :align: center
-  :height: 120px
+  :height: 100px
   
 J26 is used to connect MEMS module for Video output.
 
@@ -1238,7 +1238,7 @@ J26 is used to connect MEMS module for Video output.
 .. figure:: ./image/CIF_Header.jpg
   :alt: CIF_Header
   :align: center
-  :height: 120px
+  :height: 100px
 
 2.11 ADC (J18)
 ^^^^^^^^^^^^^^^^
@@ -1354,9 +1354,9 @@ J26 is used to connect MEMS module for Video output.
 ^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/RTC.jpg
-   :align: center
+  :align: center
   :alt: RTC battery
-  :height: 120px
+  :height: 100px
 
 3 Product Configurations
 --------------------------
