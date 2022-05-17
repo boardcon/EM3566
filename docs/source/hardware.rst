@@ -814,7 +814,8 @@ output/input.
 
 -  **SPIF-OUT (DJ2)**
 
-.. figure:: ./image/OPT.jpg
+.. figure:: ./image/opt.jpg
+  :align: center
   :alt: OPT
 
 The Optical Adaptor DLT1120 is used for S/PDIF data output.
@@ -835,6 +836,7 @@ The Optical Adaptor DLT1120 is used for S/PDIF data output.
 
 .. figure:: ./image/HDMI.jpg
   :alt: HDMI
+  :align: center
   :height: 90px
   
 EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
@@ -890,6 +892,7 @@ EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
 
 .. figure:: ./image/Micro_USB.jpg
   :alt: Micro_USB
+  :align: center
   :height: 80px
   
 EM3566 OTG is a Micro USB2.0 port, it is used to download image and ADB
@@ -984,10 +987,12 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/SATA3.0.png
   :alt: SATA3.0
+  :align: center
   :height: 100px
   
 .. figure:: ./image/PH-2A.jpg
   :alt: PH-2A
+  :align: center
   :height: 90px
 
 2.7 Ethernet (JP1)
@@ -995,6 +1000,7 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/RJ45.jpg
   :alt: RJ45
+  :align: center
   :height: 100px
 
 2.8 eDP/LVDS/MIPI Panel (CON1)
@@ -1002,13 +1008,15 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/MIPI_Header.jpg
   :alt: MIPI_Header
-  :height: 120px
+  :align: center
+  :height: 160px
 
 2.9 BT656 (J26) 
 ^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/VOP_Header.jpg
   :alt: VOP_Header
+  :align: center
   :height: 120px
   
 2.10 GPIO (CON4)
@@ -1016,6 +1024,7 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/CIP_Header.jpg
   :alt: CIP_Header
+  :align: center
   :height: 120px
 
 2.11 ADC (J18)
