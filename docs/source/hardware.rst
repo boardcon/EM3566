@@ -835,6 +835,7 @@ The Optical Adaptor DLT1120 is used for S/PDIF data output.
 
 .. figure:: ./image/HDMI.jpg
   :alt: HDMI
+  :height: 90px
   
 EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
 
@@ -889,6 +890,7 @@ EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
 
 .. figure:: ./image/Micro_USB.jpg
   :alt: Micro_USB
+  :height: 80px
   
 EM3566 OTG is a Micro USB2.0 port, it is used to download image and ADB
 transfer file.
@@ -922,9 +924,11 @@ transfer file.
 
 .. figure:: ./image/Dual-USB.jpg
   :alt: Dual-USB
+  :height: 100px
   
 .. figure:: ./image/PH-4A.jpg
   :alt: PH-4A
+  :height: 90px
   
 The 4-ch USB HOST interfaces are extended by GL850G which is a fully
 compliant with the USB 2.0 hub specification and is designed to work
@@ -980,45 +984,53 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/SATA3.0.png
   :alt: SATA3.0
+  :height: 100px
   
 .. figure:: ./image/PH-2A.jpg
-  :alt: 
+  :alt: PH-2A
+  :height: 90px
 
 2.7 Ethernet (JP1)
 ^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/RJ45.jpg
   :alt: RJ45
+  :height: 100px
 
 2.8 eDP/LVDS/MIPI Panel (CON1)
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/MIPI_Header.jpg
   :alt: MIPI_Header
+  :height: 120px
 
 2.9 BT656 (J26) 
 ^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/VOP_Header.jpg
   :alt: VOP_Header
+  :height: 120px
   
 2.10 GPIO (CON4)
 ^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/CIP_Header.jpg
   :alt: CIP_Header
+  :height: 120px
 
 2.11 ADC (J18)
 ^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/PH-4A.jpg
   :alt: PH-4A
+  :height: 90px
 
 2.12 MIPI Camera (J30, J31)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/LCD_connector.jpg
   :alt: LCD_connector
+  :height: 90px
   
 
 2.13 IR (J24)
@@ -1032,9 +1044,11 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PH-3A.jpg
   :alt: PH-3A
+  :height: 90px
   
 .. figure:: ./image/PH-4A.jpg
   :alt: PH-4A
+  :height: 90px
   
 
 2.15 RS485 (J32, JP2)
@@ -1042,15 +1056,18 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PH-3A-1.jpg
   :alt: PH-3A
+  :height: 90px
   
 .. figure:: ./image/Pin_header.jpg
   :alt: 2-pin header
+  :height: 90px
 
 2.16 Button (K3)
 ^^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/button.jpg
-  :alt: 
+  :alt: BUTTON
+  :height: 60px
   
 
 2.17 4G Module (CON2, P4)	25
@@ -1058,41 +1075,48 @@ J6 / J17 (4-pin connector)
 
 .. figure:: ./image/PCIe.jpg
   :alt: PCIe
+  :height: 90px
   
 .. figure:: ./image/4G.jpg
   :alt: 4G model
+  :height: 120px
   
 .. figure:: ./image/Nano_sim.jpg
   :alt: Nano_sim
+  :height: 90px
   
 2.18 Micro SD (J3) 
 ^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/Micro_SD.jpg
   :alt: micro SD
+  :height: 90px
 
 2.19 WiFi&Bluetooth (U20)
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/wifi.jpg
   :alt: wifi model
+  :height: 120px
 
 2.20 SSD (CON3)
 ^^^^^^^^^^^^^^^^^
 
 .. figure:: ./image/mPCIe.jpg
   :alt: mPCIe
+  :height: 90px
 
 2.21 GPS (MU4)
 ^^^^^^^^^^^^^^^
 
 .. figure:: ./image/GPS.jpg
   :alt: GPS model
+  :height: 120px
 
 2.22 RTC (BT1)
 ^^^^^^^^^^^^^^^^
 
-.. figure:: ./image/RTC.JPG
+.. figure:: ./image/RTC.jpg
   :alt: RTC battery
 
 3 Product Configurations
