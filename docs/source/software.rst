@@ -182,7 +182,7 @@ or LVDS
    :align: center
    :alt: IO-power-Domain-Map
  
-**boot.img** are generated in :file:`android11\kernel` directory.
+**boot.img** are generated in :file:`android11/kernel` directory.
  
 .. Note:: 
 
@@ -288,6 +288,7 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
 --------------
 
 Step 1, unzip *RKDevTool-rk3566-buildroot* on Windows.
+
 Step 2, open *RKDevTool.exe* Path: :file:`RKDevTool_Release/RKDevTool.exe`
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_28.png
@@ -337,7 +338,7 @@ Connect the board and monitor with a HDMI cable, then start up.
    :alt: HDMI display
    
 .. Note::
-Note: The system default HDMI display. If use LVDS, please reflash update_lvds.img.
+Note: The system default HDMI display. If use LVDS, please reflash **update_lvds.img**.
 
 5.2 SD Card
 ^^^^^^^^^^^^
@@ -361,7 +362,7 @@ The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB
 5.4 Vedio Player
 ^^^^^^^^^^^^^^^^^
 
-Copy video files to sdcard/u_disk then insert it to the board. After system boot, open sdcard/udisk and click video file to play.
+Copy video files to SD card or U_disk then insert it to the board. After system boot, open SD_card/U_disk and click video file to play.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_39.png
    :alt: Vedio player
@@ -390,6 +391,7 @@ Connect the board and router with an Ethernet cable (default DHCP=Yes). Ping URL
 ^^^^^^^^^^^
 
 Step 1, open the APP **Sound Recorder** in Android.
+
 Step 2, click **Start** button to recording.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_44.png
@@ -443,7 +445,7 @@ Select the available device in the list to pair. After pairing, devices can conn
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_54.png
    :alt: Bluetooth Setting
-.. figure:: ./image/EM3566_SBC_Android11_figure_52.jpg
+.. figure:: ./image/EM3566_SBC_Android11_figure_52.png
    :alt: BT pair
 
 5.10 Camera
@@ -460,14 +462,14 @@ Connect the camera module (OV13850) to the development board camera0 before powe
 5.11 RS485
 ^^^^^^^^^^^
 
-Connect the RS485 ports of Board A and B with the test line. 
+Connect the RS485 ports of Board A and B with the test cable. 
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_55.png
    :align: center
    :alt: Connect Board A and B
 
 Open **cmd.exe** of PC (Path: :file:`Test/cmd.exe`). After power on, the PC will report that found new hardware if it never install the usb adb driver :file:`tools/adb`. At this time user need to click **InstallADB(x64).bat** or **InstallADB(x86).bat** to install. 
-After install driver, copy the file **com** to windows C:\Users\Administrator, then execute the commands at cmd.
+After install driver, copy the file **com** to :file:`windows C:/Users/Administrator`, then execute the commands at cmd.
 
 .. code-block:: 
 
@@ -495,7 +497,7 @@ For Board B, execute the follow commands at **Serial terminal B** to set RS485 a
 5.12 RS232
 ^^^^^^^^^^^
 
-Connect the RS232 RX and TX (UART1 Pin2&Pin3 or UART2 Pin2&Pin3) with the test line. Execute the follow command to test.
+Connect the RS232 RX and TX (UART1 Pin2&Pin3 or UART2 Pin2&Pin3) with the test cable. Execute the follow command to test.
 
 For UART1
 
@@ -519,7 +521,7 @@ For UART2
 5.13 M.2 SATA
 ^^^^^^^^^^^^^^
 
-Format SSD to ext4 file system,then connect to board. Execute the follow command to mount ssd
+Format SSD to ext4 file system,then connect to board. Execute the follow command to mount SSD.
 
 .. code-block:: 
 
@@ -527,7 +529,7 @@ Format SSD to ext4 file system,then connect to board. Execute the follow command
    mount -t ext4 /dev/block/nvme0n1 /data/ssd  
    ls /data/ssd
    
-If the ssd has been automatically mounted, execute the follow command to test 
+If the SSD has been automatically mounted, execute the follow command to test 
 
 .. code-block:: 
 
@@ -542,7 +544,7 @@ If the ssd has been automatically mounted, execute the follow command to test
 5.14 IR
 ^^^^^^^^^^^
 
-Connect IR receiver to the IR port. The EM3566 supports remote control.
+The EM3566 supports remote control. Connect IR receiver to the IR port. 
 
 .. figure:: ./image/EM3566_SBC_Android11_IR.jpg
    :alt: test IR
@@ -728,7 +730,8 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
 --------------
 
 Step 1, unzip **RKDevTool.rar** on Windows.
-Step 2, open **RKDevTool.exe**  Path: :file:`RKDevTool_Release\RKDevTool.exe`
+
+Step 2, open **RKDevTool.exe**  Path: :file:`RKDevTool_Release/RKDevTool.exe`
 
 .. figure:: ./image/EM3566_Debian_38.png
    :alt: open RKDevTool
@@ -927,7 +930,7 @@ Click the Buletooth icon in the lower right corner of the UI, select the availab
 
  Hot-plug is not supported for SATA. Please connect the SATA to the development board before power on.
  
-The system is set to USB3.0 mode by default. Please reflash boot-sata.img before test. 
+The system is default USB3.0 mode. Please reflash boot-sata.img before test. 
 
 Set the SW switch to SATA mode: ON ON 
 
