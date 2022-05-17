@@ -210,7 +210,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
     * - 21
       - GMAC1_RXCLK_M0
       - 
-      -  GPIO3_A7_d
+      - GPIO3_A7_d
       - 3.3V
     * - 22
       - GMAC1_TXD2_M0
@@ -277,7 +277,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
       - MIPI DSI or LVDS TXD1P
       - 
       - 1.8V
-    * -  35
+    * - 35
       - HDMI_TX_HPDIN
       - HDMI HPD input
       - 
@@ -304,6 +304,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
       -  1.8V
     * - 40
       - HDMI_TX1N
+      - 
       - 
       - 1.8V
 
