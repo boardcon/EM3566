@@ -948,7 +948,7 @@ Connect the RS485 ports of Board A and B with the test cable.
    :align: center
    :alt: Connect Board A and B
 
-Copy the file **com** to the SD card, then insert the card into the board and powered on. After the system booting, execute the commands to copy the **com** from the SD card to the board.
+Copy the file **com** to the SD card, then insert the card into the board and powered on. After the system booting, execute the commands to copy the **com** from SD card to board.
 
 .. code-block:: 
 
@@ -1283,7 +1283,7 @@ EM3566 supports SD Hot-plug
 
 The USB Host can be used to connect USB mouse, USB keyboard, U-Disk or other USB devices.
 
-.. figure:: ./image/EM3566_Buildroot_file_manager.gif
+.. figure:: ./image/EM3566_Buildroot_USB_test.jpg
    :alt: U-Disk
  
 5.4 Video player
@@ -1349,25 +1349,140 @@ After finish recording, execute follow command to play.
   aplay -Dhw:1,0 test.wav   # headphone output
 
 5.7 RTC
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+
+Execute the command hwclock at CRT terminal 
+
+.. code-block:: 
+
+  hwclock
+  
+Wait a moment then run *hwclock* again, it can be found the time has changed.
+
+.. figure:: ./image/EM3566_Buildroot_RTC.png
+   :alt: RTC test
 
 5.8 WiFi
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^
 
+Connect the WiFi antenna, then click* qsetting -> WiFi -> turn on*, select the SSID from the list of available networks and enter the password.
+
+After connected, user can ping URL/IP at terminal.
+
+.. code-block::
+
+   ping www.boardcon.com
+
+.. figure:: ./image/EM3566_Buildroot_WiFi_test.jpg
+   :alt: wifi test-1
+   
+.. figure:: ./image/EM3566_Buildroot_wifi.gif
+   :alt: wifi test-2
+   
+.. figure:: ./image/EM3566_Buildroot_SSID.gif
+   :alt: wifi test-3
+   
 5.9 Bluetooth
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
+Click *qsetting -> WiFi -> turn on*
+
+Select the available device in the list to pair.
+
+.. figure:: ./image/EM3566_Buildroot_BT_test.jpg
+   :alt: BT test
+   
 5.10 SATA
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
+.. warning::
+
+ Hot-plug is not supported for SATA. Please connect the SATA to the development board before power on.
+ 
+The system is default USB3.0 mode. Please reflash **boot-lvds-sata.img** before test. 
+
+Set the SW switch to SATA mode: ON ON 
+
+
+.. figure:: ./image/EM3566_Buildroot_SATA.png
+   :alt: sata
+
+.. figure:: ./image/EM3566_Buildroot_ls_U_disk.png
+   :alt: SATA test
+   
 5.11 RS485
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
+
+Connect the RS485 ports of Board A and B with the test cable. 
+
+.. figure:: ./image/EM3566_SBC_Android11_figure_55.png
+   :align: center
+   :alt: Connect Board A and B
+
+Copy the file **com** to the SD card, then insert the card into the board and powered on. After the system booting, execute the commands to copy the **com** from SD card to board.
+
+.. code-block:: 
+
+  cp /sdcard/com /
+  ls
+  chmod 777 com    # Modify COM properties
+  
+.. figure:: ./image/EM3566_Buildroot_test_RS485.png
+   :alt: test_RS485
+
+For Board A, execute the follow commands at **Serial terminal A** to set RS485 as Receiver or Transmitter. 
+
+.. code-block:: 
+
+ ./com /dev/ttyS3 115200 8 0 1 
+ 
+For Board B, execute the follow commands at **Serial terminal B** to set RS485 as Receiver or Transmitter. 
+
+.. code-block:: 
+
+  ./com /dev/ttyS3 115200 8 0 1 
+
+.. figure:: ./image/EM3566_Buildroot_RS485.png
+   :alt: test_RS485
 
 5.12 UART
+^^^^^^^^^^^
+
+Connect the UART ports RX and TX with the test cable. Execute the follow command to test
+
+.. code-block::
+
+  ./com /dev/ttyS4 115200 8 0 1        # Test UART4)
+  ./com /dev/ttyS5 115200 8 0 1        # Test UART5)
+
+.. figure:: ./image/EM3566_Buildroot_UART.png
+   :alt: test UART
+   
+5.13 M.2 SATA (SSD)
 ^^^^^^^^^^^^^^^^^^^
 
-5.13 M.2 SATA
-^^^^^^^^^^^^^^^^^^^
+Format SSD to ext4 file system on ubuntu system before test
+
+.. code-block::
+
+  mke2fs -t ext4 /dev/block/nvme0n1 
+  
+Then connect the SSD to board. Execute the follow command to mount. 
+
+.. code-block::
+
+ mkdir /data/ssd 
+ mount -t ext4 /dev/nvme0n1 /data/ssd
+ ls /data/ssd
+ 
+If the SSD has been automatically mounted, execute the follow command to test
+
+.. code-block::
+
+   ls /run/media/nvme0n1 
+ 
+.. figure:: ./image/EM3566_Buildroot_test_ssd.png
+   :alt: test SSD
 
 5.14 4G (EC25/EC20)
 ^^^^^^^^^^^^^^^^^^^
