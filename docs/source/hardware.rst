@@ -317,7 +317,6 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 +===+=============+==================+===+======+====================+
 | 1 | VCC12V_DCIN | Main power       | 2 | GND  | Ground             |
 |   |             | supply.          |   |      |                    |
-|   |             |                  |   |      |                    |
 |   |             | DC 12V power in  |   |      |                    |
 +---+-------------+------------------+---+------+--------------------+
 | 3 | GND         | Ground           |   |      |                    |
