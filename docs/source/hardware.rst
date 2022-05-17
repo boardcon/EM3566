@@ -1311,6 +1311,7 @@ J26 is used to connect MEMS module for Video output.
   
 .. figure:: ./image/4G.jpg
   :alt: 4G model
+  :align: center
   :height: 120px
   
 .. figure:: ./image/Nano_sim.jpg
