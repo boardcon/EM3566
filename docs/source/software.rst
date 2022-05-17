@@ -1180,8 +1180,41 @@ Step 2, enter :file:`RKDevTool-rk3566-buildroot/rockdev/`, double-click to run *
 Step 3, the **update.img** will be generated in rockdev directory.
 
 .. figure:: ./image/EM3566_Buildroot_Pack_Image-1.png
-   :align: center
-   :alt: IO-power-Domain-Map  
+   :alt: Pack Image
+   
+.. figure:: ./image/EM3566_Buildroot_Pack_Image_2.png
+   :alt: Pack Image
+
+.. figure:: ./image/EM3566_Buildroot_Pack_Image_3.png
+   :alt: Pack Image
+
+.. figure:: ./image/EM3566_Buildroot_Pack_Image_4.png
+   :alt: Pack Image
+
+3.2 Unzip Firmware
+^^^^^^^^^^^^^^^^^^^
+
+Unzip Firmware in windows.
+
+Step 1, open **RKDevTool.exe** Path: :file:`RKDevTool_Release/RKDevTool.exe`
+
+.. figure:: ./image/EM3566_Buildroot_RKDevTool.png
+   :alt: open RKDevTool
+   
+Step 2, click *Advanced Function -> Firmware*, select **update.img**. Click *Unpack* to Unzip.
+
+.. figure:: ./image/EM3566_Buildroot_Unpack.png
+   :alt: Unpack
+
+Unpack finish.
+
+.. figure:: ./image/EM3566_Buildroot_Unpack_2.png
+   :alt: Unpack
+
+The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/Android/Image`
+
+.. figure:: ./image/EM3566_Buildroot_Unpack_3.png
+   :alt: Unpack
 
 4 Burn Images
 -------------
