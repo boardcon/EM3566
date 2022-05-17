@@ -98,216 +98,6 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
    
 **Pin Definition**
 
-.. list-table:: 
-    :widths: 15 10 30 10 15
-    :header-rows: 1
-
-    * - Pin
-      - Signal
-      - Description or functions
-      - GPIO serial
-      - IO Voltage
-    * - 1
-      - VCC3V3_SYS
-      - 3.3V Main Power input
-      - 
-      - 3.3V
-    * - 2
-      - VCC3V3_SYS
-      - 3.3V Main Power input
-      - 
-      - 3.3V
-    * - 3
-      - VCC3V3_SYS
-      - 3.3V Main Power input
-      - 
-      - 3.3V
-    * - 4
-      - VCC_RTC
-      - RTC button Cell Power input
-      - 
-      - 3.0V-1.8V
-    * - 5
-      - PMIC_32KOUT
-      - RTC clock(32.768khz) output
-      - 
-      - 3.3V
-    * - 6
-      - GND
-      - Ground
-      - 
-      - 0V
-    * -  7                                                                                                                       
-      - HDMITX_CEC_M0
-      -
-      - GPIO4_D1_u
-      -  3.3V
-    * - 8
-      - HDMITX_SDA
-      - Pull up 2.2K inside
-      - GPIO4_D0_u
-      - 3.3V
-    * - 9
-      - HDMITX_SCL
-      - Pull up 2.2K inside
-      - GPIO4_C7_u
-      - 3.3V
-    * - 10
-      - GND
-      - Ground
-      -
-      - 0V
-    * - 11
-      - GMAC1_MCLKINOUT_M0
-      - RGMII reference clock input(125Mhz)
-      - GPIO3_C0_d
-      - 3.3V
-    * - 12
-      - GND
-      - Ground
-      -            
-      - 0V
-    * - 13
-      - GMAC1_TXD0_M0
-      -                                  
-      - GPIO3_B5_d
-      - 3.3V
-    * - 14
-      - GMAC1_TXD1_M0
-      -
-      - GPIO3_B6_d
-      - 3.3V 
-    * - 15
-      - GMAC1_TXEN_M0
-      -
-      - GPIO3_B7_d
-      - 3.3V
-    * - 16
-      -  GMAC1_RXDV_CRS_M0
-      - 
-      - GPIO3_B3_d
-      - 3.3V
-    * - 17
-      - GMAC1_RXD1_M0
-      - 
-      - GPIO3_B2_d
-      - 3.3V
-    * - 18
-      - GMAC1_RXD0_M0
-      - 
-      - GPIO3_B1_d
-      - 3.3V
-    * - 19
-      - GMAC1_RXD3_M0
-      -                                   
-      - GPIO3_A5_d
-      - 3.3V
-    * - 20
-      - GMAC1_RXD2_M0
-      - 
-      - GPIO3_A4_d
-      - 3.3V
-    * - 21
-      - GMAC1_RXCLK_M0
-      - 
-      - GPIO3_A7_d
-      - 3.3V
-    * - 22
-      - GMAC1_TXD2_M0
-      - 
-      - GPIO3_A2_d
-      - 3.3V
-    * - 23
-      - GMAC1_TXD3_M0
-      - 
-      - GPIO3_A3_d
-      - 3.3V       
-    * - 24
-      - GMAC1_TXCLK_M0
-      - 
-      - GPIO3_A6_d
-      - 3.3V
-    * - 25
-      - MIPI_DSI_TX0_D3N/LVDS_TX0_D3N
-      - MIPI DSI or LVDS TXD3N
-      - 
-      - 1.8V
-    * - 26
-      - MIPI_DSI_TX0_D3P/LVDS_TX0_D3P
-      - MIPI DSI or LVDS TXD3P
-      - 
-      - 1.8V
-    * - 27
-      - MIPI_DSI_TX0_D2N/LVDS_TX0_D2N
-      - MIPI DSI or LVDS TXD2N
-      - 
-      - 1.8V
-    * - 28
-      - MIPI_DSI_TX0_D2P/LVDS_TX0_D2P
-      - MIPI DSI or LVDS TXD2P
-      - 
-      - 1.8V
-    * - 29
-      - MIPI_DSI_TX0_D1N/LVDS_TX0_D1N
-      - MIPI DSI or LVDS TXD1N
-      - 
-      - 1.8V
-    * - 30
-      - MIPI_DSI_TX0_D1P/LVDS_TX0_D1P
-      - MIPI DSI or LVDS TXD1P
-      - 
-      - 1.8V
-    * - 31
-      - MIPI_DSI_TX0_D0N/LVDS_TX0_D0N
-      - MIPI DSI or LVDS TXD1N
-      - 
-      - 1.8V
-    * -  32
-      - MIPI_DSI_TX0_D0P/LVDS_TX0_D0P
-      - MIPI DSI or LVDS TXD1P
-      - 
-      - 1.8V
-    * - 33
-      - MIPI_DSI_TX0_CLKN/LVDS_TX0_CLKN
-      - MIPI DSI or LVDS TXD1N
-      - 
-      - 1.8V
-    * - 34
-      - MIPI_DSI_TX0_CLKP/LVDS_TX0_CLKP
-      - MIPI DSI or LVDS TXD1P
-      - 
-      - 1.8V
-    * - 35
-      - HDMI_TX_HPDIN
-      - HDMI HPD input
-      - 
-      - 3.3V
-    * - 36
-      - HDMI_TXCLKN
-      - 
-      - 
-      - 1.8V
-    * - 37
-      - HDMI_TXCLKP
-      - 
-      - 
-      - 1.8V
-    * - 38
-      - HDMI_TX0N
-      - 
-      - 
-      - 1.8V
-    * - 39
-      - HDMI_TX0P
-      - 
-      - 
-      -  1.8V
-    * - 40
-      - HDMI_TX1N
-      - 
-      - 
-      - 1.8V
-
 +---+-----------------+--------------------+---------------+---------+
 |Pin|Signal           |Description or funct|GPIO serial    |IO Voltag|
 |   |                 |ions                |               |e        |
@@ -960,6 +750,18 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 | 6 |                 |                    |               |         |
 +---+-----------------+--------------------+---------------+---------+     
 
+.. Note::
+
+ I2C1 can't be used for exclusive bus, such as CTP. RGMII default is 3.3V IO, but can change to 1.8V.
+
+2 Peripherals Introduction
+--------------------------
+
+2.1 Power (P1)
+^^^^^^^^^^^^^^^^
+
+The DC JACK is 5.5 x 2.1mm, 3-pin plug Type. Typical 12V/3A DC adapter. 
+
 +---+-------------+------------------+---+------+--------------------+
 | P | Signal      | Description      | P | Si   | Description        |
 | i |             |                  | i | gnal |                    |
@@ -972,18 +774,46 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 | 3 | GND         | Ground           |   |      |                    |
 +---+-------------+------------------+---+------+--------------------+
 
-
-
-
-2 Peripherals Introduction
---------------------------
-
-2.1 Power (P1)
-^^^^^^^^^^^^^^^^^^^^^^
-
 2.2 Audio I/O 
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
+-  **Headphone (J7, 3.5mm jack)**
 
+.. figure:: ./image/PJ327E.gif
+  :alt: PJ327E
+
+The EM3566 adopts audio codec ES8388 to provide stereo audio
+output/input.
+
+**Feature**
+
+-  Low power
+-  Integrated ADC and DAC
+-  IIS transfer audio data
+-  Stereo output, support recording
+
++---+-----------+------------------+---+-----------+-----------------+
+| P | Signal    | Description      | P | Signal    | Description     |
+| i |           |                  | i |           |                 |
+| n |           |                  | n |           |                 |
++===+===========+==================+===+===========+=================+
+| 1 | GND       | Ground           | 2 | HP_RO     | Headphone       |
+|   |           |                  |   |           | amplifier       |
+|   |           |                  |   |           | output \_Right  |
+|   |           |                  |   |           | channel         |
++---+-----------+------------------+---+-----------+-----------------+
+| 3 | HP_LO     | Headphone        | 4 | PHE_DET   | Headphone       |
+|   |           | amplifier output |   |           | Detect          |
+|   |           | \_Left channel   |   |           |                 |
++---+-----------+------------------+---+-----------+-----------------+
+| 5 | MIC2P     | Single-end input |   |           |                 |
+|   |           | for microphone   |   |           |                 |
++---+-----------+------------------+---+-----------+-----------------+
+
+-  **SPIF-OUT (DJ2)**
+
+.. figure:: ./image/OPT.gif
+  :alt: OPT
+ 
 2.3 HDMI OUT (J4)
 ^^^^^^^^^^^^^^^^^^^^^^
 
