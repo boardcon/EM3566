@@ -45,7 +45,8 @@ After the installation is complete, connect the board and PC with Micro USB cabl
 .. figure:: ./image/EM3566_SBC_Android11_figure_22.png
    :alt: serial port path
 
-The WINDOW will pop up found New Hardware Wizard dialog box, choose to install from the specified location, and then select :file:`/DriverAssitant_v5.11/DriverAssitant_v5.1.1/ADBDriver`.
+The WINDOW will pop up *found New Hardware Wizard* dialog box, choose to install from the specified location, and then select :file:`/DriverAssitant_v5.11/DriverAssitant_v5.1.1/ADBDriver`.
+
 After the installation is complete in *Computer Management* can see the following information:
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_23.png
@@ -287,9 +288,9 @@ The unzip files will be generated in :file:`/RKDevTool/RKDevTool_Release/Output/
 4 Burn Images
 --------------
 
-Step 1, unzip *RKDevTool-rk3566-buildroot* on Windows.
+Step 1, unzip **RKDevTool-rk3566-buildroot** on Windows.
 
-Step 2, open *RKDevTool.exe* Path: :file:`RKDevTool_Release/RKDevTool.exe`
+Step 2, open **RKDevTool.exe** Path: :file:`RKDevTool_Release/RKDevTool.exe`
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_28.png
    :alt: RKDevTool
@@ -736,6 +737,8 @@ Step 3, connect PC and development board with Micro USB cable, keep pressing the
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_29.jpg
    :alt: connect PC and development board
+   :align: center
+   :width: 350px
    
 .. figure:: ./image/EM3566_Debian_2.png
    :alt: Found one LOADER Device
@@ -1228,7 +1231,9 @@ Step 2, open **RKDevTool.exe** Path: :file:`RKDevTool_Release/RKDevTool.exe`
 Step 3, connect PC and development board with Micro USB cable, keep pressing the **Recover** Key and power the board until the windows PC shows **Found one LOADER Device**.
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_29.jpg
-   :alt: connect USB OTG
+   :alt: connect PC and development board
+   :align: center
+   :width: 350px
    
 .. figure:: ./image/EM3566_Buildroot_Found_LOADER_Device.png
    :alt: Found one LOADER Device
