@@ -6,6 +6,11 @@ ARM Cortex-A55 CPU cores and Mali-G52-2EE graphics and designed for AIoT applica
 as AI robot, smart POS machine, face recognition terminal, and business display integrated
 equipment.
 
+.. figure:: ./image/EM3566_single_board_computer.jpg
+   :align: center
+   :alt: EM3566 single board computer
+  
+
 Contents
 --------
 
