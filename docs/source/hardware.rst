@@ -767,15 +767,14 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 The DC JACK is 5.5 x 2.1mm, 3-pin plug Type. Typical 12V/3A DC adapter. 
 
 +---+-------------+------------------+---+------+--------------------+
-| P | Signal      | Description      | P | Si   | Description        |
-| i |             |                  | i | gnal |                    |
-| n |             |                  | n |      |                    |
+|Pin| Signal      | Description      |Pin| Si   | Description        |
+|   |             |                  |   | gnal |                    |
 +===+=============+==================+===+======+====================+
 | 1 | VCC12V_DCIN | Main power       | 2 | GND  | Ground             |
 |   |             | supply.          |   |      |                    |
 |   |             | DC 12V power in  |   |      |                    |
 +---+-------------+------------------+---+------+--------------------+
-| 3 | GND         | Ground           |   |      |                    |
+| 3 | GND         | Ground           |                               |
 +---+-------------+------------------+---+------+--------------------+
 
 2.2 Audio I/O 
@@ -809,8 +808,8 @@ output/input.
 |   |           | amplifier output |   |           | Detect          |
 |   |           | \_Left channel   |   |           |                 |
 +---+-----------+------------------+---+-----------+-----------------+
-| 5 | MIC2P     | Single-end input |   |           |                 |
-|   |           | for microphone   |   |           |                 |
+| 5 | MIC2P     | Single-end input |                                 |
+|   |           | for microphone   |                                 |
 +---+-----------+------------------+---+-----------+-----------------+
 
 -  **SPIF-OUT (DJ2)**
@@ -828,7 +827,7 @@ The Optical Adaptor DLT1120 is used for S/PDIF data output.
 | 1 | SPDIF_TX_M2  | SPDIF signal  | 2 | VCC3V3_SYS | 3.3V power     |
 |   |              |               |   |            | supply         |
 +---+--------------+---------------+---+------------+----------------+
-| 3 | GND          | Ground        |   |            |                |
+| 3 | GND          | Ground        |                                 |
 +---+--------------+---------------+---+------------+----------------+
 
 2.3 HDMI OUT (J4)
