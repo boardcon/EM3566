@@ -1531,59 +1531,51 @@ provides SDIO interface for WiFi, UART / PCM for Bluetooth.
 |   |             |                |   |             | e             |
 |   |             |                |   |             | nable/disable |
 +---+-------------+----------------+---+-------------+---------------+
-| 1 | WIFI_       | WLAN to        | 1 | WIFI_D2     | WiFi data     |
-| 3 | WAKE_HOST_H | wake-up HOST   | 4 |             |               |
+| 13| WIFI_       | WLAN to        | 14| WIFI_D2     | WiFi data     |
+|   | WAKE_HOST_H | wake-up HOST   |   |             |               |
 +---+-------------+----------------+---+-------------+---------------+
-| 1 | WIFI_D3     | WiFi data      | 1 | WIFI_CMD    | WiFi command  |
-| 5 |             |                | 6 |             |               |
+| 15| WIFI_D3     | WiFi data      | 16| WIFI_CMD    | WiFi command  |
 +---+-------------+----------------+---+-------------+---------------+
-| 1 | WIFI_CLK    | WiFi clock     | 1 | WIFI_D0     | WiFi data     |
-| 7 |             |                | 8 |             |               |
+| 17| WIFI_CLK    | WiFi clock     | 18| WIFI_D0     | WiFi data     |
 +---+-------------+----------------+---+-------------+---------------+
-| 1 | WIFI_D1     | WiFi data      | 2 | GND         | Ground        |
-| 9 |             |                | 0 |             |               |
+| 19| WIFI_D1     | WiFi data      | 20| GND         | Ground        |
 +---+-------------+----------------+---+-------------+---------------+
-| 2 | VIN_LDO_OUT | Internal Buck  | 2 | VCCIO_WL    | 1.8 V power   |
-| 1 |             | voltage        | 2 |             | supply        |
+| 21| VIN_LDO_OUT | Internal Buck  | 22| VCCIO_WL    | 1.8 V power   |
+|   |             | voltage        |   |             | supply        |
 |   |             | generation pin |   |             |               |
 +---+-------------+----------------+---+-------------+---------------+
-| 2 | VIN_LDO     | Internal Buck  | 2 | PMIC        | LPO           |
-| 3 |             | voltage        | 4 | _32KOUT_SOC |               |
+| 23| VIN_LDO     | Internal Buck  | 24| PMIC        | LPO           |
+|   |             | voltage        |   | _32KOUT_SOC |               |
 |   |             | generation pin |   |             |               |
 +---+-------------+----------------+---+-------------+---------------+
-| 2 | I2S2_SDI_M0 | PCM Data       | 2 | I2S2        | PCM clock     |
-| 5 |             | output         | 6 | _LRCK_TX_M0 |               |
+| 25| I2S2_SDI_M0 | PCM Data       | 26| I2S2        | PCM clock     |
+|   |             | output         |   | _LRCK_TX_M0 |               |
 +---+-------------+----------------+---+-------------+---------------+
-| 2 | I2S2_SDO_M0 | PCM data input | 2 | I2S2        | PCM sync      |
-| 7 |             |                | 8 | _SCLK_TX_M0 | signal        |
+| 27| I2S2_SDO_M0 | PCM data input | 28| I2S2        | PCM sync      |
+|   |             |                |   | _SCLK_TX_M0 | signal        |
 +---+-------------+----------------+---+-------------+---------------+
-| 2 | NC          | Not connect    | 3 | GND         | Ground        |
-| 9 |             |                | 0 |             |               |
+| 29| NC          | Not connect    | 30| GND         | Ground        |
 +---+-------------+----------------+---+-------------+---------------+
-| 3 | GND         | Ground         | 3 | NC          | Not connect   |
-| 1 |             |                | 2 |             |               |
+| 31| GND         | Ground         | 32| NC          | Not connect   |
 +---+-------------+----------------+---+-------------+---------------+
-| 3 | GND         | Ground         | 3 | BT_REG_ON_H | Enable PIN    |
-| 3 |             |                | 4 |             | for WLAN      |
+| 33| GND         | Ground         | 34| BT_REG_ON_H | Enable PIN    |
+|   |             |                |   |             | for WLAN      |
 |   |             |                |   |             | Device        |
 |   |             |                |   |             |               |
 |   |             |                |   |             | ON: Pull high |
 +---+-------------+----------------+---+-------------+---------------+
-| 3 | NC          | Not connect    | 3 | GND         | Ground        |
-| 5 |             |                | 6 |             |               |
+| 35| NC          | Not connect    | 36| GND         | Ground        |
 +---+-------------+----------------+---+-------------+---------------+
-| 3 | NC          | Not connect    | 3 | NC          | Not connect   |
-| 7 |             |                | 8 |             |               |
+| 37| NC          | Not connect    | 38| NC          | Not connect   |
 +---+-------------+----------------+---+-------------+---------------+
-| 3 | NC          | Not connect    | 4 | NC          | Not connect   |
-| 9 |             |                | 0 |             |               |
+| 39| NC          | Not connect    | 40| NC          | Not connect   |
 +---+-------------+----------------+---+-------------+---------------+
-| 4 | UA          | Bluetooth UART | 4 | UART1_RX_M0 | Bluetooth     |
-| 1 | RT1_CTSn_M0 | interface      | 2 |             | UART          |
+| 41| UA          | Bluetooth UART | 42| UART1_RX_M0 | Bluetooth     |
+|   | RT1_CTSn_M0 | interface      |   |             | UART          |
 |   |             |                |   |             | interface     |
 +---+-------------+----------------+---+-------------+---------------+
-| 4 | UART1_TX_M0 | Bluetooth UART | 4 | UA          | Bluetooth     |
-| 3 |             | interface      | 4 | RT1_RTSn_M0 | UART          |
+| 43| UART1_TX_M0 | Bluetooth UART | 44| UA          | Bluetooth     |
+|   |             | interface      |   | RT1_RTSn_M0 | UART          |
 |   |             |                |   |             | interface     |
 +---+-------------+----------------+---+-------------+---------------+
 
@@ -1608,99 +1600,77 @@ M.2 M key socket (PCIe) for NVMe SSD.
 +---+-------------+---------------+---+-----------+-------------------+
 | 7 | NC          | Not connect   | 8 | NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 9 | GND         | Ground        | 1 | DAS       | PCIE DAS          |
-|   |             |               | 0 |           |                   |
+| 9 | GND         | Ground        | 10| DAS       | PCIE DAS          |
 +---+-------------+---------------+---+-----------+-------------------+
-| 1 | NC          | Not connect   | 1 | PCIE_3V3  | 3.3V power supply |
-| 1 |             |               | 2 |           |                   |
+| 11| NC          | Not connect   | 12| PCIE_3V3  | 3.3V power supply |
 +---+-------------+---------------+---+-----------+-------------------+
-| 1 | NC          | Not connect   | 1 | PCIE_3V3  | 3.3V power supply |
-| 3 |             |               | 4 |           |                   |
+| 13| NC          | Not connect   | 14| PCIE_3V3  | 3.3V power supply |
 +---+-------------+---------------+---+-----------+-------------------+
-| 1 | GND         | Ground        | 1 | PCIE_3V3  | 3.3V power supply |
-| 5 |             |               | 6 |           |                   |
+| 15| GND         | Ground        | 16| PCIE_3V3  | 3.3V power supply |
 +---+-------------+---------------+---+-----------+-------------------+
-| 1 | NC          | Not connect   | 1 | PCIE_3V3  | 3.3V power supply |
-| 7 |             |               | 8 |           |                   |
+| 17| NC          | Not connect   | 18| PCIE_3V3  | 3.3V power supply |
 +---+-------------+---------------+---+-----------+-------------------+
-| 1 | NC          | Not connect   | 2 | NC        | Not connect       |
-| 9 |             |               | 0 |           |                   |
+| 19| NC          | Not connect   | 20| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 2 | GND         | Ground        | 2 | NC        | Not connect       |
-| 1 |             |               | 2 |           |                   |
+| 21| GND         | Ground        | 22| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 2 | NC          | Not connect   | 2 | NC        | Not connect       |
-| 3 |             |               | 4 |           |                   |
+| 23| NC          | Not connect   | 24| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 2 | NC          | Not connect   | 2 | NC        | Not connect       |
-| 5 |             |               | 6 |           |                   |
+| 25| NC          | Not connect   | 26| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 2 | GND         | Ground        | 2 | NC        | Not connect       |
-| 7 |             |               | 8 |           |                   |
+| 27| GND         | Ground        | 28| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 2 | NC          | Not connect   | 3 | NC        | Not connect       |
-| 9 |             |               | 0 |           |                   |
+| 29| NC          | Not connect   | 30| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 3 | NC          | Not connect   | 3 | NC        | Not connect       |
-| 1 |             |               | 2 |           |                   |
+| 31| NC          | Not connect   | 32| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 3 | GND         | Ground        | 3 | NC        | Not connect       |
-| 3 |             |               | 4 |           |                   |
+| 33| GND         | Ground        | 34| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 3 | NC          | Not connect   | 3 | NC        | Not connect       |
-| 5 |             |               | 6 |           |                   |
+| 35| NC          | Not connect   | 36| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 3 | NC          | Not connect   | 3 | PC        | PCIE Device Sleep |
-| 7 |             |               | 8 | IE_DEVSLP |                   |
+| 37| NC          | Not connect   | 38| PC        | PCIE Device Sleep |
+|   |             |               |   | IE_DEVSLP |                   |
 +---+-------------+---------------+---+-----------+-------------------+
-| 3 | GND         | Ground        | 4 | NC        | Not connect       |
-| 9 |             |               | 0 |           |                   |
+| 39| GND         | Ground        | 40| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 4 | PCIE2       | PCIe RX -     | 4 | NC        | Not connect       |
-| 1 | 0_SATA2_RXN |               | 2 |           |                   |
+| 41| PCIE2       | PCIe RX -     | 42| NC        | Not connect       |
+|   | 0_SATA2_RXN |               |   |           |                   |
 +---+-------------+---------------+---+-----------+-------------------+
-| 4 | PCIE2       | PCIe RX +     | 4 | NC        | Not connect       |
-| 3 | 0_SATA2_RXP |               | 4 |           |                   |
+| 43| PCIE2       | PCIe RX +     | 44| NC        | Not connect       |
+|   | 0_SATA2_RXP |               |   |           |                   |
 +---+-------------+---------------+---+-----------+-------------------+
-| 4 | GND         | Ground        | 4 | NC        | Not connect       |
-| 5 |             |               | 6 |           |                   |
+| 45| GND         | Ground        | 46| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 4 | SATA2_TXN   | PCIe TX -     | 4 | NC        | Not connect       |
-| 7 |             |               | 8 |           |                   |
+| 47| SATA2_TXN   | PCIe TX -     | 48| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 4 | SATA2_TXP   | PCIe TX +     | 5 | PCIE20_   | PCIe reset        |
-| 9 |             |               | 0 | PERSTn_M2 |                   |
+| 49| SATA2_TXP   | PCIe TX +     | 50| PCIE20_   | PCIe reset        |
+|   |             |               |   | PERSTn_M2 |                   |
 +---+-------------+---------------+---+-----------+-------------------+
-| 5 | GND         | Ground        | 5 | PCIE20_C  | Clock Request     |
-| 1 |             |               | 2 | LKREQn_M2 |                   |
+| 51| GND         | Ground        | 52| PCIE20_C  | Clock Request     |
+|   |             |               |   | LKREQn_M2 |                   |
 +---+-------------+---------------+---+-----------+-------------------+
-| 5 | PCI         | PCIe          | 5 | PCIE20    | PCIe PME Wake     |
-| 3 | E20_REFCLKN | Reference     | 4 | _WAKEn_M2 |                   |
+| 53| PCI         | PCIe          | 54| PCIE20    | PCIe PME Wake     |
+|   | E20_REFCLKN | Reference     |   | _WAKEn_M2 |                   |
 |   |             | Clock signals |   |           |                   |
 |   |             | -             |   |           |                   |
 +---+-------------+---------------+---+-----------+-------------------+
-| 5 | PCI         | PCIe          | 5 | NC        | Not connect       |
-| 5 | E20_REFCLKP | Reference     | 6 |           |                   |
+| 55| PCI         | PCIe          | 56| NC        | Not connect       |
+|   | E20_REFCLKP | Reference     |   |           |                   |
 |   |             | Clock signals |   |           |                   |
 |   |             | +             |   |           |                   |
 +---+-------------+---------------+---+-----------+-------------------+
-| 5 | GND         | Ground        | 5 | NC        | Not connect       |
-| 7 |             |               | 8 |           |                   |
+| 57| GND         | Ground        | 58| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 6 | NC          | Not connect   | 6 | PMIC_3    | Suspend Clock     |
-| 7 |             |               | 8 | 2KOUT_SOC | (32KHz)           |
+| 67| NC          | Not connect   | 68| PMIC_3    | Suspend Clock     |
+|   |             |               |   | 2KOUT_SOC | (32KHz)           |
 +---+-------------+---------------+---+-----------+-------------------+
-| 6 | NC          | Not connect   | 7 | PCIE_3V3  | 3.3V power supply |
-| 9 |             |               | 0 |           |                   |
+| 69| NC          | Not connect   | 70| PCIE_3V3  | 3.3V power supply |
 +---+-------------+---------------+---+-----------+-------------------+
-| 7 | GND         | Ground        | 7 | PCIE_3V3  | 3.3V power supply |
-| 1 |             |               | 2 |           |                   |
+| 71| GND         | Ground        | 72| PCIE_3V3  | 3.3V power supply |
 +---+-------------+---------------+---+-----------+-------------------+
-| 7 | GND         | Ground        | 7 | PCIE_3V3  | 3.3V power supply |
-| 3 |             |               | 4 |           |                   |
+| 73| GND         | Ground        | 74| PCIE_3V3  | 3.3V power supply |
 +---+-------------+---------------+---+-----------+-------------------+
-| 7 | GND         | Ground        |   |           |                   |
-| 5 |             |               |   |           |                   |
+| 75| GND         | Ground        |                                   |
 +---+-------------+---------------+---+-----------+-------------------+
 
 2.21 GPS (MU4)
@@ -1746,21 +1716,18 @@ acquisition times.
 | 7 | GPSVDDIO    | IO Supply     | 8 | VDD_GPS      | Supply       |
 |   |             | Voltage       |   |              | voltage      |
 +---+-------------+---------------+---+--------------+--------------+
-| 9 | GPSRST      | Reset         | 1 | GND          | Ground       |
-|   |             |               | 0 |              |              |
+| 9 | GPSRST      | Reset         | 10| GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | GPS_RFIN    | GPS signal    | 1 | GND          | Ground       |
-| 1 |             | input         | 2 |              |              |
+| 11| GPS_RFIN    | GPS signal    | 12| GND          | Ground       |
+|   |             | input         |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | NC          | Not connect   | 1 | RFVCC        | Output       |
-| 3 |             |               | 4 |              | Voltage RF   |
+| 13| NC          | Not connect   | 14| RFVCC        | Output       |
+|   |             |               |   |              | Voltage RF   |
 |   |             |               |   |              | section      |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | NC          | Not connect   | 1 | NC           | Not connect  |
-| 5 |             |               | 6 |              |              |
+| 15| NC          | Not connect   | 16| NC           | Not connect  |
 +---+-------------+---------------+---+--------------+--------------+
-| 1 | NC          | Not connect   | 1 | NC           | Not connect  |
-| 7 |             |               | 8 |              |              |
+| 17| NC          | Not connect   | 18| NC           | Not connect  |
 +---+-------------+---------------+---+--------------+--------------+
 
 .. Note::
