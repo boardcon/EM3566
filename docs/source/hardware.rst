@@ -851,9 +851,7 @@ EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
    access
 
 +---+---------------+--------------+---+--------------+--------------+
-| P | Signal        | Description  | P | Signal       | Description  |
-| i |               |              | i |              |              |
-| n |               |              | n |              |              |
+|Pin| Signal        | Description  |Pin| Signal       | Description  |
 +===+===============+==============+===+==============+==============+
 | 1 | HDMI_TX2P     | HDMI data 2  | 2 | GND          | Ground       |
 |   |               | pair         |   |              |              |
@@ -882,8 +880,8 @@ EM3566 supports HDMI 2.0 transmitter with HDCP 1.4/2.2, up to 4K@60fps.
 | 1 | GND           | Ground       | 1 | HDMI_VCC     | 5V power     |
 | 7 |               |              | 8 |              | supply       |
 +---+---------------+--------------+---+--------------+--------------+
-| 1 | HDMI_TX_HPDIN | Hot Plug     |   |              |              |
-| 9 |               | Detect       |   |              |              |
+| 1 | HDMI_TX_HPDIN | Hot Plug     |                                 |
+| 9 |               | Detect       |                                 |
 +---+---------------+--------------+---+--------------+--------------+
 
 2.4 USB OTG (J29)
@@ -908,9 +906,7 @@ transfer file.
    host negotiation protocol.
 
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +===+=============+===============+===+==============+==============+
 | 1 | VCC_OTG     | USB OTG Power | 2 | USB_OTG0DM   | USB OTG0     |
 |   |             |               |   |              | data -       |
@@ -918,7 +914,7 @@ transfer file.
 | 3 | USB_OTG0DP  | USB OTG0      | 4 | USB_OTG0ID   | USB OTG0 ID  |
 |   |             | data+         |   |              | indicator    |
 +---+-------------+---------------+---+--------------+--------------+
-| 5 | GND         | Ground        |   |              |              |
+| 5 | GND         | Ground        |                                 |
 +---+-------------+---------------+---+--------------+--------------+
 
 2.5 USB HOST (P3, J6, J17)
@@ -950,9 +946,7 @@ disk, USB camera, and other USB devices. Support hot-plug.
 Dual-USB
 
 +---+------------+----------------+---+------------+----------------+
-| P | Signal     | Description    | P | Signal     | Description    |
-| i |            |                | i |            |                |
-| n |            |                | n |            |                |
+|Pin| Signal     | Description    |Pin| Signal     | Description    |
 +===+============+================+===+============+================+
 | 1 | VCC_USB    | USB Power. DC  | 2 | USB_DM1    | USB data-      |
 |   |            | 5V             |   |            |                |
@@ -968,9 +962,7 @@ Dual-USB
 J6 / J17 (4-pin connector)
 
 +---+------------+----------------+---+------------+----------------+
-| P | Signal     | Description    | P | Signal     | Description    |
-| i |            |                | i |            |                |
-| n |            |                | n |            |                |
+|Pin| Signal     | Description    |Pin| Signal     | Description    |
 +===+============+================+===+============+================+
 | 1 | VDD5V0_HOST| 5V power       | 2 | USB        | USB data-      |
 |   | 2          | supply         |   | _DM4(J6)/  |                |
@@ -1001,9 +993,9 @@ Switch for the selection of USB3.0 or SATA.
   :alt: SW-ON-ON
   
 +-----------------+----------------+-----------------+
-|                 |             **SW1**              |
+|                 | SW1                              |
 +-----------------+----------------+-----------------+
-| **Mode**        |    1           |    2            | 
+| Mode            |    1           |    2            | 
 +=================+================+=================+
 | USB3.0          | OFF            | OFF             | 
 +=================+----------------+-----------------+
@@ -1016,9 +1008,7 @@ Switch for the selection of USB3.0 or SATA.
   :height: 100px
   
 +---+-------------+---------------+---+------------+----------------+
-| P | Signal      | Description   | P | Signal     | Description    |
-| i |             |               | i |            |                |
-| n |             |               | n |            |                |
+|Pin| Signal      | Description   |Pin| Signal     | Description    |
 +===+=============+===============+===+============+================+
 | 1 | VCC5V0_HOST1| USB Power. DC | 2 | USB3_DM    | USB data-      |
 |   |             | 5V            |   |            |                |
@@ -1030,16 +1020,14 @@ Switch for the selection of USB3.0 or SATA.
 +---+-------------+---------------+---+------------+----------------+
 | 7 | GND         | Ground        | 8 | USB3_SSTXN | USB SSTX Data- |
 +---+-------------+---------------+---+------------+----------------+
-| 9 | USB3_SSTXP  | USB SSTX      |   |            |                |
-|   |             | Data+         |   |            |                |
+| 9 | USB3_SSTXP  | USB SSTX      |                                 |
+|   |             | Data+         |                                 |
 +---+-------------+---------------+---+------------+----------------+
 
 EM3566 on-board 7-pin SATA Interface. It requires 5V power supply.
 
 +---+------------+----------------+---+------------+----------------+
-| P | Signal     | Description    | P | Signal     | Description    |
-| i |            |                | i |            |                |
-| n |            |                | n |            |                |
+|Pin| Signal     | Description    |Pin| Signal     | Description    |
 +===+============+================+===+============+================+
 | 1 | GND        | Ground         | 2 | USB3_SSTXP | USB SSTX Data+ |
 +---+------------+----------------+---+------------+----------------+
@@ -1056,9 +1044,7 @@ EM3566 on-board 7-pin SATA Interface. It requires 5V power supply.
   :height: 90px
   
 +---+-------------+---------------+---+--------------+---------------+
-| P | Signal      | Description   | P | Signal       | Description   |
-| i |             |               | i |              |               |
-| n |             |               | n |              |               |
+|Pin| Signal      | Description   |Pin| Signal       | Description   |
 +===+=============+===============+===+==============+===============+
 | 1 | GND         | Ground        | 2 | VCC5V0_HOST1 | SATA power.   |
 |   |             |               |   |              | DC 5V         |
@@ -1082,9 +1068,8 @@ EM3566 adopts RTL8211F as the Ethernet chip. RJ45 connector.
 -  Implements the full 802.3 specification
 
 +---+-----------+-------------------+---+-------+--------------------+
-| P | Signal    | Description       | P | S     | Description        |
-| i |           |                   | i | ignal |                    |
-| n |           |                   | n |       |                    |
+|Pin| Signal    | Description       |Pin| S     | Description        |
+|   |           |                   |   | ignal |                    |
 +===+===========+===================+===+=======+====================+
 | 1 | DA+       | Bi-directional    | 2 | DA-   | Bi-directional     |
 |   |           | transmit/receive  |   |       | transmit/receive   |
@@ -1102,14 +1087,13 @@ EM3566 adopts RTL8211F as the Ethernet chip. RJ45 connector.
 |   |           | transmit/receive  |   |       | transmit/receive   |
 |   |           | pair D            |   |       | pair D             |
 +---+-----------+-------------------+---+-------+--------------------+
-| 9 | GND       | Ground            | 1 | GND   | Ground             |
-|   |           |                   | 0 |       |                    |
+| 9 | GND       | Ground            |10 | GND   | Ground             |
 +---+-----------+-------------------+---+-------+--------------------+
-| 1 | LED2      | LED2              | 1 | GND   | Ground             |
-| 1 | /CFG_LDO1 |                   | 2 |       |                    |
+|11 | LED2      | LED2              |12 | GND   | Ground             |
+|   | /CFG_LDO1 |                   |   |       |                    |
 +---+-----------+-------------------+---+-------+--------------------+
-| 1 | LED1      | LED1              | 1 | GND   | Ground             |
-| 3 | /CFG_LDO0 |                   | 4 |       |                    |
+|13 | LED1      | LED1              |14 | GND   | Ground             |
+|   | /CFG_LDO0 |                   |   |       |                    |
 +---+-----------+-------------------+---+-------+--------------------+
 
 2.8 eDP/LVDS/MIPI Panel (CON1)
@@ -1123,9 +1107,7 @@ resolution.
   :height: 160px
 
 +---+-------------+---------------+---+------------+----------------+
-| P | Signal      | Description   | P | Signal     | Description    |
-| i |             |               | i |            |                |
-| n |             |               | n |            |                |
+|Pin| Signal      | Description   |Pin| Signal     | Description    |
 +===+=============+===============+===+============+================+
 | 1 | VDD5V       | 5V power      | 2 | VDD5V      | 5V power       |
 |   |             | supply        |   |            | supply         |
@@ -1213,9 +1195,7 @@ resolution.
 J26 is used to connect MEMS module for Video output.
 
 +---+-------------+---------------+---+-------------+----------------+
-| P | Signal      | Description   | P | Signal      | Description    |
-| i |             |               | i |             |                |
-| n |             |               | n |             |                |
+|Pin| Signal      | Description   |Pin| Signal      | Description    |
 +===+=============+===============+===+=============+================+
 | 1 | VCC3V3_SYS  | 3.3V power    | 2 | VCC3V3_SYS  | 3.3V power     |
 |   |             | supply        |   |             | supply         |
@@ -1250,9 +1230,7 @@ The GPIO is a 14-pin header connector. The pins can be defined as data
 input / output.
 
 +---+-------------+---------------+---+-------------+----------------+
-| P | Signal      | Description   | P | Signal      | Description    |
-| i |             |               | i |             |                |
-| n |             |               | n |             |                |
+|Pin| Signal      | Description   |Pin| Signal      | Description    |
 +===+=============+===============+===+=============+================+
 | 1 | CIF         | CIF 8BIT      | 2 | CI          | GPIO           |
 |   | _8BIT_CLKIN | clock/GPIO    |   | F_8BIT_HREF |                |
@@ -1272,8 +1250,7 @@ input / output.
 | 1 | VDDIO_18    | 1.8V IO       | 1 | VDDIO_18    | 1.8V IO        |
 | 1 |             | voltage       | 2 |             | voltage        |
 +---+-------------+---------------+---+-------------+----------------+
-| 1 | GND         | Ground        | 1 | GND         | Ground         |
-| 3 |             |               | 4 |             |                |
+|13 | GND         | Ground        |14 | GND         | Ground         |
 +---+-------------+---------------+---+-------------+----------------+
 
 2.11 ADC (J18)
@@ -1287,9 +1264,7 @@ input / output.
 4pin connector. It is used to connect the ADC device.
 
 +---+--------------+---------------+---+------------+----------------+
-| P | Signal       | Description   | P | Signal     | Description    |
-| i |              |               | i |            |                |
-| n |              |               | n |            |                |
+|Pin| Signal       | Description   |Pin| Signal     | Description    |
 +===+==============+===============+===+============+================+
 | 1 | VDDIO_18     | 1.8V power    | 2 | SARADC_VI  | ADC signal     |
 |   |              | supply        |   | N2_HP_HOOK |                |
@@ -1316,9 +1291,7 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
 J30
 
 +---+-------------+---------------+---+------------+----------------+
-| P | Signal      | Description   | P | Signal     | Description    |
-| i |             |               | i |            |                |
-| n |             |               | n |            |                |
+|Pin| Signal      | Description   |Pin| Signal     | Description    |
 +---+-------------+---------------+---+------------+----------------+
 | 1 | GND         | Ground        | 2 | GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
@@ -1389,9 +1362,7 @@ J30
 J31                                                               
 
 +---+-------------+---------------+---+------------+----------------+
-| P | Signal      | Description   | P | Signal     | Description    |
-| i |             |               | i |            |                |
-| n |             |               | n |            |                |
+|Pin| Signal      | Description   |Pin| Signal     | Description    |
 +---+-------------+---------------+---+------------+----------------+
 | 1 | GND         | Ground        | 2 | GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
@@ -1471,9 +1442,7 @@ J31
 3-pin connector. It is used to connect the IR receiver.
   
 +---+-------------+---------------+---+------------+----------------+
-| P | Signal      | Description   | P | Signal     | Description    |
-| i |             |               | i |            |                |
-| n |             |               | n |            |                |
+|Pin| Signal      | Description   |Pin| Signal     | Description    |
 +===+=============+===============+===+============+================+
 | 1 | VCC3V3_SYS  | 3.3V Power    | 2 | PWM3_IR    | IR in          |
 |   |             | supply        |   |            |                |
@@ -1496,9 +1465,7 @@ J31
 The J10 is 3-pin connector for debug. The baud rate is 1500000.
 
 +---+-------------+---------------+---+-------------+---------------+
-| P | Signal      | Description   | P | Signal      | Description   |
-| i |             |               | i |             |               |
-| n |             |               | n |             |               |
+|Pin| Signal      | Description   |Pin| Signal      | Description   |
 +===+=============+===============+===+=============+===============+
 | 1 | UART2DBG_RX | Serial data   | 2 | UART2DBG_TX | Serial data   |
 |   |             | input         |   |             | output        |
@@ -1516,9 +1483,7 @@ The J11/J12 used for RS232.
 J11
 
 +---+--------------+---------------+---+------------+----------------+
-| P | Signal       | Description   | P | Signal     | Description    |
-| i |              |               | i |            |                |
-| n |              |               | n |            |                |
+|Pin| Signal       | Description   |Pin| Signal     | Description    |
 +---+--------------+---------------+---+------------+----------------+
 | 1 | VCC3V3_SYS   | 3.3V power    | 2 | U          | Transmit Data  |
 |   |              | supply        |   | ART4_TX_M0 |                |
@@ -1529,9 +1494,7 @@ J11
 J12
 
 +---+--------------+---------------+---+------------+----------------+
-| P | Signal       | Description   | P | Signal     | Description    |
-| i |              |               | i |            |                |
-| n |              |               | n |            |                |
+|Pin| Signal       | Description   |Pin| Signal     | Description    |
 +---+--------------+---------------+---+------------+----------------+
 | 1 | VCC3V3_SYS   | 3.3V power    | 2 | U          | Transmit Data  |
 |   |              | supply        |   | ART5_TX_M1 |                |
@@ -1556,9 +1519,7 @@ SN75176B Differential bus transceiver.
 J32
 
 +---+-------------+----------------+---+------------+---------------+
-| P | Signal      | Description    | P | Signal     | Description   |
-| i |             |                | i |            |               |
-| n |             |                | n |            |               |
+|Pin| Signal      | Description    |Pin| Signal     | Description   |
 +===+=============+================+===+============+===============+
 | 1 | GND         | Ground         | 2 | RS485_B    | RS-485 Data   |
 |   |             |                |   |            | Line          |
@@ -1575,9 +1536,7 @@ J32
 JP2
 
 +---+-------------+----------------+---+------------+---------------+
-| P | Signal      | Description    | P | Signal     | Description   |
-| i |             |                | i |            |               |
-| n |             |                | n |            |               |
+|Pin| Signal      | Description    |Pin| Signal     | Description   |
 +===+=============+================+===+============+===============+
 | 1 | RS485_A     | RS-485 Data    | 2 | RS485_B    | RS-485 Data   |
 |   |             | Line           |   |            | Line          |
@@ -1592,9 +1551,7 @@ JP2
   :height: 60px
 
 +---+-------------+----------------+---+-------------+--------------+
-| P | Signal      | Description    | P | Signal      | Description  |
-| i |             |                | i |             |              |
-| n |             |                | n |             |              |
+|Pin| Signal      | Description    |Pin| Signal      | Description  |
 +===+=============+================+===+=============+==============+
 | 1 | GND         | Ground         | 2 | SA          | RECOVERY     |
 |   |             |                |   | RADC_VIN0_K |              |
@@ -1623,9 +1580,7 @@ networks.
 CON2
 
 +---+-------------+---------------+---+------------+----------------+
-| P | Signal      | Description   | P | Signal     | Description    |
-| i |             |               | i |            |                |
-| n |             |               | n |            |                |
+|Pin| Signal      | Description   |Pin| Signal     | Description    |
 +===+=============+===============+===+============+================+
 | 1 | 4G_OUT_P    | Line output + | 2 | 3GVCC      | DC 3.3V        |
 +---+-------------+---------------+---+------------+----------------+
@@ -1713,9 +1668,7 @@ SIM Card and can be used for wireless transmission with a 3G/4G module.
 SIM Card slot (P4)
 
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +===+=============+===============+===+==============+==============+
 | 1 | SIM_CLK     | Clock         | 2 | SIM_DATA     | s            |
 |   |             |               |   |              | end/receiver |
@@ -1744,9 +1697,7 @@ accessible through the carrier board interface.
   :height: 90px
 
 +---+------------+-----------------+---+--------------+--------------+
-| P | Signal     | Description     | P | Signal       | Description  |
-| i |            |                 | i |              |              |
-| n |            |                 | n |              |              |
+|Pin| Signal     | Description     |Pin| Signal       | Description  |
 +===+============+=================+===+==============+==============+
 | 1 | SDMMC0_D2  | SD/MMC data2    | 2 | SDMMC0_D3    | SD/MMC data3 |
 +---+------------+-----------------+---+--------------+--------------+
@@ -1801,9 +1752,7 @@ provides SDIO interface for WiFi, UART / PCM for Bluetooth.
 +-----------------------+----------------------------------------------+
 
 +---+-------------+----------------+---+-------------+---------------+
-| P | Signal      | Description    | P | Signal      | Description   |
-| i |             |                | i |             |               |
-| n |             |                | n |             |               |
+|Pin| Signal      | Description    |Pin| Signal      | Description   |
 +===+=============+================+===+=============+===============+
 | 1 | GND         | Ground         | 2 | WL_BT_ANT   | RF I/O        |
 |   |             |                |   |             | (Connect to   |
@@ -1895,9 +1844,7 @@ M.2 M key socket (PCIe) for NVMe SSD.
   :height: 90px
 
 +---+-------------+---------------+---+-----------+-------------------+
-| P | Signal      | Description   | P | Signal    | Description       |
-| i |             |               | i |           |                   |
-| n |             |               | n |           |                   |
+|Pin| Signal      | Description   |Pin| Signal    | Description       |
 +===+=============+===============+===+===========+===================+
 | 1 | GND         | Ground        | 2 | PCIE_3V3  | 3.3V power supply |
 +---+-------------+---------------+---+-----------+-------------------+
@@ -2030,9 +1977,7 @@ acquisition times.
 -  The antenna band is 1575.42MHZ; Voltage: 3.0-5.0V
 
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +===+=============+===============+===+==============+==============+
 | 1 | GND         | Ground        | 2 | UART3_RX_M0  | UART3        |
 |   |             |               |   |              | receive      |
@@ -2079,9 +2024,7 @@ The backup battery (3V) is used to ensure the RTC (frequency 32.768KHz)
 is still able to work after power off. Lithium cell model: CR1220.
 
 +---+-------------+---------------+---+--------------+--------------+
-| P | Signal      | Description   | P | Signal       | Description  |
-| i |             |               | i |              |              |
-| n |             |               | n |              |              |
+|Pin| Signal      | Description   |Pin| Signal       | Description  |
 +===+=============+===============+===+==============+==============+
 | 1 | VBuck       | 3V battery    | 2 | GND          | Ground       |
 +---+-------------+---------------+---+--------------+--------------+
