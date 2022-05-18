@@ -1004,7 +1004,6 @@ Switch for the selection of USB3.0 or SATA.
   
 .. figure:: ./image/ON-ON.gif
   :alt: SW-ON-ON
-  :align: left
   
 +-----------------+----------------+-----------------+
 | **SW1**         | **1**          | **2**           | 
