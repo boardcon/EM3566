@@ -977,10 +977,10 @@ J6 / J17 (4-pin connector)
 | i |            |                | i |            |                |
 | n |            |                | n |            |                |
 +===+============+================+===+============+================+
-| 1 | VDD        | 5V power       | 2 | USB        | USB data-      |
-|   | 5V0_HOST2  | supply         |   | _DM4(J6)/  |                |
-|   |            |                |   | US         |                |
-|   |            |                |   | B_DM3(J17) |                |
+| 1 | VDD5V0_HOST| 5V power       | 2 | USB        | USB data-      |
+|   | 2          | supply         |   | _DM4(J6)/  |                |
+|   |            |                |   | USB_DM3    |                |
+|   |            |                |   | (J17)      |                |
 +---+------------+----------------+---+------------+----------------+
 | 3 | USB        | USB Data+      | 4 | GND        | Ground         |
 |   | _DP4(J6)/  |                |   |            |                |
@@ -1026,8 +1026,8 @@ Switch for the selection of USB3.0 or SATA.
 | i |             |               | i |            |                |
 | n |             |               | n |            |                |
 +===+=============+===============+===+============+================+
-| 1 | V           | USB Power. DC | 2 | USB3_DM    | USB data-      |
-|   | CC5V0_HOST1 | 5V            |   |            |                |
+| 1 | VCC5V0_HOST1| USB Power. DC | 2 | USB3_DM    | USB data-      |
+|   |             | 5V            |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
 | 3 | USB3_DP     | USB Data+     | 4 | GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
@@ -1214,7 +1214,7 @@ resolution.
 .. figure:: ./image/VOP_Header.jpg
   :alt: VOP_Header
   :align: center
-  :height: 100px
+  :height: 90px
   
 J26 is used to connect MEMS module for Video output.
 
@@ -1228,8 +1228,8 @@ J26 is used to connect MEMS module for Video output.
 +---+-------------+---------------+---+-------------+----------------+
 | 3 | GND         | Ground        | 4 | GND         | Ground         |
 +---+-------------+---------------+---+-------------+----------------+
-| 5 | VOP_        | BT656 data    | 6 | VOP_        | BT656 data     |
-|   | BT656_D0_M1 |               |   | BT656_D1_M1 |                |
+| 5 | VOP_B       | BT656 data    | 6 | VOP_        | BT656 data     |
+|   | T656_D0_M1  |               |   | BT656_D1_M1 |                |
 +---+-------------+---------------+---+-------------+----------------+
 | 7 | VOP_        | BT656 data    | 8 | VOP_        | BT656 data     |
 |   | BT656_D2_M1 |               |   | BT656_D3_M1 |                |
@@ -1250,7 +1250,7 @@ J26 is used to connect MEMS module for Video output.
 .. figure:: ./image/CIF_Header.jpg
   :alt: CIF_Header
   :align: center
-  :height: 100px
+  :height: 90px
 
 The GPIO is a 14-pin header connector. The pins can be defined as data
 input / output.
@@ -1318,7 +1318,7 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
   :alt: LCD_connector
   :align: center
   :height: 90px
-  
+ 
 +---+-------------+---------------+---+------------+----------------+
 | J |             |               |   |            |                |
 | 3 |             |               |   |            |                |
@@ -1327,7 +1327,7 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
 | P | Signal      | Description   | P | Signal     | Description    |
 | i |             |               | i |            |                |
 | n |             |               | n |            |                |
-+---+-------------+---------------+---+------------+----------------+
++===+=============+===============+===+============+================+
 | 1 | GND         | Ground        | 2 | GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
 | 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
@@ -1391,14 +1391,12 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
 | 2 | GND         | Ground        | 2 | MIPI_MCLK1 | MIPI clock     |
 | 3 |             |               | 4 |            |                |
 +---+-------------+---------------+---+------------+----------------+
-| J |             |               |   |            |                |
-| 3 |             |               |   |            |                |
-| 1 |             |               |   |            |                |
+| J31                                                               |
 +---+-------------+---------------+---+------------+----------------+
 | P | Signal      | Description   | P | Signal     | Description    |
 | i |             |               | i |            |                |
 | n |             |               | n |            |                |
-+---+-------------+---------------+---+------------+----------------+
++===+=============+===============+===+============+================+
 | 1 | GND         | Ground        | 2 | GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
 | 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
@@ -1462,6 +1460,7 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
 | 2 | GND         | Ground        | 2 | MIPI_MCLK0 | MIPI clock     |
 | 3 |             |               | 4 |            |                |
 +---+-------------+---------------+---+------------+----------------+
+
   
 2.13 IR (J24)
 ^^^^^^^^^^^^^^^
@@ -2150,10 +2149,8 @@ is still able to work after power off. Lithium cell model: CR1220.
 ^^^^^^^^^^^^^^^^^^^^^^
 
 +----+-------------+---------+-----------------------------------------+
-| *  | **Item**    | **Qty.  | **Description**                         |
-| *N |             | (PCS)** |                                         |
-| O. |             |         |                                         |
-| ** |             |         |                                         |
+|NO. |Item         | Qty.    | Description                             |
+|    |             | (PCS)   |                                         |
 +====+=============+=========+=========================================+
 | 1  | EM3566      | 1       | Standard Content (2GB RAM, 8GB eMMC)    |
 |    | board       |         |                                         |
