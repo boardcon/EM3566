@@ -2072,8 +2072,7 @@ acquisition times.
 +---+-------------+---------------+---+--------------+--------------+
 
 .. Note::
- RS485 and GPS are multiplexed with UART3 signal, Default support
-RS485 does not support GPS.
+ RS485 and GPS are multiplexed with UART3 signal. Default support RS485.
 
 2.22 RTC (BT1)
 ^^^^^^^^^^^^^^^^
