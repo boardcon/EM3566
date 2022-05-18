@@ -510,12 +510,12 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 |176| VOP_BT656_D0_M1 | CIF_D0             | GPIO3_C6_d    | 1.8V    |
 +---+-----------------+--------------------+---------------+---------+
 |177| V               |                    | GPIO4_B4_d    | 1.8V    |
-| 7 | OP_BT656_CLK_M1 |                    |               |         |
+|   | OP_BT656_CLK_M1 |                    |               |         |
 +---+-----------------+--------------------+---------------+---------+
 |178| GPIO4_B5_d_1V8  |                    |               | 1.8V    |
 +---+-----------------+--------------------+---------------+---------+
 |179| I2C4_SDA_M0_1V8 | Pull up 2.2K       | GPIO4_B2_d    | 1.8V    |
-| 7 |                 | inside             |               |         |
+|   |                 | inside             |               |         |
 +---+-----------------+--------------------+---------------+---------+
 |180| I2C4_SCL_M0_1V8 | Pull up 2.2K       | GPIO4_B3_d    | 1.8V    |
 | 8 |                 | inside             |               |         |
@@ -980,17 +980,17 @@ J26 is used to connect MEMS module for Video output.
 +---+-------------+---------------+---+-------------+----------------+
 | 3 | GND         | Ground        | 4 | GND         | Ground         |
 +---+-------------+---------------+---+-------------+----------------+
-| 5 | VOP_B       | BT656 data    | 6 | VOP_        | BT656 data     |
-|   | T656_D0_M1  |               |   | BT656_D1_M1 |                |
+| 5 | VOP_B       | BT656 data    | 6 | VOP_B       | BT656 data     |
+|   | T656_D0_M1  |               |   | T656_D1_M1  |                |
 +---+-------------+---------------+---+-------------+----------------+
-| 7 | VOP_        | BT656 data    | 8 | VOP_        | BT656 data     |
-|   | BT656_D2_M1 |               |   | BT656_D3_M1 |                |
+| 7 | VOP_B       | BT656 data    | 8 | VOP_B       | BT656 data     |
+|   | T656_D2_M1  |               |   | T656_D3_M1  |                |
 +---+-------------+---------------+---+-------------+----------------+
-| 9 | VOP_        | BT656 data    | 10| VOP_        | BT656 data     |
-|   | BT656_D4_M1 |               |   | BT656_D5_M1 |                |
+| 9 | VOP_B       | BT656 data    | 10| VOP_B       | BT656 data     |
+|   | T656_D4_M1  |               |   | T656_D5_M1  |                |
 +---+-------------+---------------+---+-------------+----------------+
-| 11| VOP_        | BT656 data    | 12| VOP_        | BT656 data     |
-|   | BT656_D6_M1 |               |   | BT656_D7_M1 |                |
+| 11| VOP_B       | BT656 data    | 12| VOP_B       | BT656 data     |
+|   |  T656_D6_M1 |               |   | T656_D7_M1  |                |
 +---+-------------+---------------+---+-------------+----------------+
 | 13| VOP_B       | BT656 clock   | 14| NC          | Not connect    |
 |   | T656_CLK_M1 |               |   |             |                |
@@ -1076,17 +1076,17 @@ J30
 | 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
 |   |             |               |   |            | supply         |
 +---+-------------+---------------+---+------------+----------------+
-| 5 | I2C4        | I2C data line | 6 | I2C4_      | I2C clock line |
-|   | _SDA_M0_1V8 |               |   | SCL_M0_1V8 |                |
+| 5 | I2C4        | I2C data line | 6 | I2C4_S     | I2C clock line |
+|   | _SDA_M0_1V8 |               |   | CL_M0_1V8  |                |
 +---+-------------+---------------+---+------------+----------------+
 | 7 | NC          | Not connect   | 8 | A          | DVP 2.8V power |
 |   |             |               |   | VDD2V8_DVP | supply         |
 +---+-------------+---------------+---+------------+----------------+
-| 9 | CA          | Camera reset  | 10| CIF_       | GPIO4_B7_d     |
-|   | MERAB_RST_L |               |   | 8BIT_VSYNC |                |
+| 9 | CA          | Camera reset  | 10| CIF_8      | GPIO4_B7_d     |
+|   | MERAB_RST_L |               |   | BIT_VSYNC  |                |
 +---+-------------+---------------+---+------------+----------------+
-| 11| GND         | Ground        | 12| MIPI_      | MIPI CSI       |
-|   |             |               |   | CSI_RX_D3P | positive       |
+| 11| GND         | Ground        | 12| MIPI_C     | MIPI CSI       |
+|   |             |               |   | SI_RX_D3P  | positive       |
 |   |             |               |   |            |                |
 |   |             |               |   |            | differential   |
 |   |             |               |   |            | data line      |
@@ -1103,8 +1103,8 @@ J30
 |   |             | transceiver   |   |            |                |
 |   |             | output        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
-| 15| MIPI        | MIPI CSI      | 16| MIPI_      | MIPI CSI       |
-|   | _CSI_RX_D2P | positive      |   | CSI_RX_D2N | negative       |
+| 15| MIPI        | MIPI CSI      | 16| MIPI_C     | MIPI CSI       |
+|   | _CSI_RX_D2P | positive      |   | SI_RX_D2N  | negative       |
 |   |             |               |   |            |                |
 |   |             | differential  |   |            | differential   |
 |   |             | data line     |   |            | data line      |
@@ -1145,8 +1145,8 @@ J31
 | 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
 |   |             |               |   |            | supply         |
 +---+-------------+---------------+---+------------+----------------+
-| 5 | I2C4        | I2C data line | 6 | I2C4_      | I2C clock line |
-|   | _SDA_M0_1V8 |               |   | SCL_M0_1V8 |                |
+| 5 | I2C4        | I2C data line | 6 | I2C4_S     | I2C clock line |
+|   | _SDA_M0_1V8 |               |   | CL_M0_1V8  |                |
 +---+-------------+---------------+---+------------+----------------+
 | 7 | NC          | Not connect   | 8 | A          | DVP 2.8V power |
 |   |             |               |   | VDD2V8_DVP | supply         |
@@ -1154,8 +1154,8 @@ J31
 | 9 | CA          | Camera reset  | 10| GPIO       | GPIO           |
 |   | MERAF_RST_L |               |   | 4_B5_d_1V8 |                |
 +---+-------------+---------------+---+------------+----------------+
-| 11| GND         | Ground        | 12| MIPI_      | MIPI CSI       |
-|   |             |               |   | CSI_RX_D1P | positive       |
+| 11| GND         | Ground        | 12| MIPI_C     | MIPI CSI       |
+|   |             |               |   | SI_RX_D1P  | positive       |
 |   |             |               |   |            |                |
 |   |             |               |   |            | differential   |
 |   |             |               |   |            | data line      |
@@ -1172,8 +1172,8 @@ J31
 |   |             | transceiver   |   |            |                |
 |   |             | output        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
-| 15| MIPI        | MIPI CSI      | 16| MIPI_      | MIPI CSI       |
-|   | _CSI_RX_D0P | positive      |   | CSI_RX_D0N | negative       |
+| 15| MIPI        | MIPI CSI      | 16| MIPI_C     | MIPI CSI       |
+|   | _CSI_RX_D0P | positive      |   | SI_RX_D0N  | negative       |
 |   |             |               |   |            |                |
 |   |             | differential  |   |            | differential   |
 |   |             | data line     |   |            | data line      |
@@ -1518,8 +1518,8 @@ provides SDIO interface for WiFi, UART / PCM for Bluetooth.
 |   |             |                |   | T_WAKE_BT_H | Bluetooth     |
 |   |             |                |   |             | device        |
 +---+-------------+----------------+---+-------------+---------------+
-| 7 | BT_         | Bluetooth      | 8 | NC          | Not connect   |
-|   | WAKE_HOST_H | device to      |   |             |               |
+| 7 | BT_W        | Bluetooth      | 8 | NC          | Not connect   |
+|   | AKE_HOST_H  | device to      |   |             |               |
 |   |             | wake-up HOST   |   |             |               |
 +---+-------------+----------------+---+-------------+---------------+
 | 9 | VBAT_WL     | 3.3V power     | 10| XTAL_IN     | Crystal input |
@@ -1531,8 +1531,8 @@ provides SDIO interface for WiFi, UART / PCM for Bluetooth.
 |   |             |                |   |             | e             |
 |   |             |                |   |             | nable/disable |
 +---+-------------+----------------+---+-------------+---------------+
-| 13| WIFI_       | WLAN to        | 14| WIFI_D2     | WiFi data     |
-|   | WAKE_HOST_H | wake-up HOST   |   |             |               |
+| 13| WIFI_W      | WLAN to        | 14| WIFI_D2     | WiFi data     |
+|   | AKE_HOST_H  | wake-up HOST   |   |             |               |
 +---+-------------+----------------+---+-------------+---------------+
 | 15| WIFI_D3     | WiFi data      | 16| WIFI_CMD    | WiFi command  |
 +---+-------------+----------------+---+-------------+---------------+
@@ -1643,8 +1643,8 @@ M.2 M key socket (PCIe) for NVMe SSD.
 +---+-------------+---------------+---+-----------+-------------------+
 | 47| SATA2_TXN   | PCIe TX -     | 48| NC        | Not connect       |
 +---+-------------+---------------+---+-----------+-------------------+
-| 49| SATA2_TXP   | PCIe TX +     | 50| PCIE20_   | PCIe reset        |
-|   |             |               |   | PERSTn_M2 |                   |
+| 49| SATA2_TXP   | PCIe TX +     | 50| PCIE20_P  | PCIe reset        |
+|   |             |               |   | ERSTn_M2  |                   |
 +---+-------------+---------------+---+-----------+-------------------+
 | 51| GND         | Ground        | 52| PCIE20_C  | Clock Request     |
 |   |             |               |   | LKREQn_M2 |                   |
