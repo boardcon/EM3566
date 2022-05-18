@@ -798,9 +798,7 @@ output/input.
 -  Stereo output, support recording
 
 +---+-----------+------------------+---+-----------+-----------------+
-| P | Signal    | Description      | P | Signal    | Description     |
-| i |           |                  | i |           |                 |
-| n |           |                  | n |           |                 |
+|Pin| Signal    | Description      |Pin| Signal    | Description     |
 +===+===========+==================+===+===========+=================+
 | 1 | GND       | Ground           | 2 | HP_RO     | Headphone       |
 |   |           |                  |   |           | amplifier       |
@@ -825,9 +823,7 @@ output/input.
 The Optical Adaptor DLT1120 is used for S/PDIF data output.
 
 +---+--------------+---------------+---+------------+----------------+
-| P | Signal       | Description   | P | Signal     | Description    |
-| i |              |               | i |            |                |
-| n |              |               | n |            |                |
+|Pin| Signal       | Description   | P | Signal     | Description    |
 +===+==============+===============+===+============+================+
 | 1 | SPDIF_TX_M2  | SPDIF signal  | 2 | VCC3V3_SYS | 3.3V power     |
 |   |              |               |   |            | supply         |
@@ -1006,14 +1002,14 @@ Switch for the selection of USB3.0 or SATA.
   :alt: SW-ON-ON
   
 +-----------------+----------------+-----------------+
-|                 |  **SW1**                         |
+|                 |             **SW1**              |
 +-----------------+----------------+-----------------+
-| **Mode**        | **1**          | **2**           | 
+| **Mode**        |    1           |    2            | 
 +=================+================+=================+
 | USB3.0          | OFF            | OFF             | 
-+-----------------+----------------+-----------------+
++=================+----------------+-----------------+
 | SATA            | ON             | ON              | 
-+-----------------+----------------+-----------------+
++=================+----------------+-----------------+
 
 .. figure:: ./image/SATA3.0.png
   :alt: SATA3.0
