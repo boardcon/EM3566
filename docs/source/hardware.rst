@@ -1380,8 +1380,10 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
 +---+-------------+---------------+---+------------+----------------+
 | 1 | MIPI_C      | MIPI CSI      | 2 | GND        | Ground         |
 | 9 | SI_RX_CLK1N | negative      | 0 |            |                |
+|   |             |               |   |            |                |
 |   |             | differential  |   |            |                |
 |   |             | data line     |   |            |                |
+|   |             |               |   |            |                |
 |   |             | transceiver   |   |            |                |
 |   |             | output        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
@@ -1396,7 +1398,7 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
 | P | Signal      | Description   | P | Signal     | Description    |
 | i |             |               | i |            |                |
 | n |             |               | n |            |                |
-+===+=============+===============+===+============+================+
++---+-------------+---------------+---+------------+----------------+
 | 1 | GND         | Ground        | 2 | GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
 | 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
@@ -1449,8 +1451,10 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
 +---+-------------+---------------+---+------------+----------------+
 | 1 | MIPI_C      | MIPI CSI      | 2 | GND        | Ground         |
 | 9 | SI_RX_CLK0N | negative      | 0 |            |                |
+|   |             |               |   |            |                |
 |   |             | differential  |   |            |                |
 |   |             | data line     |   |            |                |
+|   |             |               |   |            |                |
 |   |             | transceiver   |   |            |                |
 |   |             | output        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
