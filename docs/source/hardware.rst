@@ -1716,6 +1716,7 @@ SIM Card and can be used for wireless transmission with a 3G/4G module.
   :height: 90px
   
 SIM Card slot (P4)
+
 +---+-------------+---------------+---+--------------+--------------+
 | P | Signal      | Description   | P | Signal       | Description  |
 | i |             |               | i |              |              |
