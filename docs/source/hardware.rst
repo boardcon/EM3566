@@ -1786,7 +1786,7 @@ provides SDIO interface for WiFi, UART / PCM for Bluetooth.
 +-----------------------+----------------------------------------------+
 | Standard              | WiFi: IEEE 802.11b/g/n                       |
 |                       | BT: V2.1+EDR/BT v3.0+HS/BT v4.0              |
-+=======================+==============================================+
++-----------------------+----------------------------------------------+
 | Host Interface        | SDIO and UART                                |
 +-----------------------+----------------------------------------------+
 | Frequency Range       | 2.4GHz~2.4835GHz                             |
@@ -1894,8 +1894,6 @@ M.2 M key socket (PCIe) for NVMe SSD.
   :alt: mPCIe
   :align: center
   :height: 90px
-
-mPCIe
 
 +---+-------------+---------------+---+-----------+-------------------+
 | P | Signal      | Description   | P | Signal    | Description       |
