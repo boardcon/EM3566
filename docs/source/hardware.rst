@@ -1070,7 +1070,7 @@ J30
 
 +---+-------------+---------------+---+------------+----------------+
 |Pin| Signal      | Description   |Pin| Signal     | Description    |
-+---+-------------+---------------+---+------------+----------------+
++===+=============+===============+===+============+================+
 | 1 | GND         | Ground        | 2 | GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
 | 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
@@ -1082,11 +1082,11 @@ J30
 | 7 | NC          | Not connect   | 8 | A          | DVP 2.8V power |
 |   |             |               |   | VDD2V8_DVP | supply         |
 +---+-------------+---------------+---+------------+----------------+
-| 9 | CA          | Camera reset  | 1 | CIF_       | GPIO4_B7_d     |
-|   | MERAB_RST_L |               | 0 | 8BIT_VSYNC |                |
+| 9 | CA          | Camera reset  | 10| CIF_       | GPIO4_B7_d     |
+|   | MERAB_RST_L |               |   | 8BIT_VSYNC |                |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | GND         | Ground        | 1 | MIPI_      | MIPI CSI       |
-| 1 |             |               | 2 | CSI_RX_D3P | positive       |
+| 11| GND         | Ground        | 12| MIPI_      | MIPI CSI       |
+|   |             |               |   | CSI_RX_D3P | positive       |
 |   |             |               |   |            |                |
 |   |             |               |   |            | differential   |
 |   |             |               |   |            | data line      |
@@ -1094,8 +1094,8 @@ J30
 |   |             |               |   |            | transceiver    |
 |   |             |               |   |            | output         |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | MIPI        | IMIPI CSI     | 1 | GND        | Ground         |
-| 3 | _CSI_RX_D3N | negative      | 4 |            |                |
+| 13| MIPI        | IMIPI CSI     | 14| GND        | Ground         |
+|   | _CSI_RX_D3N | negative      |   |            |                |
 |   |             |               |   |            |                |
 |   |             | differential  |   |            |                |
 |   |             | data line     |   |            |                |
@@ -1103,8 +1103,8 @@ J30
 |   |             | transceiver   |   |            |                |
 |   |             | output        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | MIPI        | MIPI CSI      | 1 | MIPI_      | MIPI CSI       |
-| 5 | _CSI_RX_D2P | positive      | 6 | CSI_RX_D2N | negative       |
+| 15| MIPI        | MIPI CSI      | 16| MIPI_      | MIPI CSI       |
+|   | _CSI_RX_D2P | positive      |   | CSI_RX_D2N | negative       |
 |   |             |               |   |            |                |
 |   |             | differential  |   |            | differential   |
 |   |             | data line     |   |            | data line      |
@@ -1112,8 +1112,8 @@ J30
 |   |             | transceiver   |   |            | transceiver    |
 |   |             | output        |   |            | output         |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | GND         | Ground        | 1 | MIPI_CS    | MIPI CSI       |
-| 7 |             |               | 8 | I_RX_CLK1P | positive       |
+| 17| GND         | Ground        | 18| MIPI_CS    | MIPI CSI       |
+|   |             |               |   | I_RX_CLK1P | positive       |
 |   |             |               |   |            |                |
 |   |             |               |   |            | differential   |
 |   |             |               |   |            | data line      |
@@ -1121,8 +1121,8 @@ J30
 |   |             |               |   |            | transceiver    |
 |   |             |               |   |            | output         |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | MIPI_C      | MIPI CSI      | 2 | GND        | Ground         |
-| 9 | SI_RX_CLK1N | negative      | 0 |            |                |
+| 19| MIPI_C      | MIPI CSI      | 20| GND        | Ground         |
+|   | SI_RX_CLK1N | negative      |   |            |                |
 |   |             |               |   |            |                |
 |   |             | differential  |   |            |                |
 |   |             | data line     |   |            |                |
@@ -1130,18 +1130,16 @@ J30
 |   |             | transceiver   |   |            |                |
 |   |             | output        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | DVDD1V2     | VDD 1.2V      | 2 | VCC1V8_DVP | VCC 1.8V       |
-| 1 |             |               | 2 |            |                |
+| 21| DVDD1V2     | VDD 1.2V      | 22| VCC1V8_DVP | VCC 1.8V       |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | GND         | Ground        | 2 | MIPI_MCLK1 | MIPI clock     |
-| 3 |             |               | 4 |            |                |
+| 23| GND         | Ground        | 24| MIPI_MCLK1 | MIPI clock     |
 +---+-------------+---------------+---+------------+----------------+
 
 J31                                                               
 
 +---+-------------+---------------+---+------------+----------------+
 |Pin| Signal      | Description   |Pin| Signal     | Description    |
-+---+-------------+---------------+---+------------+----------------+
++===+=============+===============+===+============+================+
 | 1 | GND         | Ground        | 2 | GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
 | 3 | NC          | Not connect   | 4 | AF_2V8     | AF 2.8V power  |
@@ -1153,11 +1151,11 @@ J31
 | 7 | NC          | Not connect   | 8 | A          | DVP 2.8V power |
 |   |             |               |   | VDD2V8_DVP | supply         |
 +---+-------------+---------------+---+------------+----------------+
-| 9 | CA          | Camera reset  | 1 | GPIO       | GPIO           |
-|   | MERAF_RST_L |               | 0 | 4_B5_d_1V8 |                |
+| 9 | CA          | Camera reset  | 10| GPIO       | GPIO           |
+|   | MERAF_RST_L |               |   | 4_B5_d_1V8 |                |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | GND         | Ground        | 1 | MIPI_      | MIPI CSI       |
-| 1 |             |               | 2 | CSI_RX_D1P | positive       |
+| 11| GND         | Ground        | 12| MIPI_      | MIPI CSI       |
+|   |             |               |   | CSI_RX_D1P | positive       |
 |   |             |               |   |            |                |
 |   |             |               |   |            | differential   |
 |   |             |               |   |            | data line      |
@@ -1165,8 +1163,8 @@ J31
 |   |             |               |   |            | transceiver    |
 |   |             |               |   |            | output         |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | MIPI        | IMIPI CSI     | 1 | GND        | Ground         |
-| 3 | _CSI_RX_D1N | negative      | 4 |            |                |
+| 13| MIPI        | IMIPI CSI     | 14| GND        | Ground         |
+|   | _CSI_RX_D1N | negative      |   |            |                |
 |   |             |               |   |            |                |
 |   |             | differential  |   |            |                |
 |   |             | data line     |   |            |                |
@@ -1174,8 +1172,8 @@ J31
 |   |             | transceiver   |   |            |                |
 |   |             | output        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | MIPI        | MIPI CSI      | 1 | MIPI_      | MIPI CSI       |
-| 5 | _CSI_RX_D0P | positive      | 6 | CSI_RX_D0N | negative       |
+| 15| MIPI        | MIPI CSI      | 16| MIPI_      | MIPI CSI       |
+|   | _CSI_RX_D0P | positive      |   | CSI_RX_D0N | negative       |
 |   |             |               |   |            |                |
 |   |             | differential  |   |            | differential   |
 |   |             | data line     |   |            | data line      |
@@ -1183,8 +1181,8 @@ J31
 |   |             | transceiver   |   |            | transceiver    |
 |   |             | output        |   |            | output         |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | GND         | Ground        | 1 | MIPI_CS    | MIPI CSI       |
-| 7 |             |               | 8 | I_RX_CLK0P | positive       |
+| 17| GND         | Ground        | 18| MIPI_CS    | MIPI CSI       |
+|   |             |               |   | I_RX_CLK0P | positive       |
 |   |             |               |   |            |                |
 |   |             |               |   |            | differential   |
 |   |             |               |   |            | data line      |
@@ -1192,8 +1190,8 @@ J31
 |   |             |               |   |            | transceiver    |
 |   |             |               |   |            | output         |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | MIPI_C      | MIPI CSI      | 2 | GND        | Ground         |
-| 9 | SI_RX_CLK0N | negative      | 0 |            |                |
+| 19| MIPI_C      | MIPI CSI      | 20| GND        | Ground         |
+|   | SI_RX_CLK0N | negative      |   |            |                |
 |   |             |               |   |            |                |
 |   |             | differential  |   |            |                |
 |   |             | data line     |   |            |                |
@@ -1201,11 +1199,9 @@ J31
 |   |             | transceiver   |   |            |                |
 |   |             | output        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | DVDD1V2     | VDD 1.2V      | 2 | VCC1V8_DVP | VCC 1.8V       |
-| 1 |             |               | 2 |            |                |
+| 21| DVDD1V2     | VDD 1.2V      | 22| VCC1V8_DVP | VCC 1.8V       |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | GND         | Ground        | 2 | MIPI_MCLK0 | MIPI clock     |
-| 3 |             |               | 4 |            |                |
+| 23| GND         | Ground        | 24| MIPI_MCLK0 | MIPI clock     |
 +---+-------------+---------------+---+------------+----------------+
 
   
@@ -1225,7 +1221,7 @@ J31
 | 1 | VCC3V3_SYS  | 3.3V Power    | 2 | PWM3_IR    | IR in          |
 |   |             | supply        |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
-| 3 | GND         | Ground        |   |            |                |
+| 3 | GND         | Ground        |                                 |
 +---+-------------+---------------+---+------------+----------------+
   
 2.14 UART (J10, J11, J12)
@@ -1248,7 +1244,7 @@ The J10 is 3-pin connector for debug. The baud rate is 1500000.
 | 1 | UART2DBG_RX | Serial data   | 2 | UART2DBG_TX | Serial data   |
 |   |             | input         |   |             | output        |
 +---+-------------+---------------+---+-------------+---------------+
-| 3 | GND         | Ground        |   |             |               |
+| 3 | GND         | Ground        |                                 |
 +---+-------------+---------------+---+-------------+---------------+
 
 .. figure:: ./image/PH-4A.jpg
@@ -1302,8 +1298,8 @@ J32
 | 1 | GND         | Ground         | 2 | RS485_B    | RS-485 Data   |
 |   |             |                |   |            | Line          |
 +---+-------------+----------------+---+------------+---------------+
-| 3 | RS485_A     | RS-485 Data    |   |            |               |
-|   |             | Line           |   |            |               |
+| 3 | RS485_A     | RS-485 Data    |                                |
+|   |             | Line           |                                |
 +---+-------------+----------------+---+------------+---------------+
   
 .. figure:: ./image/Pin_header.jpg
@@ -1368,71 +1364,51 @@ CON2
 +---+-------------+---------------+---+------------+----------------+
 | 7 | MIC1N       | MIC -         | 8 | SIM_VCC    | SIM power      |
 +---+-------------+---------------+---+------------+----------------+
-| 9 | GND         | Ground        | 1 | SIM_DATA   | SIM data       |
-|   |             |               | 0 |            |                |
+| 9 | GND         | Ground        | 10| SIM_DATA   | SIM data       |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | NC          | Not connect   | 1 | SIM_CLK    | SIM Clock      |
-| 1 |             |               | 2 |            |                |
+| 11| NC          | Not connect   | 12| SIM_CLK    | SIM Clock      |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | NC          | Not connect   | 1 | SIM_RST    | SIM Reset      |
-| 3 |             |               | 4 |            |                |
+| 13| NC          | Not connect   | 14| SIM_RST    | SIM Reset      |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | GND         | Ground        | 1 | NC         | Not connect    |
-| 5 |             |               | 6 |            |                |
+| 15| GND         | Ground        | 16| NC         | Not connect    |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | NC          | Not connect   | 1 | GND        | Ground         |
-| 7 |             |               | 8 |            |                |
+| 17| NC          | Not connect   | 18| GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
-| 1 | NC          | Not connect   | 2 | 3GVCC      | DC 3.3V        |
-| 9 |             |               | 0 |            |                |
+| 19| NC          | Not connect   | 20| 3GVCC      | DC 3.3V        |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | GND         | Ground        | 2 | PERST      | GPIO0_A0_d     |
-| 1 |             |               | 2 |            |                |
+| 21| GND         | Ground        | 22| PERST      | GPIO0_A0_d     |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | NC          | Not connect   | 2 | 3GVCC      | DC 3.3V        |
-| 3 |             |               | 4 |            |                |
+| 23| NC          | Not connect   | 24| 3GVCC      | DC 3.3V        |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | NC          | Not connect   | 2 | GND        | Ground         |
-| 5 |             |               | 6 |            |                |
+| 25| NC          | Not connect   | 26| GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | GND         | Ground        | 2 | NC         | Not connect    |
-| 7 |             |               | 8 |            |                |
+| 27| GND         | Ground        | 28| NC         | Not connect    |
 +---+-------------+---------------+---+------------+----------------+
-| 2 | GND         | Ground        | 3 | NC         | Not connect    |
-| 9 |             |               | 0 |            |                |
+| 29| GND         | Ground        | 30| NC         | Not connect    |
 +---+-------------+---------------+---+------------+----------------+
-| 3 | NC          | Not connect   | 3 | NC         | Not connect    |
-| 1 |             |               | 2 |            |                |
+| 31| NC          | Not connect   | 32| NC         | Not connect    |
 +---+-------------+---------------+---+------------+----------------+
-| 3 | NC          | Not connect   | 3 | GND        | Ground         |
-| 3 |             |               | 4 |            |                |
+| 33| NC          | Not connect   | 34| GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
-| 3 | GND         | Ground        | 3 | USB        | Host data DN   |
-| 5 |             |               | 6 | 2_HOST2_DM |                |
+| 35| GND         | Ground        | 36| USB        | Host data DN   |
+|   |             |               |   | 2_HOST2_DM |                |
 +---+-------------+---------------+---+------------+----------------+
-| 3 | GND         | Ground        | 3 | USB        | Host data DP   |
-| 7 |             |               | 8 | 2_HOST2_DP |                |
+| 37| GND         | Ground        | 38| USB        | Host data DP   |
+|   |             |               |   | 2_HOST2_DP |                |
 +---+-------------+---------------+---+------------+----------------+
-| 3 | 3GVCC       | DC 3.3V       | 4 | GND        | Ground         |
-| 9 |             |               | 0 |            |                |
+| 39| 3GVCC       | DC 3.3V       | 40| GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
-| 4 | 3GVCC       | DC 3.3V       | 4 | LED_WWAN   | LED            |
-| 1 |             |               | 2 |            |                |
+| 41| 3GVCC       | DC 3.3V       | 42| LED_WWAN   | LED            |
 +---+-------------+---------------+---+------------+----------------+
-| 4 | GND         | Ground        | 4 | NC         | Not connect    |
-| 3 |             |               | 4 |            |                |
+| 43| GND         | Ground        | 44| NC         | Not connect    |
 +---+-------------+---------------+---+------------+----------------+
-| 4 | NC          | Not connect   | 4 | NC         | Not connect    |
-| 5 |             |               | 6 |            |                |
+| 45| NC          | Not connect   | 46| NC         | Not connect    |
 +---+-------------+---------------+---+------------+----------------+
-| 4 | NC          | Not connect   | 4 | NC         | Not connect    |
-| 7 |             |               | 8 |            |                |
+| 47| NC          | Not connect   | 48| NC         | Not connect    |
 +---+-------------+---------------+---+------------+----------------+
-| 4 | NC          | Not connect   | 5 | GND        | Ground         |
-| 9 |             |               | 0 |            |                |
+| 49| NC          | Not connect   | 50| GND        | Ground         |
 +---+-------------+---------------+---+------------+----------------+
-| 5 | NC          | Not connect   | 5 | 3GVCC      | DC 3.3V        |
-| 1 |             |               | 2 |            |                |
+| 51| NC          | Not connect   | 52| 3GVCC      | DC 3.3V        |
 +---+-------------+---------------+---+------------+----------------+
 
 P4 is an auto pop-up SIM card slot which is compatible to the standard
@@ -1459,7 +1435,7 @@ SIM Card slot (P4)
 | 5 | SIM_VCC     | SIM power     | 6 | GND          | Ground       |
 |   |             | supply        |   |              |              |
 +---+-------------+---------------+---+--------------+--------------+
-| 7 | NC          | Not connect   |   |              |              |
+| 7 | NC          | Not connect   |                                 |
 +---+-------------+---------------+---+--------------+--------------+
   
 2.18 Micro SD (J3) 
@@ -1486,8 +1462,8 @@ accessible through the carrier board interface.
 +---+------------+-----------------+---+--------------+--------------+
 | 7 | SDMMC0_D0  | SD/MMC data0    | 8 | SDMMC0_D1    | SD/MMC data1 |
 +---+------------+-----------------+---+--------------+--------------+
-| 9 | SD         | SD/MMC detect   |   |              |              |
-|   | MMC0_DET_L | signal          |   |              |              |
+| 9 | SD         | SD/MMC detect   |                                 |
+|   | MMC0_DET_L | signal          |                                 |
 +---+------------+-----------------+---+--------------+--------------+
 
 2.19 WiFi&Bluetooth (U20)
@@ -1546,11 +1522,11 @@ provides SDIO interface for WiFi, UART / PCM for Bluetooth.
 |   | WAKE_HOST_H | device to      |   |             |               |
 |   |             | wake-up HOST   |   |             |               |
 +---+-------------+----------------+---+-------------+---------------+
-| 9 | VBAT_WL     | 3.3V power     | 1 | XTAL_IN     | Crystal input |
-|   |             | supply         | 0 |             |               |
+| 9 | VBAT_WL     | 3.3V power     | 10| XTAL_IN     | Crystal input |
+|   |             | supply         |   |             |               |
 +---+-------------+----------------+---+-------------+---------------+
-| 1 | XTAL_OUT    | Crystal output | 1 | WI          | Internal      |
-| 1 |             |                | 2 | FI_REG_ON_H | regulators    |
+| 11| XTAL_OUT    | Crystal output | 12| WI          | Internal      |
+|   |             |                |   | FI_REG_ON_H | regulators    |
 |   |             |                |   |             | power         |
 |   |             |                |   |             | e             |
 |   |             |                |   |             | nable/disable |
