@@ -9,6 +9,7 @@ equipment.
 .. figure:: ./image/EM3566_single_board_computer.jpg
    :align: center
    :alt: EM3566 single board computer
+   :width: 400px
   
 
 Contents
