@@ -128,7 +128,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 | 9 | HDMITX_SCL      | Pull up 2.2K       | GPIO4_C7_u    | 3.3V    |
 |   |                 | inside             |               |         |
 +---+-----------------+--------------------+---------------+---------+
-|10 | GND             | Ground             |               | 0V      |
+|10 | GMAC1_RXER_M0   | RMII receive error | GPIO3_B4_d    | 3.3V    |
 +---+-----------------+--------------------+---------------+---------+
 |11 | GMA             | RGMII reference    | GPIO3_C0_d    | 3.3V    |
 |   | C1_MCLKINOUT_M0 | clock              |               |         |
@@ -518,7 +518,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 |   |                 | inside             |               |         |
 +---+-----------------+--------------------+---------------+---------+
 |180| I2C4_SCL_M0_1V8 | Pull up 2.2K       | GPIO4_B3_d    | 1.8V    |
-| 8 |                 | inside             |               |         |
+|   |                 | inside             |               |         |
 +---+-----------------+--------------------+---------------+---------+
 |181| GND             | Ground             |               | 0V      |
 +---+-----------------+--------------------+---------------+---------+
