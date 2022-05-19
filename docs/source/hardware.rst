@@ -325,8 +325,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 +---+-----------------+--------------------+---------------+---------+
 |92 | USB_OTG0_ID     |                    |               | 3.3V    |
 +---+-----------------+--------------------+---------------+---------+
-|93 | U               | USB OTG VBUS input |               | 3.3V    |
-|   | SB_OTG0_VBUSDET |                    |               |         |
+|93 | USB_OTG0_VBUSDET| USB OTG VBUS input |               | 3.3V    |
 +---+-----------------+--------------------+---------------+---------+
 |94 | UART1_RX_M0     |                    | GPIO2_B3_u    | 1.8V    |
 +---+-----------------+--------------------+---------------+---------+
@@ -379,19 +378,17 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 +---+-----------------+--------------------+---------------+---------+
 |117| GND             | Ground             |               | 0V      |
 +---+-----------------+--------------------+---------------+---------+
-|118| P               | PDM_SDI1_M0        | GPIO1_B2_d    | 3.3V    |
-|   | CIE20_PERSTn_M2 |                    |               |         |
+|118| PCIE20_PERSTn_M2| PDM_SDI1_M0        | GPIO1_B2_d    | 3.3V    |
 +---+-----------------+--------------------+---------------+---------+
 |119| PCIE20_WAKEn_M2 | PDM_SDI2_M0        | GPIO1_B1_d    | 3.3V    |
 +---+-----------------+--------------------+---------------+---------+
-|120| PC              | PDM_SDI3_M0        | GPIO1_B0_d    | 3.3V    |
-|   | IE20_CLKREQn_M2 |                    |               |         |
+|120|PCIE20_CLKREQn_M2| PDM_SDI3_M0        | GPIO1_B0_d    | 3.3V    |
 +---+-----------------+--------------------+---------------+---------+
-|121| UART3_RX_M0     | AudioPWM_          | GPIO1_A0_u    | 3.3V    |
-|   |                 | LOUT_P/I2C3_SDA_M0 |               |         |
+|121| UART3_RX_M0     | AudioPWM_L         | GPIO1_A0_u    | 3.3V    |
+|   |                 | OUT_P/I2C3_SDA_M0  |               |         |
 +---+-----------------+--------------------+---------------+---------+
-|122| UART3_TX_M0     | AudioPWM_          | GPIO1_A1_u    | 3.3V    |
-|   |                 | LOUT_N/I2C3_SCL_M0 |               |         |
+|122| UART3_TX_M0     | AudioPWM_L         | GPIO1_A1_u    | 3.3V    |
+|   |                 | OUT_N/I2C3_SCL_M0  |               |         |
 +---+-----------------+--------------------+---------------+---------+
 |123| UART4_RX_M0     | PDM_C              | GPIO1_A4_d    | 3.3V    |
 |   |                 | LK1_M0/SPDIF_TX_M0 |               |         |
@@ -399,20 +396,19 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 |124| UART4_TX_M0     | AudioPWM_ROUT_P    | GPIO1_A6_d    | 3.3V    |
 |   |                 | /PDM_CLK0_M0       |               |         |
 +---+-----------------+--------------------+---------------+---------+
-|125| I2S1_           |                    | GPIO1_A5_d    | 3.3V    |
-|   | LRCK_TX_M0_PMIC |                    |               |         |
+|125| I2S1_L          |                    | GPIO1_A5_d    | 3.3V    |
+|   | RCK_TX_M0_PMIC  |                    |               |         |
 +---+-----------------+--------------------+---------------+---------+
 |126| I2S1_SDI0_M0/P  | PDM_SDI0_M0        | GPIO1_B3_d    | 3.3V    |
 |   | DM_SDI0_M0_PMIC |                    |               |         |
 +---+-----------------+--------------------+---------------+---------+
-|127| I2S1_           | UART3_CTSn_M0      | GPIO1_A3_d    | 3.3V    |
-|   | SCLK_TX_M0_PMIC |                    |               |         |
+|127| I2S1_S          | UART3_CTSn_M0      | GPIO1_A3_d    | 3.3V    |
+|   | CLK_TX_M0_PMIC  |                    |               |         |
 +---+-----------------+--------------------+---------------+---------+
-|128| I2              | AudioPWM_RO        | GPIO1_A7_d    | 3.3V    |
-|   | S1_SDO0_M0_PMIC | UT_N/UART4_CTSn_M0 |               |         |
+|128|I2S1_SDO0_M0_PMIC| AudioPWM_RO        | GPIO1_A7_d    | 3.3V    |
+|   |                 | UT_N/UART4_CTSn_M0 |               |         |
 +---+-----------------+--------------------+---------------+---------+
-|129| I2              | UART3_RTSn_M0      | GPIO1_A2_d    | 3.3V    |
-|   | S1_MCLK_M0_PMIC |                    |               |         |
+|129|I2S1_MCLK_M0_PMIC| UART3_RTSn_M0      | GPIO1_A2_d    | 3.3V    |
 +---+-----------------+--------------------+---------------+---------+
 |130| GND             | Ground             |               | 0V      |
 +---+-----------------+--------------------+---------------+---------+
@@ -509,8 +505,7 @@ The CPU module CM3566 features 2GB LPDDR4 RAM and 8GB eMMC Flash.
 +---+-----------------+--------------------+---------------+---------+
 |176| VOP_BT656_D0_M1 | CIF_D0             | GPIO3_C6_d    | 1.8V    |
 +---+-----------------+--------------------+---------------+---------+
-|177| V               |                    | GPIO4_B4_d    | 1.8V    |
-|   | OP_BT656_CLK_M1 |                    |               |         |
+|177| VOP_BT656_CLK_M1|                    | GPIO4_B4_d    | 1.8V    |
 +---+-----------------+--------------------+---------------+---------+
 |178| GPIO4_B5_d_1V8  |                    |               | 1.8V    |
 +---+-----------------+--------------------+---------------+---------+
@@ -748,17 +743,17 @@ J6 / J17 (4-pin connector)
 +===+============+================+===+============+================+
 | 1 | VDD5V0_HOST| 5V power       | 2 | USB_DM4    | USB data-      |
 |   | 2          | supply         |   | (J6)/USB_D |                |
-|   |            |                |   | M3(J17)    |                |
+|   |            |                |   |M3(J17)     |                |
 +---+------------+----------------+---+------------+----------------+
 | 3 | USB_DP4    | USB Data+      | 4 | GND        | Ground         |
 |   | (J6)/USB_D |                |   |            |                |
-|   | P3(J17)    |                |   |            |                |
+|   |P3(J17)     |                |   |            |                |
 +---+------------+----------------+---+------------+----------------+
 
-2.6 USB3.0/SATA3.0 (J25, J34)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2.6 USB3.0/SATA3.0 (J25, J34-optional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The USB3.0 and SATA3.0 share the same USB signal. The SW1 is a DIP
+The USB3.0 and SATA3.0 share the same signals. Default USB3.0. The SW1 is a DIP
 Switch for the selection of USB3.0 or SATA.
 
 .. figure:: ./image/SATA-USB3.0.jpg
@@ -1413,8 +1408,7 @@ SIM Card slot (P4)
 +---+-------------+---------------+---+--------------+--------------+
 |Pin| Signal      | Description   |Pin| Signal       | Description  |
 +===+=============+===============+===+==============+==============+
-| 1 | SIM_CLK     | Clock         | 2 | SIM_DATA     | s            |
-|   |             |               |   |              | end/receiver |
+| 1 | SIM_CLK     | Clock         | 2 | SIM_DATA     | send/receiver|
 |   |             |               |   |              | data I/O     |
 |   |             |               |   |              | control      |
 +---+-------------+---------------+---+--------------+--------------+
@@ -1478,6 +1472,7 @@ provides SDIO interface for WiFi, UART / PCM for Bluetooth.
 
 +-----------------------+----------------------------------------------+
 | Standard              | WiFi: IEEE 802.11b/g/n                       |
+|                       |                                              |
 |                       | BT: V2.1+EDR/BT v3.0+HS/BT v4.0              |
 +-----------------------+----------------------------------------------+
 | Host Interface        | SDIO and UART                                |
@@ -1662,9 +1657,13 @@ M.2 M key socket (PCIe) for NVMe SSD.
 | 75| GND         | Ground        |                                   |
 +---+-------------+---------------+---+-----------+-------------------+
 
-2.21 GPS (MU4)
-^^^^^^^^^^^^^^^
+2.21 GPS (MU4. optional)
+^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+.. Note::
+ RS485 and GPS are multiplexed with UART3 signal. Default support RS485.
+ 
 .. figure:: ./image/GPS.jpg
   :alt: GPS model
   :align: center
@@ -1718,9 +1717,6 @@ acquisition times.
 +---+-------------+---------------+---+--------------+--------------+
 | 17| NC          | Not connect   | 18| NC           | Not connect  |
 +---+-------------+---------------+---+--------------+--------------+
-
-.. Note::
- RS485 and GPS are multiplexed with UART3 signal. Default support RS485.
 
 2.22 RTC (BT1)
 ^^^^^^^^^^^^^^^^
