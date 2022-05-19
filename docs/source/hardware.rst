@@ -1220,7 +1220,7 @@ J31
   :align: center
   :height: 90px
    
-The J10 is 3-pin connector for debug. The baud rate is 1500000.
+The J10 is 3-pin connector for debug. The baud rate is 1500000. J11/J12 is RS232.
 
 +---+-------------+---------------+---+-------------+---------------+
 |Pin| Signal      | Description   |Pin| Signal      | Description   |
@@ -1236,10 +1236,8 @@ The J10 is 3-pin connector for debug. The baud rate is 1500000.
   :align: center
   :height: 90px
   
-The J11/J12 used for RS232.
-
-J11
-
++---+--------------+---------------+---+------------+----------------+
+| J11                                                                |
 +---+--------------+---------------+---+------------+----------------+
 |Pin| Signal       | Description   |Pin| Signal     | Description    |
 +---+--------------+---------------+---+------------+----------------+
