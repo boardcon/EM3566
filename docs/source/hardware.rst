@@ -763,12 +763,12 @@ Switch for the selection of USB3.0 or SATA.
 
 .. figure:: ./image/SATA-USB3.0.jpg
   :alt: USB/SATA mode 
+  :height: 150px
 
-.. figure:: ./image/SATA3.0.png
-  :alt: SATA3.0
-  :align: center
+.. figure:: ./image/usb3.jpg
+  :alt: USB3.0
   :height: 100px
-  
+ 
 +---+-------------+---------------+---+------------+----------------+
 |Pin| Signal      | Description   |Pin| Signal     | Description    |
 +===+=============+===============+===+============+================+
@@ -786,6 +786,11 @@ Switch for the selection of USB3.0 or SATA.
 |   |             | Data+         |                                 |
 +---+-------------+---------------+---+------------+----------------+
 
+.. figure:: ./image/SATA3.0.png
+  :alt: SATA3.0
+  :align: center
+  :height: 100px
+  
 EM3566 on-board 7-pin SATA Interface. It requires 5V power supply.
 
 +---+------------+----------------+---+------------+----------------+
