@@ -761,24 +761,8 @@ J6 / J17 (4-pin connector)
 The USB3.0 and SATA3.0 share the same USB signal. The SW1 is a DIP
 Switch for the selection of USB3.0 or SATA.
 
-.. figure:: ./image/switch.gif
-  :alt: SW
-  :align: left
-  
-.. figure:: ./image/off-off.gif
-  :alt: SW-off-off
-  :align: left
-  
-.. figure:: ./image/ON-ON.gif
-  :alt: SW-ON-ON
-  
-+-----------------+----------------+-----------------+                 
-|     Mode        |      1         |        2        |                 
-+=================+================+=================+
-| **USB3.0**      | OFF            | OFF             |        
-+-----------------+----------------+-----------------+
-| **SATA**        | ON             | ON              | 
-+-----------------+----------------+-----------------+
+.. figure:: ./image/SATA-USB3.0.jpg
+  :alt: USB/SATA mode 
 
 .. figure:: ./image/SATA3.0.png
   :alt: SATA3.0
