@@ -720,8 +720,8 @@ disk, USB camera, and other USB devices. Support hot-plug.
 -  Provides 16 host mode channels
 -  Support periodic out channel in host mode
 
-Dual-USB
-
++---+------------+----------------+---+------------+----------------+
+| Dual-USB                                                          |
 +---+------------+----------------+---+------------+----------------+
 |Pin| Signal     | Description    |Pin| Signal     | Description    |
 +===+============+================+===+============+================+
@@ -736,8 +736,8 @@ Dual-USB
 | 7 | USB_DP2    | USB Data+      | 8 | GND        | Ground         |
 +---+------------+----------------+---+------------+----------------+
 
-J6 / J17 (4-pin connector)
-
++---+------------+----------------+---+------------+----------------+
+| J6 / J17 (4-pin connector)                                        |
 +---+------------+----------------+---+------------+----------------+
 |Pin| Signal     | Description    |Pin| Signal     | Description    |
 +===+============+================+===+============+================+
@@ -763,7 +763,9 @@ Switch for the selection of USB3.0 or SATA.
 .. figure:: ./image/usb3.jpg
   :alt: USB3.0
   :height: 100px
- 
+
++---+------------+----------------+---+------------+----------------+
+| J25 (USB3.0)                                                      |
 +---+-------------+---------------+---+------------+----------------+
 |Pin| Signal      | Description   |Pin| Signal     | Description    |
 +===+=============+===============+===+============+================+
@@ -788,6 +790,8 @@ Switch for the selection of USB3.0 or SATA.
   
 EM3566 on-board 7-pin SATA Interface. It requires 5V power supply.
 
++---+------------+----------------+---+------------+----------------+
+| J34 (SATA3.0, opional)                                            |
 +---+------------+----------------+---+------------+----------------+
 |Pin| Signal     | Description    |Pin| Signal     | Description    |
 +===+============+================+===+============+================+
@@ -830,8 +834,7 @@ EM3566 adopts RTL8211F as the Ethernet chip. RJ45 connector.
 -  Implements the full 802.3 specification
 
 +---+-----------+-------------------+---+-------+--------------------+
-|Pin| Signal    | Description       |Pin| S     | Description        |
-|   |           |                   |   | ignal |                    |
+|Pin| Signal    | Description       |Pin| Signal| Description        |
 +===+===========+===================+===+=======+====================+
 | 1 | DA+       | Bi-directional    | 2 | DA-   | Bi-directional     |
 |   |           | transmit/receive  |   |       | transmit/receive   |
@@ -891,7 +894,6 @@ resolution.
 |   |             | enable high   |   |            | PWM output     |
 +---+-------------+---------------+---+------------+----------------+
 | 15| GND         | Ground        | 16| GND        | GND            |
-|   |             |               |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
 | 17| EDP_TX_AUXP | eDP CH-AUX    | 18| E          | eDP CH-AUX     |
 |   |             | positive      |   | DP_TX_AUXP | negative       |
@@ -899,7 +901,6 @@ resolution.
 |   |             | output        |   |            | output         |
 +---+-------------+---------------+---+------------+----------------+
 | 19| GND         | Ground        | 20| GND        | Ground         |
-|   |             |               |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
 | 21| EDP_TX_D3P  | eDP data lane | 22| EDP_TX_D3N | eDP data lane  |
 |   |             | positive      |   |            | negative       |
@@ -923,7 +924,6 @@ resolution.
 |   |             |               |   | S_TX0_CLKN |                |
 +---+-------------+---------------+---+------------+----------------+
 | 31| GND         | Ground        | 32| GND        | Ground         |
-|   |             |               |   |            |                |
 +---+-------------+---------------+---+------------+----------------+
 | 33| MIPI_DS     | MIPI/LVDS     | 34| MIPI_DSI_T | MIPI/LVDS data |
 |   | I_TX0_D3P/L | data lane     |   | X0_D3N/LV  | lane negative  |
@@ -1050,8 +1050,8 @@ EM3566 features two 26-pin MIPI connectors for camera (OV13850).
   :align: center
   :height: 90px
  
-J30
-
++---+-------------+---------------+---+------------+----------------+
+| J30                                                               |
 +---+-------------+---------------+---+------------+----------------+
 |Pin| Signal      | Description   |Pin| Signal     | Description    |
 +===+=============+===============+===+============+================+
@@ -1063,8 +1063,8 @@ J30
 | 5 | I2C4        | I2C data line | 6 | I2C4_S     | I2C clock line |
 |   | _SDA_M0_1V8 |               |   | CL_M0_1V8  |                |
 +---+-------------+---------------+---+------------+----------------+
-| 7 | NC          | Not connect   | 8 | A          | DVP 2.8V power |
-|   |             |               |   | VDD2V8_DVP | supply         |
+| 7 | NC          | Not connect   | 8 | AVDD2V8_DVP| DVP 2.8V power |
+|   |             |               |   |            | supply         |
 +---+-------------+---------------+---+------------+----------------+
 | 9 | CA          | Camera reset  | 10| CIF_8      | GPIO4_B7_d     |
 |   | MERAB_RST_L |               |   | BIT_VSYNC  |                |
