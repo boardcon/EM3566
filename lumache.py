@@ -1,5 +1,5 @@
 """
-Boardcon Embedded Design -  an Original Design Manufacturer dedicated to providing high quality ARM core based SBC and SoM.
+Boardcon Embedded Design -  an Original Design Manufacturer dedicated to providing ARM core based SBC and SoM.
 """
 
 __version__ = "0.1.0"
