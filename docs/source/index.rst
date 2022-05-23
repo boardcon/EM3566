@@ -19,4 +19,3 @@ Contents
 
    hardware
    software
-   genindex
