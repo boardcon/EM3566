@@ -18,9 +18,6 @@ Plug the USB-to-UART cable CP2102 to the PC, unzip **CP2102WIN7.rar** on Windows
 
 .. figure:: ./image/EM3566_SBC_Android11_figure_18.png
    :alt: Install successful
-
-.. figure:: ./image/EM3566_SBC_Android11_figure_19.png
-   :alt: unzip files
       
 Now the device will be listed under *Device Manager -> PORTS* with unique serial port assigned
 
