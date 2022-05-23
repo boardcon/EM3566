@@ -1,9 +1,9 @@
-Template for the Read the Docs tutorial
+Boardcon Hardware/Software User Manual
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Boardcon Embedded Design established in 2008, is an Original Design Manufacturer dedicated to providing ARM core based industrial Computer-on-Module and Single Board Computer.
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+- Hardware
+- Android
+- Debian
+- bulidroot
