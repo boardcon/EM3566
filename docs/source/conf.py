@@ -32,7 +32,7 @@ templates_path = ['_templates']
 # Html logo in drawer.
 # Fit in the drawer at the width of image is 240 px.
 
-html_logo = 'image/logo.png'
+html_logo = 'image/boardcon-logo.png'
 
 html_theme = 'sphinx_rtd_theme'
 
