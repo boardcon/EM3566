@@ -31,7 +31,7 @@ templates_path = ['_templates']
 
 html_theme = 'sphinx_rtd_theme'
 
-html_logo = 'images/Boardcon_logo.png'
+html_logo = 'image/Boardcon_logo.png'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
