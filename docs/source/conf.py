@@ -31,6 +31,9 @@ templates_path = ['_templates']
 
 html_theme = 'sphinx_rtd_theme'
 
+# Html logo in drawer.
+# Fit in the drawer at the width of image is 240 px.
+
 html_logo = 'image/Boardcon_logo.png'
 
 # -- Options for EPUB output
