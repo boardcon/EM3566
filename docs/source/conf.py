@@ -29,16 +29,7 @@ html_theme_path = ["_themes", ]
 
 # -- Options for HTML output
 
-# Html logo in drawer.
-# Fit in the drawer at the width of image is 240 px.
-
-import sphinx_rtd_theme
-html_use_index = True
-html_show_sphinx = True
-
-html_logo = 'image/boardcon-logo.png'
 html_theme = "sphinx_rtd_theme"
-html_theme_path = ["_themes", ]
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
