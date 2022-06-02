@@ -5,4 +5,4 @@ build-backend = "flit_core.buildapi"
 [project]
 name = "boardcon"
 authors = [{name = "boardcon"}]
-dynamic = ["version", "description"]
+dynamic = ["version"]
