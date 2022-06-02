@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'EM3566 User Manual'
-copyright = '2022, Boardcon Embedded Design'
+copyright = '2021, Boardcon Embedded Design'
 author = 'Boardcon'
 
 release = '0.1'
@@ -25,9 +25,11 @@ intersphinx_mapping = {
 }
 intersphinx_disabled_domains = ['std']
 
-html_theme_path = ["_themes", ]
+templates_path = ['_templates']
 
 # -- Options for HTML output
+
+html_theme_path = ["_themes", ]
 
 html_theme = "sphinx_rtd_theme"
 
