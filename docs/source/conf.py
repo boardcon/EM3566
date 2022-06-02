@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'EM3566 User Manual'
-copyright = '2022, Boardcon Embedded Design'
+copyright = '2021, Boardcon Embedded Design'
 author = 'Boardcon'
 
 release = '0.1'
